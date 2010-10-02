@@ -1,0 +1,17 @@
+[user]
+	name = Svante Kvarnstrom
+	email = sjk@ankeborg.nu
+[alias]
+	ci = commit -a
+	co = checkout
+	st = status -a
+    pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+    lc = log ORIG_HEAD.. --stat --no-merges
+    whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+[apply]
+	whitespace = strip
+[color]
+	diff = auto
+	status = auto
+	branch = auto

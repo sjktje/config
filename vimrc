@@ -1,0 +1,39 @@
+" sjks .vimrc
+set nocompatible		" I don't like vi
+set history=50			" Keep 50 lines of command line history.
+set ts=4
+set si					" Smart indent
+set cindent				" Do c-style indenting
+set noexpandtab			" Real tabs please!
+"set smarttab			" Use tabs at the start of a line, spaces elsewhere
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4			" Compatible tab settings
+set history=50
+set ai
+set bs=2
+set ruler				" ruler enables the line count etc thing at the bottom of the window.
+set nowrap				" Don't wrap text at window width
+set nohlsearch			" Don't make search results red
+set incsearch			" But do hilight as you type search phrase
+set noerrorbells		" don't make noise
+set foldenable			" Enable {{{ folding }}}
+set foldmethod=marker	" Fold stuff within {{{ and }}}
+set showmatch			" show matching brackets
+set mat=5				" how many tenths of a second to blink matching brackets for
+set pastetoggle=<F2>
+syntax enable			" syntax hilighting is nice
+colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
+
+map <A-i> i <ESC>r " alt-i (normal mode) inserts a single char, and then switches back to normal
+
+highlight Folded guibg=Black guifg=blue
+highlight FoldColumn guibg=darkgrey guifg=white
+
+"nmap = o<Esc>			" Press = to insert an empty line without going into insert mode
+
+"autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
+filetype plugin on
+
+filetype plugin indent on
+syntax on

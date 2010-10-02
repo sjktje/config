@@ -1,0 +1,6 @@
+defutf8			on
+autodetach		on
+startup_message off
+vbell			off
+hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
+#caption always "%3n %t%? (%u)%?%?: %h%?"
