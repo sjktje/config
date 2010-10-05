@@ -54,6 +54,8 @@ alias burniso='cdrecord -v -eject dev=1,0,0'
 
 if [[ `uname -s` == "Darwin" ]]; then
     alias pubkeycp='cat ~/.ssh/id_dsa.pub |pbcopy |echo "Public key copied to clipboard."'
+	alias hibernateon='sudo pmset -a hibernatemode 5'
+	alias hibernateoff='sudo pmset -a hibernatemode 0'
 fi
 
 alias -s {avi,flv,mpg,mpeg,wmv}=/Applications/VLC.app/Contents/MacOS/VLC
