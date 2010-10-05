@@ -59,6 +59,7 @@ fi
 alias -s {avi,flv,mpg,mpeg,wmv}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
+alias -s pdf=open
 alias -s tar="tar xf"
 alias -s gz="gunzip"
 alias -s bz2="bunzip2"
