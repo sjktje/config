@@ -30,7 +30,11 @@ alias srsync='rsync -zIPe ssh'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ls='ls -G'
+
+# No colour support on OpenBSD ls
+if [[ `uname -s` != "OpenBSD" ]]; then
+	alias ls='ls -G'
+fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias ukspell='ispell -d british'
