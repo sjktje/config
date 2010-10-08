@@ -8,6 +8,7 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/texlive/20
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
+export BLOCKTABLE="attackers"
 
 if [[ -n "$ZSHRUN" ]]
 then
