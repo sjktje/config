@@ -27,7 +27,7 @@ if [[ `uname -s` == "OpenBSD" ]]; then
 	export CVSROOT=anoncvs@anoncvs.se.openbsd.org:/cvs
 fi
 
-alias srsync='rsync -zIPe ssh'
+alias srsync='rsync -zPe ssh'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -38,8 +38,10 @@ if [[ `uname -s` != "OpenBSD" ]]; then
 fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
-alias ukspell='ispell -d british'
-alias svspell='ispell -d svenska'
+alias svspell='aspell -l sv check'
+alias ukspell='aspell -l en check'
+alias svtexspell='aspell -l sv -t check'
+alias uktexspell='aspell -l en -t check'
 
 alias syncsite='rsync -auz --progress --delete-after /Users/sjk/sjksite/* sjksite@82.103.130.62:htdocs/'
 alias rsmirror='rsync --delete-after -arczvv --progress'
