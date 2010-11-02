@@ -47,6 +47,7 @@ alias syncsite='rsync -auz --progress --delete-after /Users/sjk/sjksite/* sjksit
 alias syncrkh='rsync -rauz --progress --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
 #alias rsmirror='rsync --delete-after -arczvv --progress'
 alias rsmirror='rsync --delete-after -arzvv --progress'
+alias syncmusic='rsync -av /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
 
 alias bbackupquery='bbackupquery -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
 alias bbackupctl='bbackupctl -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
