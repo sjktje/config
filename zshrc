@@ -38,6 +38,7 @@ if [[ `uname -s` != "OpenBSD" ]]; then
 fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
+alias cdmob='cd /Volumes/Nokia\ N900'
 alias svspell='aspell -l sv check'
 alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
