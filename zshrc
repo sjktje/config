@@ -45,7 +45,8 @@ alias uktexspell='aspell -l en -t check'
 
 alias syncsite='rsync -auz --progress --delete-after /Users/sjk/sjksite/* sjksite@82.103.130.62:htdocs/'
 alias syncrkh='rsync -rauz --progress --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
-alias rsmirror='rsync --delete-after -arczvv --progress'
+#alias rsmirror='rsync --delete-after -arczvv --progress'
+alias rsmirror='rsync --delete-after -arzvv --progress'
 
 alias bbackupquery='bbackupquery -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
 alias bbackupctl='bbackupctl -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
