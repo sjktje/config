@@ -44,10 +44,10 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
-alias syncsite='rsync -auz --progress --delete-after /Users/sjk/sjksite/* sjksite@82.103.130.62:htdocs/'
-alias syncrkh='rsync -rauz --progress --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
+alias syncsite='rsync -auzP --delete-after /Users/sjk/sjksite/* sjksite@82.103.130.62:htdocs/'
+alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
 #alias rsmirror='rsync --delete-after -arczvv --progress'
-alias rsmirror='rsync --delete-after -arzvv --progress'
+alias rsmirror='rsync --delete-after -azvvP'
 alias syncmusic='rsync -av /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
 
 alias bbackupquery='bbackupquery -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
