@@ -44,7 +44,7 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
-alias syncsite='rsync -auzP --delete-after /Users/sjk/sjksite/* sjksite@82.103.130.62:htdocs/'
+alias syncsite='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.130.62:htdocs/'
 alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
 alias rsmirror='rsync --delete-after -azP'
 alias syncmusic='rsync -av /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
@@ -61,6 +61,9 @@ alias dvdleft='echo $(( ( 4700000000 - $( du -s . | sed "s/[^0-9]//g" ) ) /1024.
 
 alias mkiso='mkisofs -r -o'
 alias burniso='cdrecord -v -eject dev=1,0,0'
+
+# Remove downloads older than 30 days.
+alias rmdl30='find ~/Downloads -mtime +30 -exec rm -rf {} \;'
 
 if [[ `uname -s` == "Darwin" ]]; then
     alias pubkeycp='cat ~/.ssh/id_dsa.pub |pbcopy |echo "Public key copied to clipboard."'
