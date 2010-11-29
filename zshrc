@@ -138,6 +138,9 @@ zstyle ':completion:*' verbose yes
 # Correction
 setopt correctall
 
+# I don't like beeps
+unsetopt beep
+
 # Prompt 
 autoload -U promptinit
 promptinit
