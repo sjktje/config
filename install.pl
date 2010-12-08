@@ -28,9 +28,7 @@ sub install_dotfiles {
 				print "Could not rename $target to $target.old: $!\n";
 				exit(1);
 			}
-		} else {
-			print "I'm past file_exists if.\n";
-		}
+		} 
 
 		if (!symlink($curdir."/".$file, $target)) {
 			print "Could not symlink $file to $target: $!\n";
