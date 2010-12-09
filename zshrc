@@ -46,7 +46,7 @@ alias uktexspell='aspell -l en -t check'
 
 alias syncsite='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.130.62:htdocs/'
 alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
-alias syncrkhstick='rsync -auP --delete-after /Users/sjk/Documents/Skola/RKH /Volumes/SJK\ RKH'
+alias syncrkhstick='rsync -rtvPL --modify-window=2 --delete-after /Users/sjk/Documents/Skola/RKH /Volumes/SJK\ RKH'
 alias rsmirror='rsync --delete-after -azP'
 alias syncmusic='rsync -auv --ignore-existing /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
 
