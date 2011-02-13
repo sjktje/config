@@ -27,6 +27,10 @@ if [[ `uname -s` == "OpenBSD" ]]; then
 	export CVSROOT=anoncvs@anoncvs.se.openbsd.org:/cvs
 fi
 
+if [[ `uname -n` != "krypton.local" && -z "$TMUX" ]]; then
+	tmux attach || tmux new;
+fi
+
 alias srsync='rsync -zPe ssh'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -64,7 +68,7 @@ alias mkiso='mkisofs -r -o'
 alias burniso='cdrecord -v -eject dev=1,0,0'
 
 # Remove downloads older than 30 days.
-alias rmdl30='find ~/Downloads -mtime +30 -exec rm -rf {} \;'
+alias rmdl30='find ~/Downloads -mtime +30 -exec rm -rf "{}" \;'
 
 if [[ `uname -s` == "Darwin" ]]; then
     alias pubkeycp='cat ~/.ssh/id_dsa.pub |pbcopy |echo "Public key copied to clipboard."'
