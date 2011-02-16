@@ -27,7 +27,7 @@ if [[ `uname -s` == "OpenBSD" ]]; then
 	export CVSROOT=anoncvs@anoncvs.se.openbsd.org:/cvs
 fi
 
-if [[ `uname -n` != "krypton.local" && -z "$TMUX" ]]; then
+if [[ `uname -n` != "krypton.local" && -z "$TMUX" && $USER != "root" ]]; then
 	tmux attach || tmux new;
 fi
 
