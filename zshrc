@@ -1,7 +1,7 @@
 export CVS_RSH=ssh
 export EDITOR=vim
 export LC_CTYPE=sv_SE.UTF-8
-export TZ=GMT
+export TZ=CET
 export HISTSIZE=13000
 export SAVEHIST=12000
 export HISTFILE=~/.history
