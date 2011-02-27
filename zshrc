@@ -1,6 +1,7 @@
 export CVS_RSH=ssh
 export EDITOR=vim
 export LC_CTYPE=sv_SE.UTF-8
+export TZ=GMT
 export HISTSIZE=13000
 export SAVEHIST=12000
 export HISTFILE=~/.history
@@ -49,6 +50,7 @@ alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
 alias syncsite='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.130.62:htdocs/'
+alias syncbaksite='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@werther.log2x.nu:htdocs/'
 alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
 alias syncrkhstick='rsync -rtvPL --modify-window=2 --delete-after /Users/sjk/Documents/Skola/RKH /Volumes/SJK\ RKH'
 alias rsmirror='rsync --delete-after -azP'
