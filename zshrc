@@ -54,7 +54,8 @@ alias syncsite1='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.1
 alias syncsite2='rsync -auzP --delete-after /Users/sjk/sjksite/ sjk@shell.slashbox.net:sites/sjk.ankeborg.nu/'
 alias syncsite3='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@werther.log2x.nu:htdocs/'
 
-alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@shell:.'
+alias syncrkh='rsync -auzP --delete-after /Users/sjk/Documents/Skola/RKH sjk@slashbox:.'
+alias syncworkouts='rsync -auzP --delete-after /Users/sjk/Documents/workouts*.numbers sjk@slashbox:.'
 alias syncrkhstick='rsync -rtvPL --modify-window=2 --delete-after /Users/sjk/Documents/Skola/RKH /Volumes/SJK\ RKH'
 alias rsmirror='rsync --delete-after -azP'
 alias syncmusic='rsync -rtvPL /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
@@ -149,6 +150,9 @@ setopt correctall
 
 # I don't like beeps
 unsetopt beep
+
+# Nice fancy globbing
+setopt extendedglob
 
 # Prompt 
 autoload -U promptinit

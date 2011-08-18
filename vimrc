@@ -46,4 +46,3 @@ function! UPDSERIAL(date, num)
 endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\); Serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; Serial'/gc
-
