@@ -51,7 +51,7 @@ alias uktexspell='aspell -l en -t check'
 
 alias syncsite=syncsite2
 alias syncsite1='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.130.62:htdocs/'
-alias syncsite2='rsync -auzP --exclude=.git --delete-after /Users/sjk/sjksite/ sjk@shell.slashbox.net:sites/sjk.ankeborg.nu/'
+alias syncsite2='rsync -auzP --exclude=.git --exclude=config.php --delete-after /Users/sjk/sjksite/ sjk@shell.slashbox.net:sites/sjk.ankeborg.nu/'
 alias syncsite3='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@werther.log2x.nu:htdocs/'
 
 alias syncbth='rsync -auzP --delete-after --exclude=.git /Users/sjk/bth/ svkv11@ssh.student.bth.se:www/'
@@ -102,6 +102,24 @@ function fd() { find . -type d -iname '*'$*'*' -ls; }
 function bytetombit() { echo $(( $1/1024.0**2*8 )) }
 function mbittobyte() { echo $(( $1*1024.0**2/8 )) }
 function texpdf() { pdflatex ${1}.tex && open ${1}.pdf } 
+
+function newgitrepo() {
+	if [ -d $1 ]; then
+		echo "Repo $1 does already exist."
+		return
+	fi
+
+	mkdir /pub/git/${1}
+	pushd
+	cd /pub/git/${1}
+	git init --bare
+	mv hooks/post-update.sample hooks/post-update
+	chmod +x hooks/post-update
+	vim description
+	popd
+}
+
+
 
 
 #function title {

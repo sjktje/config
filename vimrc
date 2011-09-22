@@ -22,6 +22,7 @@ set foldmethod=marker	" Fold stuff within {{{ and }}}
 set showmatch			" show matching brackets
 set mat=5				" how many tenths of a second to blink matching brackets for
 set pastetoggle=<F2>
+set grepprg=grep\ -nH\ $* " Required by Latex-Suite
 syntax enable			" syntax hilighting is nice
 colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 
@@ -46,3 +47,5 @@ function! UPDSERIAL(date, num)
 endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\); Serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; Serial'/gc
+
+let g:tex_flavor='latex'
