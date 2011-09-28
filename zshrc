@@ -5,7 +5,7 @@ export TZ=CET
 export HISTSIZE=13000
 export SAVEHIST=12000
 export HISTFILE=~/.history
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin:$HOME/bin:/usr/local/texlive/2009basic/bin/universal-darwin
+export PATH=$PATH:/opt/local/bin:/opt/local/sbin:$HOME/bin
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
