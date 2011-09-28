@@ -166,7 +166,11 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' verbose yes
 
 # Correction
-setopt correctall
+# 21:22.38 < sjk> setopt correctall is evil
+# 21:23.13 < ft> Yes. Yes, it is.
+# 21:25.52 < sjk> Should one replace setopt correctall with something else, or should one just remove it?
+# 21:26.06 < ft> Get rid of it.
+#setopt correctall
 
 # I don't like beeps
 unsetopt beep
