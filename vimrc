@@ -23,6 +23,7 @@ set showmatch			" show matching brackets
 set mat=5				" how many tenths of a second to blink matching brackets for
 set pastetoggle=<F2>
 set grepprg=grep\ -nH\ $* " Required by Latex-Suite
+set textwidth=80		" I like 80 char long rows.
 syntax enable			" syntax hilighting is nice
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 colo desert				" And desert is too.
