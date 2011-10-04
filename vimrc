@@ -49,5 +49,6 @@ function! UPDSERIAL(date, num)
 endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\); Serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; Serial'/gc
+command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
 
 let g:tex_flavor='latex'
