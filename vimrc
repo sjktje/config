@@ -54,3 +54,5 @@ command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä
 
 let g:tex_flavor='latex'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
+
+nnoremap <leader>l :ls<CR>:b<space>
