@@ -53,3 +53,4 @@ command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\); Serial/\=UPDSERIAL(submatch(1), sub
 command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
 
 let g:tex_flavor='latex'
+let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
