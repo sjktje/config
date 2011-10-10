@@ -172,11 +172,8 @@ zstyle ':completion:*' verbose yes
 # 21:26.06 < ft> Get rid of it.
 #setopt correctall
 
-# I don't like beeps
-unsetopt beep
-
-# Nice fancy globbing
-setopt extendedglob
+unsetopt beep			# I don't like beeps
+setopt extendedglob		# Nice fancy globbing
 
 # Prompt 
 autoload -U promptinit
