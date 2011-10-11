@@ -28,9 +28,11 @@ if [[ `uname -s` == "OpenBSD" ]]; then
 	export CVSROOT=anoncvs@anoncvs.se.openbsd.org:/cvs
 fi
 
-if [[ `uname -n` != "krypton.local" && -z "$TMUX" && $USER != "root" ]]; then
-	tmux attach || tmux new;
-fi
+# I am not completely happy with the following block. Might enable it
+# again later. 
+#if [[ `uname -n` != "krypton.local" && -z "$TMUX" && $USER != "root" ]]; then
+#	tmux attach || tmux new;
+#fi
 
 alias srsync='rsync -zPe ssh'
 alias ..='cd ..'
