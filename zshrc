@@ -104,6 +104,16 @@ function fd() { find . -type d -iname '*'$*'*' -ls; }
 function bytetombit() { echo $(( $1/1024.0**2*8 )) }
 function mbittobyte() { echo $(( $1*1024.0**2/8 )) }
 function texpdf() { pdflatex ${1}.tex && open ${1}.pdf } 
+function 6p() { 
+	ret=$(curl -s -F "content=<${1--}" -F ttl=604800 -w "%{redirect_url}\n" -o /dev/null https://p.6core.net/;)
+
+	if [[ `uname -s` == "Darwin" ]]; then
+		echo $ret |pbcopy
+		echo "Copied url (${ret}) to clipboard."
+	else 
+		echo "${ret}"
+	fi
+}
 
 function newgitrepo() {
 	if [ -d $1 ]; then
