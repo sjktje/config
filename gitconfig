@@ -2,7 +2,7 @@
 	name = Svante Kvarnstrom
 	email = sjk@ankeborg.nu
 [alias]
-	ci = commit -a
+	ci = commit
 	co = checkout
 	st = status -a
     pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
