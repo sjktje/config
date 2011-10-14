@@ -49,7 +49,7 @@ function! UPDSERIAL(date, num)
 	return strftime("%Y%m%d") . '01'
 endfunction
 
-command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; Serial'/gc
+command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; serial'/gc
 command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
 
 let g:tex_flavor='latex'
