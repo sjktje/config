@@ -104,6 +104,7 @@ function fd() { find . -type d -iname '*'$*'*' -ls; }
 function bytetombit() { echo $(( $1/1024.0**2*8 )) }
 function mbittobyte() { echo $(( $1*1024.0**2/8 )) }
 function texpdf() { pdflatex ${1}.tex && open ${1}.pdf } 
+function cl() { cd ${1} && ls }
 function 6p() { 
 	ret=$(curl -s -F "content=<${1--}" -F ttl=604800 -w "%{redirect_url}\n" -o /dev/null https://p.6core.net/;)
 
