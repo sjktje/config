@@ -86,7 +86,7 @@ if [[ `uname -s` == "Darwin" ]]; then
 	alias hibernateoff='sudo pmset -a hibernatemode 0'
 fi
 
-alias -s {avi,flv,mpg,mpeg,wmv,mp4}=/Applications/VLC.app/Contents/MacOS/VLC
+alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
 alias -s pdf=open
