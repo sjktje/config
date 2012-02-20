@@ -8,7 +8,7 @@ set expandtab			" I don't like tabs anymore.
 "set smarttab			" Use tabs at the start of a line, spaces elsewhere
 set shiftwidth=4
 set softtabstop=4
-set tabstop=4			" Compatible tab settings
+set tabstop=8
 set history=50
 set ai
 set bs=2
