@@ -12,8 +12,8 @@ set tabstop=8
 set history=50
 set ai
 set bs=2
-set ruler				" ruler enables the line count etc thing at the bottom of the window.
-set nowrap				" Don't wrap text at window width
+set ruler			" ruler enables the line count etc thing at the bottom of the window.
+set nowrap			" Don't wrap text at window width
 set nohlsearch			" Don't make search results red
 set incsearch			" But do hilight as you type search phrase
 set noerrorbells		" don't make noise
