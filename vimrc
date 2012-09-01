@@ -18,18 +18,23 @@ set nohlsearch			" Don't make search results red
 set incsearch			" But do hilight as you type search phrase
 set noerrorbells		" don't make noise
 set foldenable			" Enable {{{ folding }}}
-set foldmethod=marker	" Fold stuff within {{{ and }}}
+set foldmethod=marker	        " Fold stuff within {{{ and }}}
 set showmatch			" show matching brackets
-set mat=5				" how many tenths of a second to blink matching brackets for
+set mat=5			" how many tenths of a second to blink matching brackets for
 set pastetoggle=<F2>
-set grepprg=grep\ -nH\ $* " Required by Latex-Suite
-set textwidth=80		" I like 80 char long rows.
-set ignorecase          " Make ctrl-n (and others) ignore case.
-"set number				" Show line numbers
+set grepprg=grep\ -nH\ $*       " Required by Latex-Suite
+set textwidth=78		" I like 80 char long rows.
+set ignorecase                  " Make ctrl-n (and others) ignore case.
+set infercase                   " Make 'Compl' complete to 'Complete' instead of 'complete'.
+set dictionary=/Users/sjk/Documents/Wordlists/ssk.txt
+set complete=.,k,w,b,u,t,i      "Including 'k' looks for completions in our wordlist(s)
+set title                       " update the terminal's title
+
+"set number			" Show line numbers
 syntax enable			" syntax hilighting is nice
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
-colo desert				" And desert is too.
-
+"colo desert			" And desert is too.
+colo slate                      " why not try slate for a while?
 map <A-i> i <ESC>r " alt-i (normal mode) inserts a single char, and then switches back to normal
 
 highlight Folded guibg=Black guifg=blue
@@ -54,9 +59,25 @@ command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1)
 command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
 
 let g:tex_flavor='latex'
+let g:Tex_CompileRule='pdflatex --interaction=nonstopmode $*'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader="\\"			
 
 nnoremap <leader>l :ls<CR>:b<space>
+
+"Use TAB for completing words.
+function! Tab_Or_Complete()
+    if col('.')>1 && strpart(getline('.'), col('.')-2, 3) =~ '^\w'
+        return "\<C-N>"
+    else 
+        return "\<Tab>"
+    endif
+endfunction
+
+:inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
+
+source $VIMHOME/abbreviations.vim        " Common abbreviations.
+source $VIMHOME/autocorrect.vim          " Common misspellings
+
 " Try to find a template for our new file.
 autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
