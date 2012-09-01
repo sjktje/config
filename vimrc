@@ -58,3 +58,5 @@ let html_use_css = 1            " the ':%TOhtml' command generates html without 
 let mapleader="\\"			
 
 nnoremap <leader>l :ls<CR>:b<space>
+" Try to find a template for our new file.
+autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
