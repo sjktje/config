@@ -2,8 +2,8 @@
 set nocompatible		" I don't like vi
 set history=50			" Keep 50 lines of command line history.
 set ts=4
-set si					" Smart indent
-set cindent				" Do c-style indenting
+set si				" Smart indent
+set cindent			" Do c-style indenting
 set expandtab			" I don't like tabs anymore.
 "set smarttab			" Use tabs at the start of a line, spaces elsewhere
 set shiftwidth=4
