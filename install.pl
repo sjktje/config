@@ -12,6 +12,7 @@ my @dotfiles = (
 	'gitconfig', 
 	'screenrc',	
 	'tmux.conf',
+        'vim',
 );
 
 my $curdir = getcwd();
