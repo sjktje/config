@@ -87,6 +87,11 @@ if [[ `uname -s` == "Darwin" ]]; then
 	alias hibernateoff='sudo pmset -a hibernatemode 0'
 fi
 
+alias latmk='pdflatex main && pdflatex main && pdflatex main && open main.pdf'
+alias latbibmk='pdflatex main && bibtex main && pdflatex main && pdflatex main && open main.pdf'
+alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
+
+alias t='todo.sh -t' 
 alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
@@ -97,6 +102,7 @@ alias -s bz2="bunzip2"
 alias -s tgz="tar zxvf"
 alias -s tbz2="tar jxvf"
 alias -s zip="unzip"
+
 
 
 function ff() { find . -type f -iname '*'$*'*' -ls; }
