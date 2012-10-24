@@ -29,6 +29,7 @@ set infercase                   " Make 'Compl' complete to 'Complete' instead of
 set dictionary=/Users/sjk/Documents/Wordlists/ssk.txt
 set complete=.,k,w,b,u,t,i      "Including 'k' looks for completions in our wordlist(s)
 set title                       " update the terminal's title
+set scrolloff=4                 " keep four lines above cursor when scrolling
 
 "set number			" Show line numbers
 syntax enable			" syntax hilighting is nice
