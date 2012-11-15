@@ -65,7 +65,7 @@ let html_use_css = 1            " the ':%TOhtml' command generates html without 
 let mapleader="\\"
 
 nnoremap <leader>l :ls<CR>:b<space>
-inoremap ht <esc>                " Pressing 'ht' in insert mode takes you to normal mode
+inoremap hh <esc>                " Pressing 'hh' in insert mode takes you to normal mode
 
 "Use TAB for completing words.
 function! Tab_Or_Complete()
