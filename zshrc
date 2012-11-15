@@ -23,11 +23,38 @@ else
   fc -R ~/.history
 fi
 
-
 if [[ `uname -s` == "OpenBSD" ]]; then
 	export PKG_PATH="ftp://ftp.su.se/pub/OpenBSD/`uname -r`/packages/`uname -m`/"
 	export CVSROOT=anoncvs@anoncvs.se.openbsd.org:/cvs
 fi
+
+# Colours
+autoload -U colors
+colors
+
+# Git {{{
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[red]%}‹"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[red]%}›%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}%{$fg[yellow]%}∗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_ADDED="%{$reset_color%}%{$fg[green]%}✓%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# get the name of the branch we are on
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
+# Checks if working tree is dirty
+parse_git_dirty() {
+  if [[ -n $(git status -s --ignore-submodules=dirty 2> /dev/null) ]]; then
+    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
+  fi
+}
+
+# }}}
 
 # I am not completely happy with the following block. Might enable it
 # again later. 
@@ -198,10 +225,11 @@ zstyle ':completion:*' verbose yes
 unsetopt beep			# I don't like beeps
 setopt extendedglob		# Nice fancy globbing
 
-# Prompt 
+# Prompt
 autoload -U promptinit
 promptinit
 prompt elite2
+PROMPT='%{$fg[green]%}%2~ $(git_prompt_info)%{$reset_color%}%(?:%{$fg[blue]%}:$fg[red])%(!.#.%%) %{$reset_color%}'
 
 autoload -U zsh/stat
 
