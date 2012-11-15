@@ -62,7 +62,7 @@ command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä
 let g:tex_flavor='latex'
 let g:Tex_CompileRule='pdflatex --interaction=nonstopmode $*'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
-let mapleader="\\"			
+let mapleader="\\"
 
 nnoremap <leader>l :ls<CR>:b<space>
 
@@ -70,7 +70,7 @@ nnoremap <leader>l :ls<CR>:b<space>
 function! Tab_Or_Complete()
     if col('.')>1 && strpart(getline('.'), col('.')-2, 3) =~ '^\w'
         return "\<C-N>"
-    else 
+    else
         return "\<Tab>"
     endif
 endfunction
