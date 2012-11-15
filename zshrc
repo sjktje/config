@@ -57,7 +57,7 @@ parse_git_dirty() {
 # }}}
 
 # I am not completely happy with the following block. Might enable it
-# again later. 
+# again later.
 #if [[ `uname -n` != "krypton.local" && -z "$TMUX" && $USER != "root" ]]; then
 #	tmux attach || tmux new;
 #fi
@@ -121,7 +121,7 @@ alias latmk='pdflatex main && pdflatex main && pdflatex main && open main.pdf'
 alias latbibmk='pdflatex main && bibtex main && pdflatex main && pdflatex main && open main.pdf'
 alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
 
-alias t='todo.sh -t' 
+alias t='todo.sh -t'
 alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
@@ -140,15 +140,15 @@ function fe() { find . -type f -iname '*'$1'*' -exec "${2:-file}" {} \; ; }
 function fd() { find . -type d -iname '*'$*'*' -ls; }
 function bytetombit() { echo $(( $1/1024.0**2*8 )) }
 function mbittobyte() { echo $(( $1*1024.0**2/8 )) }
-function texpdf() { pdflatex ${1}.tex && open ${1}.pdf } 
+function texpdf() { pdflatex ${1}.tex && open ${1}.pdf }
 function cl() { cd ${1} && ls }
-function 6p() { 
+function 6p() {
 	ret=$(curl -s -F "content=<${1--}" -F ttl=604800 -w "%{redirect_url}\n" -o /dev/null https://p.6core.net/;)
 
 	if [[ `uname -s` == "Darwin" ]]; then
 		echo $ret |pbcopy
 		echo "Copied url (${ret}) to clipboard."
-	else 
+	else
 		echo "${ret}"
 	fi
 }
@@ -183,11 +183,11 @@ function newgitrepo() {
 #    print -nR $'\033]0;'$*$'\a'
 #  fi
 #}
-#  
+#
 #function precmd {
 #  title zsh "$PWD"
 #}
-#  
+#
 #function preexec {
 #  emulate -L zsh
 #  local -a cmd; cmd=(${(z)1})
