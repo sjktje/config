@@ -87,6 +87,9 @@ if [[ `uname -s` == "Darwin" ]]; then
 	alias hibernateoff='sudo pmset -a hibernatemode 0'
 fi
 
+# Using another output directory causes problems with bibtex. Will use this
+# again when I have figured out how to make bibtex use the same directory.
+#alias pdflatex='mkdir -p tmp; pdflatex -output-directory tmp'
 alias latmk='pdflatex main && pdflatex main && pdflatex main && open main.pdf'
 alias latbibmk='pdflatex main && bibtex main && pdflatex main && pdflatex main && open main.pdf'
 alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
