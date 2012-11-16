@@ -35,7 +35,7 @@ def create_symlink(src, dest):
         os.unlink(dest)
 
     os.symlink(src, dest)
-    print "Symlink: %s -> %s" % (src, dest)
+    print "symlink: %s -> %s" % (src, dest)
 
 def main():
     home = os.environ['HOME']
@@ -54,6 +54,7 @@ def main():
 
     # Install binaries
     if not os.path.exists(home_bin):
+        print 'mkdir: %s' % home_bin
         os.makedirs(home_bin)
 
     os.chdir(config_bin)
