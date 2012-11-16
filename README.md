@@ -9,3 +9,9 @@ To install clone the project and run the install script:
     git clone http://github.com/sjktje/config
     cd config
     ./install
+
+To update:
+
+    cd ~/config
+    ./install -u
+
