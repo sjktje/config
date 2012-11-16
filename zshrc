@@ -135,6 +135,7 @@ alias -s zip="unzip"
 
 
 
+function dk() { cd ~/Documents/Skola/RKH/DK${1} }
 function ff() { find . -type f -iname '*'$*'*' -ls; }
 function fe() { find . -type f -iname '*'$1'*' -exec "${2:-file}" {} \; ; }
 function fd() { find . -type d -iname '*'$*'*' -ls; }
