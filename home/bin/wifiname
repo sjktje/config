@@ -1,0 +1,2 @@
+#!/bin/sh
+airport -I |awk '/^[[:blank:]]+SSID: / {print $2}'
