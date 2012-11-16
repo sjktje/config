@@ -25,6 +25,8 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import os
+import argparse
+import subprocess
 
 class colours:
     BOLD = "\033[1m"
@@ -74,7 +76,17 @@ def main():
     config_home = os.path.join(config_dir, 'home')
     config_bin = os.path.join(config_home, 'bin')
 
+    parser = argparse.ArgumentParser(description='Install sjk dotfiles')
+    parser.add_argument('-u', '--update', action='store_true',
+            help='pull config updates from github')
+    args = parser.parse_args()
+
     os.chdir(config_home)
+
+    if args.update:
+        if 'Already up-to-date.' in subprocess.check_output(['git', 'pull']):
+            print_ok('Already got the latest timey-wimey, wobbly-bobbly config.')
+            return
 
     # Install .dotfiles
     print_header('Installing home directory dotfiles')
