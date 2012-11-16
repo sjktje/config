@@ -26,16 +26,46 @@
 
 import os
 
+class colours:
+    BOLD = "\033[1m"
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+
+    def disable(self):
+        self.BOLD = ''
+        self.HEADER = ''
+        self.OKBLUE = ''
+        self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
+        self.ENDC = ''
+
+def print_header(str):
+    line = '-' * len(str)
+    print line
+    print colours.HEADER + colours.BOLD + str + colours.ENDC
+    print line
+
+def print_warning(str):
+    print colours.WARNING + str + colours.ENDC
+
+def print_ok(str):
+    print colours.OKGREEN + str + colours.ENDC
+
 def create_symlink(src, dest):
     if os.path.isfile(dest) and not os.path.islink(dest):
-        print "Will not symlink %s -> %s: file exists" % (src, dest)
+        print_warning("Will not symlink %s -> %s: file exists" % (src, dest))
         return
 
     if os.path.islink(dest):
         os.unlink(dest)
 
     os.symlink(src, dest)
-    print "symlink: %s -> %s" % (src, dest)
+    print_ok("symlink: %s -> %s" % (src, dest))
 
 def main():
     home = os.environ['HOME']
@@ -47,14 +77,16 @@ def main():
     os.chdir(config_home)
 
     # Install .dotfiles
+    print_header('Installing home directory dotfiles')
     for src in os.listdir(config_home):
         if src in 'bin':
             continue
         create_symlink(os.path.abspath(src), os.path.join(home, '.' + src))
 
     # Install binaries
+    print_header('Installing home directory binaries')
     if not os.path.exists(home_bin):
-        print 'mkdir: %s' % home_bin
+        print_ok('mkdir: %s' % home_bin)
         os.makedirs(home_bin)
 
     os.chdir(config_bin)
