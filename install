@@ -69,6 +69,13 @@ def create_symlink(src, dest):
     os.symlink(src, dest)
     print_ok("symlink: %s -> %s" % (src, dest))
 
+def which(file):
+    for path in os.environ['PATH'].split(':'):
+        if os.path.exists(os.path.join(path, file)):
+            return os.path.join(path, file)
+
+    return None
+
 def main():
     home = os.environ['HOME']
     home_bin = os.path.join(home, 'bin')
@@ -105,6 +112,14 @@ def main():
 
     for src in os.listdir(config_bin):
         create_symlink(os.path.abspath(src), os.path.join(home_bin, src))
+
+    # Check if zsh is available and if we are running it
+    if 'zsh' not in os.path.basename(os.environ['SHELL']):
+        print_warning('You are not currently using zsh.')
+        zsh_bin = which('zsh')
+        if zsh_bin is not None:
+            print_ok('Zsh is in your path. Making it your default shell now...')
+            subprocess.call(['chsh', '-s', zsh_bin], stdin=subprocess.PIPE)
 
 main()
 
