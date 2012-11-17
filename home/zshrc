@@ -105,6 +105,11 @@ alias dvdleft='echo $(( ( 4700000000 - $( du -s . | sed "s/[^0-9]//g" ) ) /1024.
 alias mkiso='mkisofs -r -o'
 alias burniso='cdrecord -v -eject dev=1,0,0'
 
+# Make the Terminal icon bounce. Sometimes useful, like:
+# execute_timey_wimey_command && termbounce
+# Then minimize terminal and it'll bounce when done.
+alias termbounce='tput bel'
+
 # Remove downloads older than 30 days.
 alias rmdl30='find ~/Downloads -mtime +30 -exec rm -rf "{}" \;'
 
