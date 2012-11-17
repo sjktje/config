@@ -1,0 +1,10 @@
+#!/bin/sh
+
+SITE_HOME=${HOME}/code/blog
+TARGET=slashbox:sites/sjk-beta.ankeborg.nu
+
+echo "Generating website"
+cd $SITE_HOME
+jekyll
+echo "Updating website"
+rsync -avz --delete _site/ $TARGET
