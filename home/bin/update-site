@@ -5,6 +5,6 @@ TARGET=slashbox:sites/sjk-beta.ankeborg.nu
 
 echo "Generating website"
 cd $SITE_HOME
-jekyll
+jekyll --no-server --no-auto
 echo "Updating website"
 rsync -avz --delete _site/ $TARGET
