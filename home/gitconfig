@@ -13,7 +13,7 @@
         whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
         dic = diff --cached
         sync = "!f() { echo Syncing branch with master && git checkout master && git pull && git checkout - && git rebase master; }; f"
-
+        hist = "log --graph --color=always --pretty='[%C(cyan)%h %ar%Creset]%C(bold cyan)%d%Creset %s' --all"
 [apply]
 	whitespace = strip
 [color]
