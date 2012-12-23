@@ -14,6 +14,7 @@
         dic = diff --cached
         sync = "!f() { echo Syncing branch with master && git checkout master && git pull && git checkout - && git rebase master; }; f"
         hist = "log --graph --color=always --pretty='[%C(cyan)%h %ar%Creset]%C(bold cyan)%d%Creset %s' --all"
+        cbr = "!sh -c 'git-cbr'"
 [apply]
 	whitespace = strip
 [color]
