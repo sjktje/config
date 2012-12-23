@@ -1,0 +1,7 @@
+#!/bin/sh
+# List branches that have been fully merged.
+# See http://www.darkcoding.net/software/cleaning-up-old-git-branches/
+
+for k in $(git branch -a --merged|grep -v "\->"|sed s/^..//); do
+    echo $(git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" "$k")\\t"$k";
+done |sort 
