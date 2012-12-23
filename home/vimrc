@@ -58,6 +58,7 @@ endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; serial'/gc
 command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
+command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g
 
 let g:tex_flavor='latex'
 let g:Tex_CompileRule='pdflatex --interaction=nonstopmode $*'
