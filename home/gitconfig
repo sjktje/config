@@ -15,7 +15,7 @@
         sync = "!f() { echo Syncing branch with master && git checkout master && git pull && git checkout - && git rebase master; }; f"
         hist = "log --graph --color=always --pretty='[%C(cyan)%h %ar%Creset]%C(bold cyan)%d%Creset %s' --all"
         cbr = "!sh -c 'git-cbr'"
-        kbr = "!sh -c 'git branch -d $1"
+        kbr = "!sh -c 'git branch -d $1' -"
         kbrr = "!sh -c 'git branch -d $1 && git push origin :$1' -"
         killmergedr = !sh -c 'git checkout $1 && git branch --merged | grep -v $1 | xargs -I "{}" git kbrr "{}"' -
         killmerged = !sh -c 'git checkout $1 && git branch --merged | grep -v $1 | xargs -I "{}" git kbr "{}"' -
