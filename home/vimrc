@@ -84,6 +84,15 @@ endfunction
 
 :inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
 
+" Enter 'Word processor mode' by hitting :WP
+" See http://www.drbunsen.org/writing-in-vim.html for mor information.
+function! WordProcessorMode()
+    set formatprg=par
+    setlocal wrap
+    setlocal linebreak
+endfunction
+com! WP cal WordProcessorMode()
+
 source $VIMHOME/abbreviations.vim        " Common abbreviations.
 source $VIMHOME/autocorrect.vim          " Common misspellings
 
