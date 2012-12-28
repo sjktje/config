@@ -59,6 +59,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" :w!! writes file using sudo
+cmap w!! w !sudo tee % >/dev/null
+
 "autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
 filetype plugin on
 
