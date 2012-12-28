@@ -90,6 +90,9 @@ function! WordProcessorMode()
     set formatprg=par
     setlocal wrap
     setlocal linebreak
+    colo iawriter
+    set background=light
+    set fuoptions=background:#00f5f6f6
 endfunction
 com! WP cal WordProcessorMode()
 
