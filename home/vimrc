@@ -53,6 +53,12 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 vmap Q gq
 nmap Q gqap
 
+" Switch windows easily
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 "autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
 filetype plugin on
 
