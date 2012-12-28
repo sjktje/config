@@ -35,7 +35,9 @@ set scrolloff=4                 " keep four lines above cursor when scrolling
 syntax enable			" syntax hilighting is nice
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 "colo desert			" And desert is too.
-colo slate                      " why not try slate for a while?
+"colo slate                     " why not try slate for a while?
+colo mustang
+
 map <A-i> i <ESC>r " alt-i (normal mode) inserts a single char, and then switches back to normal
 
 highlight Folded guibg=Black guifg=blue
