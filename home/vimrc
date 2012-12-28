@@ -43,6 +43,10 @@ highlight FoldColumn guibg=darkgrey guifg=white
 
 "nmap = o<Esc>			" Press = to insert an empty line without going into insert mode
 
+" ,ev and ,sv edits and reloads vimrc
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
 "autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
 filetype plugin on
 
