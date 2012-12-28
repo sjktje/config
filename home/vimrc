@@ -31,7 +31,7 @@ set complete=.,k,w,b,u,t,i      "Including 'k' looks for completions in our word
 set title                       " update the terminal's title
 set scrolloff=4                 " keep four lines above cursor when scrolling
 
-"set number			" Show line numbers
+set number			" Show line numbers
 syntax enable			" syntax hilighting is nice
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 "colo desert			" And desert is too.
