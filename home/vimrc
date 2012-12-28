@@ -63,7 +63,7 @@ command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g
 let g:tex_flavor='latex'
 let g:Tex_CompileRule='pdflatex --interaction=nonstopmode $*'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
-let mapleader="\\"
+let mapleader=","
 
 nnoremap <leader>l :ls<CR>:b<space>
 
