@@ -49,6 +49,10 @@ highlight FoldColumn guibg=darkgrey guifg=white
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Reformat current paragraph (or selected text) with Q
+vmap Q gq
+nmap Q gqap
+
 "autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
 filetype plugin on
 
