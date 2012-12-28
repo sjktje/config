@@ -86,3 +86,5 @@ autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 
 " I use two character shift width when editing html
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+call pathogen#infect()
