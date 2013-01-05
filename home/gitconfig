@@ -12,7 +12,6 @@
         whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
         whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
         dic = diff --cached
-        sync = "!f() { echo Syncing branch with master && git checkout master && git pull && git checkout - && git rebase master; }; f"
         hist = "log --graph --color=always --pretty='[%C(cyan)%h %ar%Creset]%C(bold cyan)%d%Creset %s' --all"
         cbr = "!sh -c 'git-cbr'"
         kbr = "!sh -c 'git branch -d $1' -"
