@@ -31,6 +31,7 @@ set complete=.,k,w,b,u,t,i      "Including 'k' looks for completions in our word
 set title                       " update the terminal's title
 set scrolloff=4                 " keep four lines above cursor when scrolling
 set clipboard=unnamed           " Yank to OS X's clipboard
+set nojoinspaces                " I don't want double spaces after periods when joining lines
 
 set number			" Show line numbers
 syntax enable			" syntax hilighting is nice
