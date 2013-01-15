@@ -6,6 +6,7 @@
 	co = checkout
 	st = status
         br = branch
+        ri = rebase --interactive
         pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
         lc = log ORIG_HEAD.. --stat --no-merges
         lo = log --oneline
