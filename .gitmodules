@@ -25,3 +25,6 @@
 [submodule "home/vim/bundle/abolish"]
 	path = home/vim/bundle/abolish
 	url = git://github.com/tpope/vim-abolish.git
+[submodule "home/vim/bundle/splitjoin"]
+	path = home/vim/bundle/splitjoin
+	url = git://github.com/AndrewRadev/splitjoin.vim.git
