@@ -22,3 +22,6 @@
 [submodule "home/vim/bundle/repeat"]
 	path = home/vim/bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
+[submodule "home/vim/bundle/abolish"]
+	path = home/vim/bundle/abolish
+	url = git://github.com/tpope/vim-abolish.git
