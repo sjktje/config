@@ -90,8 +90,6 @@ def main():
             help='set up symlinks etc even though there were no updates to repository')
     args = parser.parse_args()
 
-    os.chdir(config_home)
-
     if args.update:
         if 'Already up-to-date.' in subprocess.check_output(['git', 'pull']):
             print_ok('Already got the latest timey-wimey, wobbly-bobbly config.')
@@ -99,8 +97,11 @@ def main():
                 return
 
     # Install submodules
+    print_header('Installing submodules')
     subprocess.call(['git', 'submodule', 'init'])
     subprocess.call(['git', 'submodule', 'update'])
+
+    os.chdir(config_home)
 
     # Install .dotfiles
     print_header('Installing home directory dotfiles')
