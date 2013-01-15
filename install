@@ -95,6 +95,10 @@ def main():
             print_ok('Already got the latest timey-wimey, wobbly-bobbly config.')
             return
 
+    # Install submodules
+    subprocess.call(['git', 'submodule', 'init'])
+    subprocess.call(['git', 'submodule', 'update'])
+
     # Install .dotfiles
     print_header('Installing home directory dotfiles')
     for src in os.listdir(config_home):
