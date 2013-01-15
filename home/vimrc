@@ -82,6 +82,7 @@ command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä
 command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g
 
 let g:tex_flavor='latex'
+let g:jekyll_path='/Users/sjk/Code/blog'
 let g:Tex_CompileRule='pdflatex --interaction=nonstopmode $*'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
