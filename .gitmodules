@@ -7,3 +7,6 @@
 [submodule "home/vim/bundle/jekyll"]
 	path = home/vim/bundle/jekyll
 	url = git://github.com/csexton/jekyll.vim.git
+[submodule "home/vim/bundle/surround"]
+	path = home/vim/bundle/surround
+	url = git://github.com/tpope/vim-surround.git
