@@ -1,4 +1,6 @@
 " sjks .vimrc
+runtime bundle/pathogen/autoload/pathogen.vim
+
 set nocompatible		" I don't like vi
 set history=50			" Keep 50 lines of command line history.
 set ts=4
