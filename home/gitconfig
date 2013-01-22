@@ -34,3 +34,5 @@
 	excludesfile = ~/.gitignore_global
 [merge]
         summary = true
+[github]
+	user = sjktje
