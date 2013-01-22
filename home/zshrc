@@ -107,6 +107,7 @@ alias burniso='cdrecord -v -eject dev=1,0,0'
 
 alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
+alias stfu='osascript -e "set volume output muted true"'
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
