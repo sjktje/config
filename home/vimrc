@@ -91,20 +91,21 @@ let g:jekyll_path='/Users/sjk/Code/blog'
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+let g:snips_author='Svante Kvarnström'
 "}}}
 
 nnoremap <leader>l :ls<CR>:b<space>
 
 "Use TAB for completing words.
-function! Tab_Or_Complete()
-    if col('.')>1 && strpart(getline('.'), col('.')-2, 3) =~ '^\w'
-        return "\<C-N>"
-    else
-        return "\<Tab>"
-    endif
-endfunction
-
-:inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
+"function! Tab_Or_Complete()
+"    if col('.')>1 && strpart(getline('.'), col('.')-2, 3) =~ '^\w'
+"        return "\<C-N>"
+"    else
+"        return "\<Tab>"
+"    endif
+"endfunction
+"
+":inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
 
 " Enter 'Word processor mode' by hitting :WP
 " See http://www.drbunsen.org/writing-in-vim.html for mor information.
