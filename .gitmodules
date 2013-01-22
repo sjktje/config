@@ -40,3 +40,6 @@
 [submodule "home/vim/bundle/tabular"]
 	path = home/vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "home/vim/bundle/gist"]
+	path = home/vim/bundle/gist
+	url = git://github.com/mattn/gist-vim.git
