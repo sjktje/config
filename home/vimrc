@@ -99,6 +99,7 @@ let html_use_css = 1            " the ':%TOhtml' command generates html without 
 let mapleader=","
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:snips_author='Svante Kvarnström'
+let g:gist_clip_command = 'pbcopy'
 "}}}
 
 nnoremap <leader>l :ls<CR>:b<space>
