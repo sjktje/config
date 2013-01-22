@@ -105,6 +105,8 @@ alias dvdleft='echo $(( ( 4700000000 - $( du -s . | sed "s/[^0-9]//g" ) ) /1024.
 alias mkiso='mkisofs -r -o'
 alias burniso='cdrecord -v -eject dev=1,0,0'
 
+alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
@@ -125,6 +127,8 @@ fi
 alias latmk='pdflatex main && pdflatex main && pdflatex main && open main.pdf'
 alias latbibmk='pdflatex main && bibtex main && pdflatex main && pdflatex main && open main.pdf'
 alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
+
+
 
 alias t='todo.sh -t'
 alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov}=/Applications/VLC.app/Contents/MacOS/VLC
