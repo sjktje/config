@@ -140,5 +140,6 @@ let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:snips_author='Svante Kvarnström'
 let g:gist_clip_command = 'pbcopy'
 "}}}
-
-source $VIMHOME/autocorrect.vim          " Common misspellings
+" Source external files {{{1
+    "source $VIMHOME/autocorrect.vim          " Common misspellings
+"1}}}

@@ -2,6 +2,7 @@ if !exists(":Abolish")
     finish
 endif
 
+" Swedish
 Abolish ommun{,er}                              kommun{}
 Abolish arbetsmilö{,n,er,erna}                  arbetsmiljö{}
 Abolish någto                                   något
