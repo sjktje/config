@@ -1,5 +1,0 @@
-" Engelska
-:iabbr teh the
-
-
-

@@ -141,5 +141,4 @@ let g:snips_author='Svante Kvarnström'
 let g:gist_clip_command = 'pbcopy'
 "}}}
 
-source $VIMHOME/abbreviations.vim        " Common abbreviations.
 source $VIMHOME/autocorrect.vim          " Common misspellings
