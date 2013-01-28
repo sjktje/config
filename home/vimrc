@@ -77,6 +77,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nnoremap <leader>es :vsplit ~/.ssh/config<cr>
 nnoremap <leader>ez :vsplit ~/config/home/zshrc<cr>
 " 2}}}
+" Sane search regexps
+nnoremap / /\v
+vnoremap / /\v
 
 " Reformat current paragraph (or selected text) with Q
 vmap Q gq
