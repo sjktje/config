@@ -50,6 +50,7 @@ set statusline+=\ %f\ %m\ %r                    " Show filename/path
 set statusline+=%=                              " Set right-side status info after this line
 set statusline+=%l/%L:%v                        " Set <line number>/<total lines>:<column>
 set statusline+=\                               " Set ending space
+set shortmess+=I                " Disable vim welcome screen
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
 syntax enable			" syntax hilighting is nice
