@@ -88,6 +88,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Go to beginning/end of lines
+noremap H ^
+noremap L $
+vnoremap L g_
+
 " :w!! writes file using sudo
 cmap w!! w !sudo tee % >/dev/null
 "}}}
