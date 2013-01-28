@@ -59,8 +59,8 @@ syntax enable			" syntax hilighting is nice
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
 colo mustang
-highlight Folded guibg=Black guifg=blue
-highlight FoldColumn guibg=darkgrey guifg=white
+"highlight Folded guibg=Black guifg=blue
+"highlight FoldColumn guibg=darkgrey guifg=white
 " }}}
 "{{{ Mappings
 " ,ev and ,sv edits and reloads vimrc
