@@ -63,6 +63,12 @@ colo mustang
 "highlight FoldColumn guibg=darkgrey guifg=white
 " }}}
 "{{{ Mappings
+
+" The following mapping is taken from Steve Losh's vimrc (which is available
+" at https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc). It turns the
+" current word into UPPERCASE.
+inoremap <C-u> <esc>mzgUiw`za
+
 " ,ev and ,sv edits and reloads vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
