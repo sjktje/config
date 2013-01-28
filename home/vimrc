@@ -1,7 +1,14 @@
 " sjks .vimrc
+" {{{ Setup
+set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
-
-set nocompatible		" I don't like vi
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin on
+filetype plugin indent on
+syntax on
+" }}}
+" {{{ Options
 set history=50			" Keep 50 lines of command line history.
 set ts=4
 set si				" Smart indent
@@ -34,8 +41,7 @@ set title                       " update the terminal's title
 set scrolloff=4                 " keep four lines above cursor when scrolling
 set clipboard=unnamed           " Yank to OS X's clipboard
 set nojoinspaces                " I don't want double spaces after periods when joining lines
-set cursorline
-
+set cursorline                  " Hilight the current line
 set number			" Show line numbers
 set laststatus=2                " Always show status line
 set statusline=                                 " Override default
@@ -44,23 +50,24 @@ set statusline+=\ %f\ %m\ %r                    " Show filename/path
 set statusline+=%=                              " Set right-side status info after this line
 set statusline+=%l/%L:%v                        " Set <line number>/<total lines>:<column>
 set statusline+=\                               " Set ending space
+let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
+let mapleader=","
 syntax enable			" syntax hilighting is nice
+" }}}
+" {{{ Colors
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
 colo mustang
-
-map <A-i> i <ESC>r " alt-i (normal mode) inserts a single char, and then switches back to normal
-
 highlight Folded guibg=Black guifg=blue
 highlight FoldColumn guibg=darkgrey guifg=white
-
-"{{{ mappings
-"nmap = o<Esc>			" Press = to insert an empty line without going into insert mode
-
+" }}}
+"{{{ Mappings
 " ,ev and ,sv edits and reloads vimrc
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+nnoremap <leader>l :ls<CR>:b<space>
 
 " Reformat current paragraph (or selected text) with Q
 vmap Q gq
@@ -71,17 +78,25 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-"}}}
 
 " :w!! writes file using sudo
 cmap w!! w !sudo tee % >/dev/null
-
-"autocmd BufWrite *.pl %s/changed\(\s\+\)=> '.*/\="changed\1=> '" . strftime("%c") . "',"/e
-filetype plugin on
-
-filetype plugin indent on
-syntax on
-
+"}}}
+" Autocommands {{{1
+augroup autowrites " {{{2
+    autocmd BufWrite *.pl %s/\(changed\s\+\)=> '.*/\="\1=> '" . strftime("%c") . "',"/e
+augroup end " 2}}}
+augroup filetypes " {{{2
+    " I use two character shift width when editing html
+    autocmd FileType html setlocal shiftwidth=2 tabstop=2
+augroup end
+augroup onnewfile " {{{2
+    " Try to find a template for our new file.
+    autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+augroup end
+" 1}}}
+" Functions {{{1
+" Named serial inc {{{2
 function! UPDSERIAL(date, num)
 	if (strftime("%Y%m%d") == a:date)
 		return a:date . a:num+1
@@ -90,21 +105,8 @@ function! UPDSERIAL(date, num)
 endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; serial'/gc
-command Aao :%s,å,\&aring;,eg | :%s,Å,\&Aring;,eg | :%s,ä,\&auml;,eg | :%s,Ä,\&Auml;,eg | :%s,ö,\&ouml;,eg | :%s,Ö,\&ouml;,eg
-command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g
-
-"{{{ plugin settings
-let g:tex_flavor='latex'
-let g:jekyll_path='/Users/sjk/Code/blog'
-let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
-let mapleader=","
-let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
-let g:snips_author='Svante Kvarnström'
-let g:gist_clip_command = 'pbcopy'
-"}}}
-
-nnoremap <leader>l :ls<CR>:b<space>
-
+" 2}}}
+" Tab completion {{{2
 "Use TAB for completing words.
 "function! Tab_Or_Complete()
 "    if col('.')>1 && strpart(getline('.'), col('.')-2, 3) =~ '^\w'
@@ -115,7 +117,8 @@ nnoremap <leader>l :ls<CR>:b<space>
 "endfunction
 "
 ":inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
-
+"2}}}
+" Word processor mode {{{2
 " Enter 'Word processor mode' by hitting :WP
 " See http://www.drbunsen.org/writing-in-vim.html for mor information.
 function! WordProcessorMode()
@@ -127,14 +130,16 @@ function! WordProcessorMode()
     set fuoptions=background:#00f5f6f6
 endfunction
 com! WP cal WordProcessorMode()
+" 2}}}
+command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendly ones
+"1}}}
+"{{{ Plugin settings
+let g:tex_flavor='latex'
+let g:jekyll_path='/Users/sjk/Code/blog'
+let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+let g:snips_author='Svante Kvarnström'
+let g:gist_clip_command = 'pbcopy'
+"}}}
 
 source $VIMHOME/abbreviations.vim        " Common abbreviations.
 source $VIMHOME/autocorrect.vim          " Common misspellings
-
-" Try to find a template for our new file.
-autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-
-" I use two character shift width when editing html
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-
-call pathogen#infect()
