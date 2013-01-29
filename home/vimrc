@@ -70,11 +70,16 @@ colo mustang
 " current word into UPPERCASE.
 inoremap <C-u> <esc>mzgUiw`za
 
-" Quick editing {{{2
+" Quick editing
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>es :vsplit ~/.ssh/config<cr>
 nnoremap <leader>ez :vsplit ~/config/home/zshrc<cr>
-" 2}}}
+
+" Jekyll.vim convenience mappings
+map <leader>jb :JekyllBuild<cr>
+map <leader>jn :JekyllPost<cr>
+map <leader>jl :JekyllList<cr>
+
 " Sane search regexps
 nnoremap / /\v
 vnoremap / /\v
