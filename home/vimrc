@@ -143,15 +143,15 @@ command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1)
 " Word processor mode {{{2
 " Enter 'Word processor mode' by hitting :WP
 " See http://www.drbunsen.org/writing-in-vim.html for mor information.
-function! WordProcessorMode()
-    set formatprg=par
-    setlocal wrap
-    setlocal linebreak
-    colo iawriter
-    set background=light
-    set fuoptions=background:#00f5f6f6
-endfunction
-com! WP cal WordProcessorMode()
+"function! WordProcessorMode()
+"    set formatprg=par
+"    setlocal wrap
+"    setlocal linebreak
+"    colo iawriter
+"    set background=light
+"    set fuoptions=background:#00f5f6f6
+"endfunction
+"com! WP cal WordProcessorMode()
 " 2}}}
 " Highlight Word {{{
 " The following function was shamelessly ripped from Steve Losh's vimrc at
