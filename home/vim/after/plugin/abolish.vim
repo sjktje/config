@@ -9,3 +9,4 @@ Abolish någto                                   något
 Abolish gurpp{,er,erna,n,a}                     grupp{}
 Abolish ssk{,s,or,ors,orna,ornas,an,ans}        sjukskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish usk{,s,or,ors,orna,ornas,an,ans}        underskötersk{a,as,or,ors,orna,ornas,an,ans}
+Abolish pat{,er,ers,erna,ernas,s}               patient{}
