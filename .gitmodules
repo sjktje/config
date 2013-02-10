@@ -64,3 +64,6 @@
 [submodule "home/vim/bundle/endwise"]
 	path = home/vim/bundle/endwise
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "home/vim/bundle/ragtag"]
+	path = home/vim/bundle/ragtag
+	url = git://github.com/tpope/vim-ragtag.git
