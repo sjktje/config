@@ -82,6 +82,9 @@ map <leader>jb :JekyllBuild<cr>
 map <leader>jn :JekyllPost<cr>
 map <leader>jl :JekyllList<cr>
 
+" NERDTree convenience mappings
+map <leader>nt :NERDTree<cr>
+
 " Sane search regexps
 nnoremap / /\v
 vnoremap / /\v
