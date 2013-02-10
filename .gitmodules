@@ -58,3 +58,6 @@
 [submodule "home/vim/bundle/rails"]
 	path = home/vim/bundle/rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "home/vim/bundle/bundler"]
+	path = home/vim/bundle/bundler
+	url = git://github.com/tpope/vim-bundler.git
