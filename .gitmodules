@@ -52,3 +52,6 @@
 [submodule "home/vim/bundle/puppet"]
 	path = home/vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "home/vim/bundle/texnotes"]
+	path = home/vim/bundle/texnotes
+	url = git://github.com/sjktje/vim-texnotes
