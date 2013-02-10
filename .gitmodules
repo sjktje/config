@@ -55,3 +55,6 @@
 [submodule "home/vim/bundle/texnotes"]
 	path = home/vim/bundle/texnotes
 	url = git://github.com/sjktje/vim-texnotes
+[submodule "home/vim/bundle/rails"]
+	path = home/vim/bundle/rails
+	url = git://github.com/tpope/vim-rails.git
