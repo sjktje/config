@@ -61,3 +61,6 @@
 [submodule "home/vim/bundle/bundler"]
 	path = home/vim/bundle/bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "home/vim/bundle/endwise"]
+	path = home/vim/bundle/endwise
+	url = git://github.com/tpope/vim-endwise.git
