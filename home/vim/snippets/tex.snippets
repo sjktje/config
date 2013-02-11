@@ -6,3 +6,13 @@ snippet fig
 	    \caption{${3:Caption of figure}}
 	    \label{fig:$2}
 	\end{figure}
+
+snippet tab
+	\begin{table}[h!]
+	    \centering
+	    \begin{tabular}{${1:ll}}
+			${2:tabular data}
+	    \end{tabular}
+	    \caption{${3:caption}}
+	    \label{tab:${4:label}}
+	\end{table}
