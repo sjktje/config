@@ -216,7 +216,6 @@ command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendl
 let g:tex_flavor='latex'
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
-let g:snips_author='Svante Kvarnström'
 let g:gist_clip_command = 'pbcopy'
 "}}}
 " Source external files {{{1
