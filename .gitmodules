@@ -46,9 +46,6 @@
 [submodule "home/vim/bundle/webapi"]
 	path = home/vim/bundle/webapi
 	url = git://github.com/mattn/webapi-vim.git
-[submodule "home/vim/bundle/autoclose"]
-	path = home/vim/bundle/autoclose
-	url = git://github.com/Townk/vim-autoclose.git
 [submodule "home/vim/bundle/puppet"]
 	path = home/vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
