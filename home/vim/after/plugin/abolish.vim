@@ -11,3 +11,5 @@ Abolish ssk{,s,or,ors,orna,ornas,an,ans}        sjukskötersk{a,as,or,ors,orna,o
 Abolish usk{,s,or,ors,orna,ornas,an,ans}        underskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish pat{,er,ers,erna,ernas,s,en,ens}        patient{}
 Abolish öht överhuvudtaget
+Abolish hra har
+Abolish flytat flytta
