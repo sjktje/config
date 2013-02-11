@@ -13,3 +13,4 @@ Abolish pat{,er,ers,erna,ernas,s,en,ens}        patient{}
 Abolish öht överhuvudtaget
 Abolish hra har
 Abolish flytat flytta
+Abolish jga jag
