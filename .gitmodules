@@ -34,9 +34,6 @@
 [submodule "home/vim/bundle/latex-box"]
 	path = home/vim/bundle/latex-box
 	url = git://github.com/LaTeX-Box-Team/LaTeX-Box.git
-[submodule "home/vim/bundle/snipmate"]
-	path = home/vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "home/vim/bundle/tabular"]
 	path = home/vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
