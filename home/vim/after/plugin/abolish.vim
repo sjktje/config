@@ -14,3 +14,5 @@ Abolish öht överhuvudtaget
 Abolish hra har
 Abolish flytat flytta
 Abolish jga jag
+Abolish inofrmation{,en,ens} information{}
+Abolish sjd{,s,en,ens,ar,ars,arna,arnas}        sjukdom{}
