@@ -1,4 +1,4 @@
-/* Copyright (c) 2012 Svante Kvarnström <sjk@ankeborg.nu>. All rights reserved.
+/* Copyright (c) 2013 Svante Kvarnström <sjk@ankeborg.nu>. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
