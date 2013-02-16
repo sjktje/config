@@ -115,10 +115,10 @@ augroup filetypes " {{{2
     autocmd FileType html setlocal shiftwidth=2 tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup end
-augroup onnewfile " {{{2
-    " Try to find a template for our new file.
-    autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-augroup end
+" augroup onnewfile " {{{2
+"     " Try to find a template for our new file.
+"     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
+" augroup end
 " 1}}}
 " Functions {{{1
 " Named serial inc {{{2
