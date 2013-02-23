@@ -277,3 +277,5 @@ bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
 eval "$(hub alias -s)"
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
