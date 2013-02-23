@@ -112,7 +112,7 @@ augroup autowrites " {{{2
     autocmd BufWrite *.pl %s/\(changed\s\+\)=> '.*/\="\1=> '" . strftime("%c") . "',"/e
 augroup end " 2}}}
 augroup filetypes " {{{2
-    autocmd FileType html setlocal shiftwidth=2 tabstop=2
+    autocmd FileType html,htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
 augroup end
 " augroup onnewfile " {{{2
