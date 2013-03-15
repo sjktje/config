@@ -167,6 +167,19 @@ function 6p() {
 	fi
 }
 
+function rlss(){
+    last_screenshot="${HOME}/ss/$(ls -1 ~/ss|tail -n 1)"
+    filename="${HOME}/ss/${1}.png"
+
+    mv "$last_screenshot" "$filename"
+
+    if [[ `uname -s` == "Darwin" ]]; then
+        echo $filename |pbcopy
+    else
+        echo $filename
+    fi
+}
+
 function newgitrepo() {
 	if [ -d $1 ]; then
 		echo "Repo $1 does already exist."
