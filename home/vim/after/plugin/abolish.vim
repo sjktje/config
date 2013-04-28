@@ -16,3 +16,11 @@ Abolish flytat flytta
 Abolish jga jag
 Abolish inofrmation{,en,ens} information{}
 Abolish sjd{,s,en,ens,ar,ars,arna,arnas}        sjukdom{}
+Abolish bätr{e,ing,ingsvägen}                   bättr{}
+Abolish sjh{,en,et,ens,ets}                     sjukhus{}
+Abolish bt{,et} blodtryck{}
+Abolish resp{,t} respiratorisk{}
+Abolish cirk{,t} cirkulatorisk{}
+Abolish sthlm{,s} Stockholm{}
+Abolish iv intravenös
+Abolish ellre eller
