@@ -1,7 +1,7 @@
 snippet figure
 \begin{figure}[h!]
     \begin{center}
-                \includegraphics[${1:scale=0.8}]{images/${2:blah}.png}
+                \includegraphics[scale=${1:1.0}]{images/${2:blah}.png}
     \end{center}
     \caption{${3:Caption of figure}}
     \label{fig:$2}
@@ -22,4 +22,8 @@ endsnippet
 
 snippet e "\emph{text}" w
 \emph{${1:${VISUAL:text}}}
+endsnippet
+
+snippet text "\text{text}" w
+\text{${1:${VISUAL:text}}}
 endsnippet
