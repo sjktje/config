@@ -174,7 +174,7 @@ function rlss(){
     mv "$last_screenshot" "$filename"
 
     if [[ `uname -s` == "Darwin" ]]; then
-        echo $filename |pbcopy
+        printf "%s" "`echo $filename`" |pbcopy
     else
         echo $filename
     fi
