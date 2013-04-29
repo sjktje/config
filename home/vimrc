@@ -83,6 +83,13 @@ map <leader>jb :JekyllBuild<cr>
 map <leader>jn :JekyllPost<cr>
 map <leader>jl :JekyllList<cr>
 
+" Fugitive convenience mappings
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gw :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
 " NERDTree convenience mappings
 map <leader>nt :NERDTreeToggle<cr>
 
