@@ -180,6 +180,10 @@ function rlss(){
     fi
 }
 
+function lilypondbookmake() {
+    lilypond-book --output=out --pdf ${1}.lytex && cd out && pdflatex ${1}.tex && open ${1}.pdf && cd ..
+}
+
 function newgitrepo() {
 	if [ -d $1 ]; then
 		echo "Repo $1 does already exist."
