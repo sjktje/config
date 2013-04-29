@@ -229,6 +229,7 @@ let g:tex_flavor='latex'
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:gist_clip_command = 'pbcopy'
+let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$']
 "}}}
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
