@@ -90,6 +90,10 @@ nmap <leader>ga :Gwrite<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
+
+" LaTeX-work mappings
+nmap <leader>lm :make viewpdf<cr>
+
 " NERDTree convenience mappings
 map <leader>nt :NERDTreeToggle<cr>
 
