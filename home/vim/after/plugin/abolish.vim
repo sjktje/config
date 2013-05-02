@@ -24,3 +24,18 @@ Abolish cirk{,t} cirkulatorisk{}
 Abolish sthlm{,s} Stockholm{}
 Abolish iv intravenös
 Abolish ellre eller
+Abolish msk{a,as,ans,or,ors,orna,ornas} människ{}
+Abolish rätj{,en,ens,erna,ernas} räddningstjänst{}
+Abolish fnt footnote
+Abolish katmed{,sk,ska} katastrofmedicin{}
+Abolish sthlm{,s} Stockholm{}
+Abolish sll{,s} Stockholms läns landsting{}
+Abolish anh{,a,as,s} anhörig{}
+Abolish ks{,s} Karolinska universitetssjukhuset{}
+Abolish sös{,s} Södersjukhuset{}
+Abolish sjvg{,s,en,ens,erna,ernas} sjukvårdsgrupp{}
+Abolish akm{,en,ens,s,ar,arna,arnas} akutmottagning{}
+Abolish sjv{,s,en,ens} sjukvård{}
+Abolish sjvins{,en,ens,erna,ernas} sjukvårdsinsats{}
+Abolish rtj{,s,en,ens,er,erna,ernas} räddningstjänst{}
+Abolish syst systoliskt
