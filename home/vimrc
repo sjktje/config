@@ -128,6 +128,7 @@ augroup end " 2}}}
 augroup filetypes " {{{2
     autocmd FileType html,htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
+    autocmd FileType bib setlocal fdm=syntax
 augroup end
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
@@ -228,6 +229,7 @@ command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendl
 "1}}}
 "{{{ Plugin settings
 let g:tex_flavor='latex'
+let g:tex_fold_enabled=1 " This might not be a plugin setting.
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:gist_clip_command = 'pbcopy'
