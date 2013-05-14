@@ -39,3 +39,4 @@ Abolish sjv{,s,en,ens} sjukvård{}
 Abolish sjvins{,en,ens,erna,ernas} sjukvårdsinsats{}
 Abolish rtj{,s,en,ens,er,erna,ernas} räddningstjänst{}
 Abolish syst systoliskt
+Abolish lm{,s} läkemedel{}
