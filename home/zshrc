@@ -170,7 +170,7 @@ function 6p() {
 }
 
 function rlss(){
-    last_screenshot="${HOME}/ss/$(ls -1 ~/ss|tail -n 1)"
+    last_screenshot="$(ls -1 ~/ss/Screen\ Shot*|tail -n 1)"
     filename="${HOME}/ss/${1}.png"
 
     mv "$last_screenshot" "$filename"
