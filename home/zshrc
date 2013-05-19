@@ -79,6 +79,8 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
+alias spacetodash="rename 's,\s,_,g'"
+alias lowercase='rename -fc'
 alias syncsite=syncsite2
 alias syncsite1='rsync -auzP --delete-after /Users/sjk/sjksite/ sjksite@82.103.130.62:htdocs/'
 alias syncsite2='rsync -auzP --exclude=.git --exclude=config.php --delete-after /Users/sjk/sjksite/ sjk@shell.slashbox.net:sites/sjk.ankeborg.nu/'
