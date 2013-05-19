@@ -10,6 +10,7 @@ Abolish gurpp{,er,erna,n,a}                     grupp{}
 Abolish ssk{,s,or,ors,orna,ornas,an,ans}        sjukskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish usk{,s,or,ors,orna,ornas,an,ans}        underskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish pat{,er,ers,erna,ernas,s,en,ens}        patient{}
+Abolish cssk{,s,or,ors,orna,ornas,an,ans}       chefssjukskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish öht överhuvudtaget
 Abolish hra har
 Abolish flytat flytta
@@ -40,3 +41,4 @@ Abolish sjvins{,en,ens,erna,ernas} sjukvårdsinsats{}
 Abolish rtj{,s,en,ens,er,erna,ernas} räddningstjänst{}
 Abolish syst systoliskt
 Abolish lm{,s} läkemedel{}
+Abolish sskprof{,en,ens,s,erna,ernas} sjuksköterskeprofession{}
