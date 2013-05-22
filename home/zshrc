@@ -113,6 +113,8 @@ alias stfu='osascript -e "set volume output muted true"'
 alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 
+alias pms="/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner"
+
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
