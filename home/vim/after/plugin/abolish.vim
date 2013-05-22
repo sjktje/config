@@ -42,3 +42,10 @@ Abolish rtj{,s,en,ens,er,erna,ernas} räddningstjänst{}
 Abolish syst systoliskt
 Abolish lm{,s} läkemedel{}
 Abolish sskprof{,en,ens,s,erna,ernas} sjuksköterskeprofession{}
+Abolish sskstud{,er,erna,ernas,s} sjuksköterskestudent{}
+Abolish exvis exempelvis
+Abolish beh{,en,ens,s,ar,ars,arna,arnas} behandling{}
+Abolish ex exempel
+Abolish lmbiv{,s,ar,arna,arnas} läkemedelsbiverkning{}
+Abolish mha med hjälp av
+Abolish ns{,s,et,ets,en,ens,ena,enas} nervsystem{}
