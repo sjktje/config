@@ -67,3 +67,6 @@
 [submodule "home/vim/bundle/ultisnips"]
 	path = home/vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "zsh-plugins/syntax-highlighting"]
+	path = zsh-plugins/syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

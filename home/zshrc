@@ -305,3 +305,5 @@ bindkey "^E" end-of-line
 eval "$(hub alias -s)"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
