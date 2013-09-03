@@ -151,6 +151,7 @@ alias -s tgz="tar zxvf"
 alias -s tbz2="tar jxvf"
 alias -s zip="unzip"
 
+alias -g D="~/Downloads/*(om[1])"
 
 
 function dk() { cd ~/Documents/Skola/RKH/DK${1} }
