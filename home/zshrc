@@ -115,6 +115,7 @@ alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && k
 
 alias pms="/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner"
 
+alias django-admin="/usr/local/share/python/django-admin.py"
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
