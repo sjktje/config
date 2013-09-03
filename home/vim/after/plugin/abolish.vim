@@ -25,7 +25,7 @@ Abolish cirk{,t} cirkulatorisk{}
 Abolish sthlm{,s} Stockholm{}
 Abolish iv intravenös
 Abolish ellre eller
-Abolish msk{a,as,ans,or,ors,orna,ornas} människ{}
+Abolish msk{a,as,an,ans,or,ors,orna,ornas} människ{}
 Abolish rätj{,en,ens,erna,ernas} räddningstjänst{}
 Abolish fnt footnote
 Abolish katmed{,sk,ska} katastrofmedicin{}
