@@ -74,6 +74,7 @@ fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias cdgit='cd /pub/git'
+alias cdsu='cd ~/Documents/Skola/SU'
 alias svspell='aspell -l sv check'
 alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
