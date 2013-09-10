@@ -50,3 +50,4 @@ Abolish lmbiv{,s,ar,arna,arnas} läkemedelsbiverkning{}
 Abolish mha med hjälp av
 Abolish ns{,s,et,ets,en,ens,ena,enas} nervsystem{}
 Abolish behmet{,s,en,ens,er,ers,erna,ernas} behandlingsmetod{}
+Abolish tilgång{,en} tillgång{}

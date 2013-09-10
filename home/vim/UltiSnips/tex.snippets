@@ -1,7 +1,7 @@
 snippet figure
 \begin{figure}[h!]
     \begin{center}
-                \includegraphics[scale=${1:1.0}]{images/${2:blah}.png}
+        \includegraphics[scale=${1:1.0}]{images/${2:blah}.png}
     \end{center}
     \caption{${3:Caption of figure}}
     \label{fig:$2}
@@ -13,7 +13,7 @@ snippet table
 \begin{table}[h!]
     \centering
     \begin{tabular}{${1:ll}}
-                ${2:tabular data}
+        ${2:tabular data}
     \end{tabular}
     \caption{${3:caption}}
     \label{tab:${4:label}}
@@ -34,8 +34,16 @@ snippet text "\text{text}" w
 \text{${1:${VISUAL:text}}}
 endsnippet
 
-snippet f "\footnote{text}" w
+snippet f "\footnote{text}" i
 \footnote{${1:${VISUAL:text}}}
+endsnippet
+
+snippet i "\item" w
+\item
+endsnippet
+
+snippet ii "\item[]" w
+\item[${1:${VISUAL:text}}] $2
 endsnippet
 
 snippet url "\url{url}" w
@@ -52,4 +60,12 @@ endsnippet
 
 snippet lectinfo "\lecturerinfo{}{}{}{}" w
 \lecturerinfo{${1:name}}{${2:email}}{${3:phone}}{${4:other}}
+endsnippet
+
+snippet $ "$text$" w
+$${1:${VISUAL:text}}$
+endsnippet
+
+snippet tms "\cdot" w
+\cdot 
 endsnippet
