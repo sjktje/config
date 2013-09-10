@@ -187,6 +187,10 @@ function rlss(){
     fi
 }
 
+function recurwc() {
+    grep -oE '\w{5,}' ${1} |sort |tr '[:upper:]' '[:lower:]' |uniq -c |sort
+}
+
 function lilypondbookmake() {
     lilypond-book --output=out --pdf ${1}.lytex && cd out && pdflatex ${1}.tex && open ${1}.pdf && cd ..
 }
