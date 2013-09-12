@@ -107,6 +107,9 @@ vnoremap / /\v
 vmap Q gq
 nmap Q gqap
 
+" Use this to add newline chars to latex table lines and tab them correctly
+vmap <leader>t :s,$,\\\\, | :Tab /&<cr>
+
 " Switch windows easily
 map <C-h> <C-w>h
 map <C-j> <C-w>j
