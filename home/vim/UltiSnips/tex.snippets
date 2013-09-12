@@ -26,8 +26,24 @@ snippet flash
 \end{flashcard}
 endsnippet
 
+snippet w
+\begin{warning}
+    ${1:${VISUAL:text}}
+\end{warning}
+endsnippet
+
+snippet ex
+\begin{example}
+    ${1:${VISUAL:text}}
+\end{example}
+endsnippet
+
 snippet e "\emph{text}" w
 \emph{${1:${VISUAL:text}}}
+endsnippet
+
+snippet c "\ce{text}" w
+\ce{${1:${VISUAL:formula}}}
 endsnippet
 
 snippet text "\text{text}" w
