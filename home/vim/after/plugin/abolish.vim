@@ -20,7 +20,7 @@ Abolish sjd{,s,en,ens,ar,ars,arna,arnas}        sjukdom{}
 Abolish bätr{e,ing,ingsvägen}                   bättr{}
 Abolish sjh{,en,et,ens,ets}                     sjukhus{}
 Abolish bt{,et} blodtryck{}
-Abolish resp{,t} respiratorisk{}
+Abolish resp respektive
 Abolish cirk{,t} cirkulatorisk{}
 Abolish sthlm{,s} Stockholm{}
 Abolish iv intravenös
@@ -51,3 +51,16 @@ Abolish mha med hjälp av
 Abolish ns{,s,et,ets,en,ens,ena,enas} nervsystem{}
 Abolish behmet{,s,en,ens,er,ers,erna,ernas} behandlingsmetod{}
 Abolish tilgång{,en} tillgång{}
+Abolish lr eller
+Abolish o och
+Abolish mkt mycket
+Abolish omst{,er,ers,erna,ernas} omständighet{}
+Abolish tiom till och med
+Abolish vtn{,s} vatten{}
+Abolish vtnet{,s} vattnet{}
+Abolish vtna{,r,s,t,ts} vattna{}
+Abolish esom eftersom
+Abolish bakt{,s,r,rs,rna,rnas} bakterie{}
+Abolish tex t.ex.
+Abolish fr från
+Abolish tot{,a} total{}
