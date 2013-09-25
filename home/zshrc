@@ -141,7 +141,7 @@ alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
 
 
 alias t='todo.sh -t'
-alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov}=/Applications/VLC.app/Contents/MacOS/VLC
+alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov,mkv}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
 alias -s pdf=open
