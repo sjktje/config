@@ -8,6 +8,24 @@ snippet figure
 \end{figure}
 endsnippet
 
+snippet grfig
+\begin{figure}[h!]
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                xlabel=$x$,
+                ylabel={$y$},
+                grid=major,
+                axis lines=middle,
+                ]
+                \addplot[very thick] {${1:${VISUAL:math}}};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{${2:caption}}
+    \label{fig:${3:label}}
+\end{figure}
+endsnippet
 
 snippet table
 \begin{table}[h!]
@@ -24,6 +42,10 @@ snippet flash
 \begin{flashcard}{${1:${VISUAL:question}}}
     $2
 \end{flashcard}
+endsnippet
+
+snippet cfoot
+\cardfrontfoot{${1:${VISUAL:text}}}
 endsnippet
 
 snippet w
@@ -55,7 +77,7 @@ snippet f "\footnote{text}" i
 endsnippet
 
 snippet i "\item" w
-\item
+\item $1
 endsnippet
 
 snippet ii "\item[]" w
@@ -84,4 +106,18 @@ endsnippet
 
 snippet tms "\cdot" w
 \cdot 
+endsnippet
+
+snippet sqrt "\sqrt" i
+\sqrt{${1:${VISUAL:text}}}
+endsnippet
+
+snippet lg "\log" w
+\log 
+endsnippet
+
+snippet bal "\begin{align*}" w
+\begin{align*}
+    ${1:${VISUAL:math}}
+\end{align*}
 endsnippet
