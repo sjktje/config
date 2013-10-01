@@ -138,7 +138,7 @@ alias latmk='pdflatex main && pdflatex main && pdflatex main && open main.pdf'
 alias latbibmk='pdflatex main && bibtex main && pdflatex main && pdflatex main && open main.pdf'
 alias latclean='for a in {aux,bbl,blg,brf,out,log,toc}; do echo *.$a; done'
 
-
+alias liber='googles www4.liber.se'
 
 alias t='todo.sh -t'
 alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov,mkv}=/Applications/VLC.app/Contents/MacOS/VLC
