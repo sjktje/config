@@ -238,6 +238,7 @@ let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:gist_clip_command = 'pbcopy'
 let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$']
 let g:airline_theme='badwolf' " Status bar theme
+let g:airline_powerline_fonts = 1
 "}}}
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
