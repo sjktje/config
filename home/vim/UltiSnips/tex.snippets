@@ -116,8 +116,20 @@ snippet lg "\log" w
 \log 
 endsnippet
 
+snippet to "$\to$" w
+$\to$ $1
+endsnippet
+
 snippet bal "\begin{align*}" w
 \begin{align*}
     ${1:${VISUAL:math}}
 \end{align*}
+endsnippet
+
+snippet rat "right arrow text" w
+$\overrightarrow{\text{${1:${VISUAL:text}}}}$
+endsnippet
+
+snippet lat "left arrow text" w
+$\overleftarrow{\text{${1:${VISUAL:text}}}}$
 endsnippet
