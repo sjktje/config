@@ -124,6 +124,8 @@ vnoremap L g_
 
 " :w!! writes file using sudo
 cmap w!! w !sudo tee % >/dev/null
+
+nnoremap <F5> :GundoToggle<CR>
 "}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
