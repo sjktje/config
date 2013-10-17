@@ -63,7 +63,8 @@ set guifont=Anonymice\ Powerline
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
-colo mustang
+" colo mustang
+colo badwolf
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 " }}}
