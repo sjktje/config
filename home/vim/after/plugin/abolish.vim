@@ -84,3 +84,7 @@ Abolish gnm genom
 Abolish vlkt vilket
 Abolish vktg{,a,are,ast} viktig{}
 Abolish vlka{,s} vilka{}
+Abolish mao med andra ord
+Abolish emd med
+Abolish vä vänster
+Abolish hö höger
