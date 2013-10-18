@@ -8,6 +8,16 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 " }}}
+" {{{ GUI options
+if has('gui_running')
+    set guifont=Anonymice\ Powerline
+    set go-=T
+    set go-=l
+    set go-=L
+    set go-=r
+    set go-=R
+endif
+" }}}
 " {{{ Options
 set history=50			" Keep 50 lines of command line history.
 set ts=4
@@ -57,7 +67,6 @@ set hidden                      " Make vim work like all other editors...
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
 syntax enable			" syntax hilighting is nice
-set guifont=Anonymice\ Powerline
 " }}}
 " {{{ Colors
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
