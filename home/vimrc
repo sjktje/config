@@ -136,10 +136,24 @@ vnoremap L g_
 cmap w!! w !sudo tee % >/dev/null
 
 nnoremap <F5> :GundoToggle<CR>
+
+nnoremap _hd :set ft=htmldjango<CR>
+nnoremap _pd :set ft=python.django<CR>
 "}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
     autocmd BufWrite *.pl %s/\(changed\s\+\)=> '.*/\="\1=> '" . strftime("%c") . "',"/e
+augroup end " 2}}}
+augroup ft_html " {{{2
+    autocmd BufNewFile,BufRead admin.py    setlocal filetype=python.django
+    autocmd BufNewFile,BufRead urls.py     setlocal filetype=python.django
+    autocmd BufNewFile,BufRead models.py   setlocal filetype=python.django
+    autocmd BufNewFile,BufRead views.py    setlocal filetype=python.django
+    autocmd BufNewFile,BufRead settings.py setlocal filetype=python.django
+    autocmd BufNewFile,BufRead forms.py    setlocal filetype=python.django
+    autocmd FileType html,htmldjango setlocal foldmethod=manual
+    autocmd FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
+    autocmd FileType htmldjango inoremap <buffer> <c-b> {{<space><space>}}<left><left><left>
 augroup end " 2}}}
 augroup filetypes " {{{2
     autocmd FileType html,htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
@@ -249,7 +263,7 @@ let g:tex_fold_enabled=1 " This might not be a plugin setting.
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
 let g:gist_clip_command = 'pbcopy'
-let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$']
+let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$', '\.pyc$']
 let g:airline_theme='badwolf' " Status bar theme
 let g:airline_powerline_fonts = 1
 "}}}
