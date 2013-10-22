@@ -150,6 +150,9 @@ nnoremap <leader>ft Vatzf
 
 " jj takes us to normal mode
 inoremap jj <ESC>
+
+" Open a vertical split and switch focus to it
+nnoremap <leader>w <C-w>v<C-w>l
 "}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
