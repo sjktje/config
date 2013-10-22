@@ -147,6 +147,9 @@ nnoremap ; :
 
 " Fold html tags
 nnoremap <leader>ft Vatzf
+
+" jj takes us to normal mode
+inoremap jj <ESC>
 "}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
