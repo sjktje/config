@@ -66,7 +66,6 @@ Abolish fr från
 Abolish tot{,a} total{}
 Abolish bl bland
 Abolish temp{,s,en,ens,er,erna} temperatur{}
-Abolish org{,a} organisk{}
 Abolish ngn{,s} någon{}
 Abolish ngr några
 Abolish jfr{,s,a,as,t,ts} jämför{}
