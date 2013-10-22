@@ -141,6 +141,9 @@ nnoremap <F5> :GundoToggle<CR>
 
 nnoremap _hd :set ft=htmldjango<CR>
 nnoremap _pd :set ft=python.django<CR>
+
+" ;q instead of :q means one less key to hit when quitting, etc.
+nnoremap ; :
 "}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
