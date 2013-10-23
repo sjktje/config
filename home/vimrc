@@ -165,6 +165,7 @@ augroup ft_html " {{{2
     autocmd BufNewFile,BufRead views.py    setlocal filetype=python.django
     autocmd BufNewFile,BufRead settings.py setlocal filetype=python.django
     autocmd BufNewFile,BufRead forms.py    setlocal filetype=python.django
+    autocmd BufNewFile,BufRead *.html setlocal filetype=htmldjango
     autocmd FileType html,htmldjango setlocal foldmethod=manual
     autocmd FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
     autocmd FileType htmldjango inoremap <buffer> <c-b> {{<space><space>}}<left><left><left>
