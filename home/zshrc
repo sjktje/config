@@ -11,6 +11,7 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
 export BLOCKTABLE="attackers"
+export WORKON_HOME=~/Envs
 
 if [[ -n "$ZSHRUN" ]]
 then
@@ -313,3 +314,7 @@ bindkey "^E" end-of-line
 eval "$(hub alias -s)"
 
 source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    source /usr/local/share/python/virtualenvwrapper.sh
+fi
