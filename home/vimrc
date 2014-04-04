@@ -107,7 +107,7 @@ nmap <leader>gp :!git push<cr>
 nmap <leader>gb :!hub browse<cr>
 
 " LaTeX-work mappings
-nmap <leader>lm :make viewpdf<cr>
+nmap <leader>lm :w<cr> :make viewpdf<cr>
 
 " NERDTree convenience mappings
 map <leader>nt :NERDTreeToggle<cr>
