@@ -275,14 +275,26 @@ hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendly ones
 "1}}}
 "{{{ Plugin settings
+"{{{ TeX
 let g:tex_flavor='latex'
 let g:tex_fold_enabled=1 " This might not be a plugin setting.
+"}}}
+"{{{ Jekyll
 let g:jekyll_path='/Users/sjk/Code/blog'
+"}}}
+"{{{ Surround
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+"}}}
+"{{{ Gist
 let g:gist_clip_command = 'pbcopy'
+"}}}
+"{{{ NERDTree
 let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$', '\.pyc$']
+"}}}
+"{{{ Airline
 let g:airline_theme='badwolf' " Status bar theme
 let g:airline_powerline_fonts = 1
+"}}}
 "{{{ Python-mode
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'M'
