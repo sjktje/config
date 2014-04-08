@@ -332,3 +332,7 @@ source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
 if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
     source /usr/local/share/python/virtualenvwrapper.sh
 fi
+
+if [ -f ~/.zsh_extra ]; then
+    source ~/.zsh_extra
+fi
