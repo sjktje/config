@@ -12,7 +12,10 @@ export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
 export BLOCKTABLE="attackers"
 export WORKON_HOME=~/Envs
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+
+if [[ `uname -s` == "Darwin" ]]; then
+    export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+fi
 
 if [[ -n "$ZSHRUN" ]]
 then
