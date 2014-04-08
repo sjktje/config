@@ -266,6 +266,19 @@ add-zsh-hook preexec title_preexec
 # Completion
 zmodload zsh/complist
 autoload -U compinit && compinit
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
+
 ### If you want zsh's completion to pick up new commands in $path automatically
 ### comment out the next line and un-comment the following 5 lines
 zstyle ':completion:::::' completer _complete _approximate
