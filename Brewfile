@@ -15,6 +15,7 @@ install tmux
 install tree
 install unrar
 install vim --override-system-vi
+install wget
 install zsh
 
 
