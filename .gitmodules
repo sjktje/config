@@ -91,3 +91,9 @@
 [submodule "home/vim/bundle/python-mode"]
 	path = home/vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
+[submodule "home/vim/bundle/heroku"]
+	path = home/vim/bundle/heroku
+	url = git://github.com/tpope/vim-heroku.git
+[submodule "home/vim/bundle/dispatch"]
+	path = home/vim/bundle/dispatch
+	url = git://github.com/tpope/vim-dispatch.git
