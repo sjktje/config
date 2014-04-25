@@ -129,6 +129,8 @@ alias django-admin="/usr/local/share/python/django-admin.py"
 # Then minimize terminal and it'll bounce when done.
 alias termbounce='tput bel'
 
+alias td='todo.sh -t'
+
 # Remove downloads older than 30 days.
 alias rmdl30='find ~/Downloads -mtime +30 -exec rm -rf "{}" \;'
 
