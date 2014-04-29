@@ -100,8 +100,11 @@ alias syncrkhstick='rsync -rtvPL --modify-window=2 --delete-after /Users/sjk/Doc
 alias rsmirror='rsync --delete-after -azP'
 alias syncmusic='rsync -rtvPL /Users/sjk/Music/iTunes/iTunes\ Music /Volumes/Nokia\ N900/'
 
-alias synccapiohome='rsync -arP --delete-after /Volumes/ncsvakva /Users/sjk/Documents/Capio'
-alias synccapiocommon='rsync -arP --delete-after /Volumes/COMMONGER\$ /Users/sjk/Documents/Capio'
+alias pullcapiohome='rsync -arP --delete-after /Volumes/ncsvakva /Users/sjk/Documents/Capio'
+alias pullcapiocommon='rsync -arP --delete-after /Volumes/COMMONGER\$ /Users/sjk/Documents/Capio'
+alias pushcapiohome="rsync -arP --delete-after /Users/sjk/Documents/Capio/ncsvakva /Volumes"
+alias pushcapiocommon="rsync -arP --delete-after /Users/sjk/Documents/Capio/COMMONGER\$ /Volumes"
+
 alias bbackupquery='bbackupquery -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
 alias bbackupctl='bbackupctl -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
 
