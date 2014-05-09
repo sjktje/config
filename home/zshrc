@@ -121,6 +121,12 @@ alias burniso='cdrecord -v -eject dev=1,0,0'
 alias lockmac='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 alias stfu='osascript -e "set volume output muted true"'
+alias v10='osascript -e "set volume 10"'
+alias v30='osascript -e "set volume 30"'
+alias v50='osascript -e "set volume 50"'
+alias v70='osascript -e "set volume 70"'
+alias v90='osascript -e "set volume 90"'
+
 alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 
