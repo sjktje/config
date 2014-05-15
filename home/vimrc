@@ -66,6 +66,7 @@ set spelllang=en_gb,sv
 set hidden                      " Make vim work like all other editors...
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
+let maplocalleader="-"
 syntax enable			" syntax hilighting is nice
 set list
 set listchars=tab:▸\ ,eol:¬
