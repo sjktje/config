@@ -100,3 +100,6 @@
 [submodule "home/vim/bundle/vim-snippets"]
 	path = home/vim/bundle/vim-snippets
 	url = git://github.com/honza/vim-snippets
+[submodule "home/vim/bundle/vimple"]
+	path = home/vim/bundle/vimple
+	url = git://github.com/dahu/vimple
