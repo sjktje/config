@@ -88,3 +88,6 @@ Abolish emd med
 Abolish vä vänster
 Abolish hö höger
 Abolish sjg{,s,er,ers,erna,ernas} sjukgymnast{}
+Abolish utb{,en,ens,ar,ars,arna,arnas} utbildning{}
+Abolish hrä här
+Abolish patsäk{en,ens} patientsäkerhet{}
