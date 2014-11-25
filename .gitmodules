@@ -103,3 +103,6 @@
 [submodule "home/vim/bundle/vimple"]
 	path = home/vim/bundle/vimple
 	url = git://github.com/dahu/vimple
+[submodule "fonts/powerline-fonts"]
+	path = fonts/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
