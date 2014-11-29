@@ -11,7 +11,7 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
 export BLOCKTABLE="attackers"
-export WORKON_HOME=~/Envs
+export WORKON_HOME=~/.envs
 
 if [[ `uname -s` == "Darwin" ]]; then
     export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
@@ -343,8 +343,8 @@ eval "$(hub alias -s)"
 
 source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 
 if [ -f ~/.zsh_extra ]; then
