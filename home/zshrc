@@ -78,6 +78,7 @@ if [[ `uname -s` != "OpenBSD" ]]; then
 fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
+alias cdshh='cd ~/Documents/Skola/SHH'
 alias cdgit='cd /pub/git'
 alias cdsu='cd ~/Documents/Skola/SU'
 alias svspell='aspell -l sv check'
