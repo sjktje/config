@@ -12,6 +12,7 @@ export GREP_COLOR='3;33'
 export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
 export BLOCKTABLE="attackers"
 export WORKON_HOME=~/.envs
+export TODOTXT_DEFAULT_ACTION='ls'
 
 if [[ `uname -s` == "Darwin" ]]; then
     export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
@@ -86,6 +87,7 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
+alias t='todo.sh -d ~/.todo.cfg'
 alias spacetodash="rename 's,\s,_,g'"
 alias lowercase='rename -fc'
 alias syncsite=syncsite2
