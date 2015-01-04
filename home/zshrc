@@ -5,7 +5,7 @@ export TZ=CET
 export HISTSIZE=13000
 export SAVEHIST=12000
 export HISTFILE=~/.history
-export PATH=/usr/local/sbin:$HOME/bin:/usr/local/opt/ruby/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$HOME/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export VIMHOME=${HOME}/.vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
