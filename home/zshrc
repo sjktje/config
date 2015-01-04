@@ -111,6 +111,7 @@ alias bbackupquery='bbackupquery -c /usr/local/etc/box/clients/boxbackup.vanbaak
 alias bbackupctl='bbackupctl -c /usr/local/etc/box/clients/boxbackup.vanbaak.info/bbackupd.conf'
 
 alias bigfiles='ls -fld ./**/*(d`stat +device . `OL[1,100])'
+alias dus='du -hs * |gsort -h'
 
 alias tdpf='tcpdump -n -e -tttt -r /var/log/pflog'
 alias tdpfi='tcpdump -n -e -tttt -i pflog0'
