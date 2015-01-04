@@ -91,3 +91,9 @@ Abolish sjg{,s,er,ers,erna,ernas} sjukgymnast{}
 Abolish utb{,en,ens,ar,ars,arna,arnas} utbildning{}
 Abolish hrä här
 Abolish patsäk{en,ens} patientsäkerhet{}
+Abolish hsjd{,s,en,ens,ar,arna,arnas,ars} hjärtsjukdom{}
+Abolish hinf{,s,en,ens,er,ers,erna,ernas} hjärtinfarkt{}
+Abolish ind{,er,ers,erna,ernas} indikation{}
+Abolish diffdiag{,er,ers,erna,ernas} differentialdiagnos{}
+Abolish aortdis{,en,ens,s,er,erna,ernas} aortadissektion{}
+Abolish kksj{,s,en,ens,ar,ars,arnas} kranskärlssjukdom{}
