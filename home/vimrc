@@ -181,7 +181,10 @@ augroup filetypes " {{{2
     autocmd FileType html,htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType bib setlocal fdm=syntax
-augroup end
+augroup end " 2}}}
+augroup ft_mediawiki " {{{2
+    autocmd BufNewFile,BufRead *.shoutwiki.com.*.txt setlocal filetype=mediawiki
+augroup end " 2}}}
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
 "     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
