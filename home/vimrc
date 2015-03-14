@@ -185,6 +185,36 @@ augroup end " 2}}}
 augroup ft_mediawiki " {{{2
     autocmd BufNewFile,BufRead *.shoutwiki.com.*.txt setlocal filetype=mediawiki
 augroup end " 2}}}
+augroup ft_markdown " {{{2
+    autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+    setlocal wrap linebreak
+    setlocal textwidth=0
+
+    " No auto-wrap at all.
+    setlocal formatoptions-=tc formatoptions+=l
+    if v:version >= 602 | setlocal formatoptions-=a | endif
+
+    " Make navigation more amenable to the long wrapping lines.
+    noremap <buffer> k gk
+    noremap <buffer> j gj
+    noremap <buffer> <Up> gk
+    noremap <buffer> <Down> gj
+    noremap <buffer> 0 g0
+    noremap <buffer> ^ g^
+    noremap <buffer> $ g$
+    noremap <buffer> D dg$
+    noremap <buffer> C cg$
+    noremap <buffer> A g$a
+
+    inoremap <buffer> <Up> <C-O>gk
+    inoremap <buffer> <Down> <C-O>gj
+
+    " Treat lists, indented text and tables as comment lines and continue with the
+    " same formatting in the next line (i.e. insert the comment leader) when hitting
+    " <CR> or using "o".
+    setlocal comments=n:#,n:*,n:\:,s:{\|,m:\|,ex:\|}
+    setlocal formatoptions+=roq
+augroup end " 2}}}
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
 "     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
@@ -216,15 +246,14 @@ command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1)
 " Word processor mode {{{2
 " Enter 'Word processor mode' by hitting :WP
 " See http://www.drbunsen.org/writing-in-vim.html for mor information.
-"function! WordProcessorMode()
-"    set formatprg=par
-"    setlocal wrap
-"    setlocal linebreak
-"    colo iawriter
-"    set background=light
-"    set fuoptions=background:#00f5f6f6
-"endfunction
-"com! WP cal WordProcessorMode()
+function! WordProcessorMode()
+    setlocal formatoptions=l
+    setlocal noexpandtab
+    set complete+=s
+    setlocal wrap
+    setlocal linebreak
+endfunction
+com! WP cal WordProcessorMode()
 " 2}}}
 " Highlight Word {{{
 " The following function was shamelessly ripped from Steve Losh's vimrc at
