@@ -97,3 +97,19 @@ Abolish ind{,er,ers,erna,ernas} indikation{}
 Abolish diffdiag{,er,ers,erna,ernas} differentialdiagnos{}
 Abolish aortdis{,en,ens,s,er,erna,ernas} aortadissektion{}
 Abolish kksj{,s,en,ens,ar,ars,arnas} kranskärlssjukdom{}
+Abolish ffl förmaksflimmer
+Abolish väsi vänstersidiga
+Abolish hösi högersidiga
+Abolish vlt vilket leder till
+Abolish hfrv{,s,en,ens} hjärtfrekvensvariabilitet{}
+Abolish hfr{,en,erna,ernas,ens,s} hjärtfrekvens{}
+Abolish lmboken läkemedelsboken
+Abolish oak orala antikoagulantia
+Abolish lmbeh{,s,en,ens,ar,arna,arnas} läkemedelsbehandling{}
+Abolish dfr därför
+Abolish utr{,en,ens,s,ar,ars,arna,arnas} utredning{}
+Abolish fsjd{,s,ar,ars,arna,arnas} folksjukdom{}
+Abolish hjrr hjärtrytmrubbning
+Abolish prv{,en,ens,er,erna,ernas} prevalens{}
+Abolish obeh obehandlat
+Abolish behas behandlas
