@@ -109,3 +109,6 @@
 [submodule "home/vim/bundle/mediawiki"]
 	path = home/vim/bundle/mediawiki
 	url = git://github.com/chikamichi/mediawiki.vim.git
+[submodule "home/vim/bundle/solarized"]
+	path = home/vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
