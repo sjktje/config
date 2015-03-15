@@ -113,3 +113,5 @@ Abolish hjrr hjärtrytmrubbning
 Abolish prv{,en,ens,er,erna,ernas} prevalens{}
 Abolish obeh obehandlat
 Abolish behas behandlas
+Abolish mtp med tanke på
+Abolish ffr framför
