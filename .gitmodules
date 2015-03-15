@@ -112,3 +112,12 @@
 [submodule "home/vim/bundle/solarized"]
 	path = home/vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "home/vim/bundle/markdown"]
+	path = home/vim/bundle/markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "home/vim/bundle/markdown-folding"]
+	path = home/vim/bundle/markdown-folding
+	url = https://github.com/nelstrom/vim-markdown-folding
+[submodule "home/vim/bundle/pencil"]
+	path = home/vim/bundle/pencil
+	url = https://github.com/reedes/vim-pencil.git
