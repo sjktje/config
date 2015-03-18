@@ -94,6 +94,9 @@ nnoremap <leader>es :vsplit ~/.ssh/config<cr>
 nnoremap <leader>ez :vsplit ~/config/home/zshrc<cr>
 nnoremap <leader>et :vsplit ~/Dropbox/todo/todo.txt<cr>
 
+" Source vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Word mode
 nnoremap <leader>wm :set tw=0 wrap linebreak<cr>
 
