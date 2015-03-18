@@ -121,3 +121,6 @@
 [submodule "home/vim/bundle/pencil"]
 	path = home/vim/bundle/pencil
 	url = https://github.com/reedes/vim-pencil.git
+[submodule "home/vim/bundle/ctrlp"]
+	path = home/vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
