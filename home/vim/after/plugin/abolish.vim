@@ -115,3 +115,10 @@ Abolish obeh obehandlat
 Abolish behas behandlas
 Abolish mtp med tanke på
 Abolish ffr framför
+Abolish ffa framför allt
+Abolish kmr kommer
+Abolish hjsv{,s,en,ens} hjärtsvikt{}
+Abolish ss självständigt
+Abolish patsäk patientsäker
+Abolish patsäkh{,s,en,ens} patientsäkerhet{}
+Abolish hsjv{,s,en,ens} hjärtsjukvård{}
