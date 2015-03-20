@@ -97,6 +97,17 @@ nnoremap <leader>et :vsplit ~/Dropbox/todo/todo.txt<cr>
 " Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Tabs and buffers
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<cr>
+nmap <leader>h :bprevious<cr>
+
+" Close current buffer and move to prev
+nmap <leader>bq :bp <BAR> bd #<cr>
+
+" Show open buffers
+nmap <leader>bl :ls<cr>
+
 " Word mode
 nnoremap <leader>wm :set tw=0 wrap linebreak<cr>
 
