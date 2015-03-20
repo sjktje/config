@@ -10,7 +10,7 @@ syntax on
 " }}}
 " {{{ GUI options
 if has('gui_running')
-    set guifont=Anonymice\ Powerline
+    set guifont=Anonymice\ Powerline:h14
     set go-=T
     set go-=l
     set go-=L
