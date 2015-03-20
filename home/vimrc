@@ -319,6 +319,7 @@ map <silent> <Leader>ls :silent
 "}}}
 "{{{ Jekyll
 let g:jekyll_path='/Users/sjk/Code/blog'
+let g:jekyll_post_suffix = 'md'
 "}}}
 "{{{ Surround
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
