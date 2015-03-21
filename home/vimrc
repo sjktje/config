@@ -123,7 +123,7 @@ nmap <leader>ga :Gwrite<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
-nmap <leader>gp :!git push<cr>
+nmap <leader>gp :cd %:p:h<cr>; !git push<cr>;cd -<cr>
 nmap <leader>gb :!hub browse<cr>
 
 " LaTeX-work mappings
