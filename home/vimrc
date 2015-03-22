@@ -99,6 +99,10 @@ nnoremap <leader>et :vsplit ~/Dropbox/todo/todo.txt<cr>
 " Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" Toggle folds with the space bar
+nnoremap <Space> za
+vnoremap <Space> za
+
 " Tabs and buffers
 nmap <leader>T :enew<cr>
 nmap <leader>l :bnext<cr>
