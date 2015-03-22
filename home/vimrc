@@ -1,5 +1,5 @@
 " sjks .vimrc
-" {{{ Setup
+" Setup {{{1
 set nocompatible
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -7,8 +7,8 @@ call pathogen#helptags()
 filetype plugin on
 filetype plugin indent on
 syntax on
-" }}}
-" {{{ GUI options
+
+" GUI Options {{{1
 if has('gui_running')
     set guifont=Anonymice\ Powerline:h14
     set go-=T
@@ -17,8 +17,7 @@ if has('gui_running')
     set go-=r
     set go-=R
 endif
-" }}}
-" {{{ Options
+" {{{1 Settings
 set history=50			" Keep 50 lines of command line history.
 set ts=4
 set si				" Smart indent
@@ -70,8 +69,8 @@ let maplocalleader="-"
 syntax enable			" syntax hilighting is nice
 set list
 set listchars=tab:▸\ ,eol:¬
-" }}}
-" {{{ Colors
+
+" Colorschemes {{{1
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
@@ -80,8 +79,8 @@ set listchars=tab:▸\ ,eol:¬
 colo solarized
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
-" }}}
-"{{{ Mappings
+
+" Mappings {{{1
 
 " The following mapping is taken from Steve Losh's vimrc (which is available
 " at https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc). It turns the
@@ -126,11 +125,13 @@ nmap <leader>gd :Gdiff<cr>
 nmap <leader>gp :cd %:p:h<cr>; !git push<cr>;cd -<cr>
 nmap <leader>gb :!hub browse<cr>
 
-" LaTeX-work mappings
+" LaTeX-work mappings {{{2
 nmap <leader>lm :w<cr> :make viewpdf<cr>
+command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendly ones
 
-" NERDTree convenience mappings
+" NERDTree convenience mappings {{{2
 map <leader>nt :NERDTreeToggle<cr>
+"2}}}
 
 " Sane search regexps
 nnoremap / /\v
@@ -173,11 +174,10 @@ inoremap jj <ESC>
 
 " Open a vertical split and switch focus to it
 nnoremap <leader>w <C-w>v<C-w>l
-"}}}
 " Autocommands {{{1
 augroup autowrites " {{{2
     autocmd BufWrite *.pl %s/\(changed\s\+\)=> '.*/\="\1=> '" . strftime("%c") . "',"/e
-augroup end " 2}}}
+augroup end
 augroup ft_html " {{{2
     autocmd!
     autocmd BufNewFile,BufRead admin.py    setlocal filetype=python.django
@@ -191,20 +191,19 @@ augroup ft_html " {{{2
     autocmd FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
     autocmd FileType htmldjango inoremap <buffer> <c-b> {{<space><space>}}<left><left><left>
     autocmd FileType php,htmldjango runtime! ftplugin/html/sparkup.vim
-augroup end " 2}}}
+augroup end
 augroup filetypes " {{{2
     autocmd FileType html,htmldjango setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
     autocmd FileType bib setlocal fdm=syntax
-augroup end " 2}}}
+augroup end
 augroup ft_mediawiki " {{{2
-    autocmd BufNewFile,BufRead *.shoutwiki.com.*.txt setlocal filetype=mediawiki
-augroup end " 2}}}
+    autocmd BufNewFile,BufRead *.shoutwiki.com*.*.txt setlocal filetype=mediawiki
+augroup end
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
 "     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 " augroup end
-" 1}}}
 " Functions {{{1
 " Named serial inc {{{2
 function! UPDSERIAL(date, num)
@@ -215,7 +214,6 @@ function! UPDSERIAL(date, num)
 endfunction
 
 command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1), submatch(2)) . '; serial'/gc
-" 2}}}
 " Tab completion {{{2
 "Use TAB for completing words.
 "function! Tab_Or_Complete()
@@ -227,7 +225,6 @@ command Soa :%s/\(2[0-9]\{7}\)\([0-9]\{2}\)\s*;\s*serial/\=UPDSERIAL(submatch(1)
 "endfunction
 "
 ":inoremap<Tab> <C-R>=Tab_Or_Complete()<CR>
-"2}}}
 " Word processor mode {{{2
 " Enter 'Word processor mode' by hitting :WP
 " See http://www.drbunsen.org/writing-in-vim.html for mor information.
@@ -239,8 +236,7 @@ function! WordProcessorMode()
     setlocal linebreak
 endfunction
 com! WP cal WordProcessorMode()
-" 2}}}
-" Highlight Word {{{
+" Highlight Word {{{2
 " The following function was shamelessly ripped from Steve Losh's vimrc at
 " https://bitbucket.org/sjl/dotfiles/src/tip/vim/vimrc.
 "
@@ -272,9 +268,7 @@ function! HiInterestingWord(n)
 
     " Move back to our original location.
     normal! `z
-endfunction " }}}
-
-" Mappings {{{
+endfunction
 
 nnoremap <silent> <leader>1 :call HiInterestingWord(1)<cr>
 nnoremap <silent> <leader>2 :call HiInterestingWord(2)<cr>
@@ -283,9 +277,6 @@ nnoremap <silent> <leader>4 :call HiInterestingWord(4)<cr>
 nnoremap <silent> <leader>5 :call HiInterestingWord(5)<cr>
 nnoremap <silent> <leader>6 :call HiInterestingWord(6)<cr>
 
-" }}}
-" Default Highlights {{{
-
 hi def InterestingWord1 guifg=#000000 ctermfg=16 guibg=#ffa724 ctermbg=214
 hi def InterestingWord2 guifg=#000000 ctermfg=16 guibg=#aeee00 ctermbg=154
 hi def InterestingWord3 guifg=#000000 ctermfg=16 guibg=#8cffba ctermbg=121
@@ -293,15 +284,12 @@ hi def InterestingWord4 guifg=#000000 ctermfg=16 guibg=#b88853 ctermbg=137
 hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
 hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 
-" }}}
-command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendly ones
-"1}}}
-"{{{ Plugin settings
-"{{{ TeX
+
+" Plugin settings {{{1
+" TeX {{{2
 let g:tex_flavor='latex'
 let g:tex_fold_enabled=1 " This might not be a plugin setting.
-"}}}
-"{{{ latex-box
+" latex-box {{{2
 let g:LatexBox_bibtex_wild_spaces = 1 " \cite{Knuth 1981 == \cite{Knuth.*1981
 let g:LatexBox_Folding = 1 " LaTeX structure folding
 let g:LatexBox_fold_preamble = 1
@@ -310,31 +298,25 @@ let g:LatexBox_latexmk_async = 1 " Let latexmk run in the background
 let g:LatexBox_latexmk_preview_continuously = 1 " Compile on write
 let g:LatexBox_quickfix = 2 " Don't steal the cursor
 
-"Set up synctex
+" Synctex {{{2
 let g:LatexBox_latexmk_options = "-pdflatex='pdflatex -synctex=1 \%O \%S'"
 map <silent> <Leader>ls :silent
     \ !/Applications/Skim.app/Contents/SharedSupport/displayline
     \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>"
     \ "%:p" <CR>
-"}}}
-"{{{ Jekyll
+" Jekyll {{{2
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:jekyll_post_suffix = 'md'
-"}}}
-"{{{ Surround
+" Surround {{{2
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
-"}}}
-"{{{ Gist
+" Gist {{{2
 let g:gist_clip_command = 'pbcopy'
-"}}}
-"{{{ NERDTree
+" NERDTree {{{2
 let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$', '\.pyc$']
-"}}}
-"{{{ Airline
+" Airline {{{2
 let g:airline_theme='badwolf' " Status bar theme
 let g:airline_powerline_fonts = 1
-"}}}
-"{{{ Python-mode
+" Python-mode {{{2
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'M'
 let g:pydoc = 'pydoc'
@@ -371,19 +353,15 @@ let g:pymode_rope_vim_completion = 1
 let g:pymode_rope_guess_project = 1
 let g:pymode_rope_goto_def_newwin = 0
 let g:pymode_rope_always_show_complete_menu = 0
-"}}}
-"{{{ Sparkup
+" Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
-"}}}
-"{{{ pencil
+" Pencil {{{2
 augroup pencil
     autocmd!
     autocmd FileType markdown   call pencil#init()
     autocmd FileType text       call pencil#init()
 augroup end
-"}}}
-"}}}
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
