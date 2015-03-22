@@ -121,7 +121,39 @@ nmap <leader>bl :ls<cr>
 " Word mode
 nnoremap <leader>wm :set tw=0 wrap linebreak<cr>
 
-" Jekyll.vim convenience mappings
+" Writeroom {{{2
+let g:writeroom = 0
+function! WriteRoom()
+   if has("gui_running")
+      if g:writeroom == 0
+         let g:writeroom = 1
+         set columns=80
+         set fullscreen
+         set linebreak
+         set nocursorline
+         set nolist
+         set nonumber
+         set noshowmode
+         set transparency=0
+         hi NonText guifg=bg
+      else
+         let g:writeroom = 0
+         set cursorline
+         set list
+         set nofullscreen
+         set nolinebreak
+         set number
+         set rulerformat=
+         set showmode
+         hi clear
+      endif
+   endif
+endfunction
+
+nmap gw :exe WriteRoom()<cr>
+imap <leader>w <esc>:exe WriteRoom()<cr>i
+
+" Jekyll.vim convenience mappings {{{2
 map <leader>jb :JekyllBuild<cr>
 map <leader>jn :JekyllPost<cr>
 map <leader>jl :JekyllList<cr>
