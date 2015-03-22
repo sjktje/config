@@ -108,6 +108,10 @@ nmap <leader>T :enew<cr>
 nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
 
+" Grep lecture notes
+command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
+nnoremap <leader>[ :Ngrep
+
 " Close current buffer and move to prev
 nmap <leader>bq :bp <BAR> bd #<cr>
 
