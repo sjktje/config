@@ -123,3 +123,5 @@ Abolish patsäk patientsäker
 Abolish patsäkh{,s,en,ens} patientsäkerhet{}
 Abolish hsjv{,s,en,ens} hjärtsjukvård{}
 Abolish parox paroxysmalt
+Abolish lmet{,s} läkemedlet{}
+Abolish lmen{,s} läkemedlen{}
