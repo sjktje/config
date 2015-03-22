@@ -17,6 +17,9 @@ if has('gui_running')
     set go-=r
     set go-=R
 endif
+
+autocmd! GUIEnter * set vb t_vb=
+
 " {{{1 Settings
 set history=50			" Keep 50 lines of command line history.
 set ts=4
