@@ -96,12 +96,21 @@ nnoremap <leader>es :vsplit ~/.ssh/config<cr>
 nnoremap <leader>ez :vsplit ~/config/home/zshrc<cr>
 nnoremap <leader>et :vsplit ~/Dropbox/todo/todo.txt<cr>
 
+" Effortless and quick changing of buffers!
+nnoremap <leader>b :CtrlPBuffer<cr>
+
+" Sane mapping for omnicomplete
+inoremap <S-TAB> <C-X><C-O>
+
 " Source vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Toggle folds with the space bar
 nnoremap <Space> za
 vnoremap <Space> za
+
+" Toggle spell checking
+nmap <silent> <leader>s :set spell!<cr>
 
 " Tabs and buffers
 nmap <leader>T :enew<cr>
