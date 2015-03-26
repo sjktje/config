@@ -408,12 +408,6 @@ let g:pymode_rope_always_show_complete_menu = 0
 " Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
-" Pencil {{{2
-augroup pencil
-    autocmd!
-    autocmd FileType markdown   call pencil#init()
-    autocmd FileType text       call pencil#init()
-augroup end
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
