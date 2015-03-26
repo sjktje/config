@@ -130,3 +130,6 @@
 [submodule "home/vim/bundle/pandoc-syntax"]
 	path = home/vim/bundle/pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "home/vim/bundle/vimwiki"]
+	path = home/vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
