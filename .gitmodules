@@ -85,9 +85,6 @@
 [submodule "home/vim/bundle/ruby"]
 	path = home/vim/bundle/ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
-[submodule "home/vim/bundle/sparkup"]
-	path = home/vim/bundle/sparkup
-	url = https://github.com/sjl/vim-sparkup.git
 [submodule "home/vim/bundle/python-mode"]
 	path = home/vim/bundle/python-mode
 	url = https://github.com/klen/python-mode.git
@@ -133,3 +130,6 @@
 [submodule "home/vim/bundle/vimwiki"]
 	path = home/vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "home/vim/bundle/syntastic"]
+	path = home/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
