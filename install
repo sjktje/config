@@ -48,15 +48,15 @@ class colours:
 
 def print_header(str):
     line = '-' * len(str)
-    print line
-    print colours.HEADER + colours.BOLD + str + colours.ENDC
-    print line
+    print(line)
+    print(colours.HEADER + colours.BOLD + str + colours.ENDC)
+    print(line)
 
 def print_warning(str):
-    print colours.WARNING + str + colours.ENDC
+    print(colours.WARNING + str + colours.ENDC)
 
 def print_ok(str):
-    print colours.OKGREEN + str + colours.ENDC
+    print(colours.OKGREEN + str + colours.ENDC)
 
 def create_symlink(src, dest):
     if os.path.isfile(dest) and not os.path.islink(dest):
