@@ -91,7 +91,7 @@ def main():
     args = parser.parse_args()
 
     if args.update:
-        if 'Already up-to-date.' in subprocess.check_output(['git', 'pull']):
+        if b'Already up-to-date.' in subprocess.check_output(['git', 'pull']):
             print_ok('Already got the latest timey-wimey, wobbly-bobbly config.')
             if not args.force:
                 return
