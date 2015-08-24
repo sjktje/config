@@ -9,14 +9,12 @@ export PATH=/usr/local/sbin:$HOME/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/Ap
 export VIMHOME=${HOME}/.vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
-export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
+# export TEXINPUTS=$TEXINPUTS:${HOME}/lib/LaTeX
 export BLOCKTABLE="attackers"
 export WORKON_HOME=~/.envs
 export TODOTXT_DEFAULT_ACTION='ls'
-
-if [[ `uname -s` == "Darwin" ]]; then
-    export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
-fi
+export NOTES_DIR=/Users/sjk/Documents/Skola/SHH/notes
+export PIP_REQUIRE_VIRTUALENV=true
 
 if [[ -n "$ZSHRUN" ]]
 then
@@ -80,6 +78,7 @@ fi
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias cdshh='cd ~/Documents/Skola/SHH'
+alias cddr='cd ~/Documents/Skola/SHH/@Drafts'
 alias cdgit='cd /pub/git'
 alias cdsu='cd ~/Documents/Skola/SU'
 alias svspell='aspell -l sv check'
@@ -130,12 +129,13 @@ alias v5='osascript -e "set volume 5"'
 alias v7='osascript -e "set volume 7"'
 alias v9='osascript -e "set volume 9"'
 
+alias thesession='timidity ~/Downloads/*.mid(Nm0om[1])'
 alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
 alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 
 alias pms="/Applications/Plex\ Media\ Server.app/Contents/MacOS/Plex\ Media\ Scanner"
 
-alias django-admin="/usr/local/share/python/django-admin.py"
+#alias django-admin="/usr/local/share/python/django-admin.py"
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
@@ -151,6 +151,11 @@ if [[ `uname -s` == "Darwin" ]]; then
 	alias hibernateon='sudo pmset -a hibernatemode 5'
 	alias hibernateoff='sudo pmset -a hibernatemode 0'
 fi
+
+# A virtualenv is required in order to install python packages (see export
+# PIP_REQUIRE_VIRTUALENV above), but sometimes I want to install or upgrade
+# global packages. That's where I use gpip.
+alias gpip='PIP_REQUIRE_VIRTUALENV="" pip'
 
 # Using another output directory causes problems with bibtex. Will use this
 # again when I have figured out how to make bibtex use the same directory.
