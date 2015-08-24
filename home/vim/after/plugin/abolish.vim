@@ -125,3 +125,9 @@ Abolish hsjv{,s,en,ens} hjärtsjukvård{}
 Abolish parox paroxysmalt
 Abolish lmet{,s} läkemedlet{}
 Abolish lmen{,s} läkemedlen{}
+Abolish hjmv{,en,ens} hjärtminutvolym{}
+Abolish hjst{e,na,nas,en,ens,} hjärtstartar{}
+Abolish krksjd{,s,en,ens,ar,arna,ars,arnas} kranskärlssjukdom{}
+Abolish mha med hjälp av
+Abolish patfall{,s,en,ens,et,ets} patientfall{}
+Abolish ggr{,na} gånger{}
