@@ -101,6 +101,16 @@ colo solarized
 " current word into UPPERCASE.
 inoremap <C-u> <esc>mzgUiw`za
 
+" Clean trailing whitespace
+nnoremap <leader>wss mz:%s/\s\+$//<cr>:let @/=''<cr>`z
+
+" Again, from Steve Losh. Close all folds, open the one containing current
+" line and pulse it.
+nnoremap <c-z> mzzMzvzz15<c-e>`z:Pulse<cr>
+
+" gp to select pasted text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 " Quick editing
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>es :vsplit ~/.ssh/config<cr>
@@ -120,8 +130,14 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <Space> za
 vnoremap <Space> za
 
+" Split lines - opposite of J. From Steve Losh.
+nnoremap S i<cr><esc>^mwgk:silent! s/\v +$//<cr>:noh<cr>`w
+
 " Toggle spell checking
 nmap <silent> <leader>s :set spell!<cr>
+
+" Delete to end of line
+nmap D d$
 
 " Tabs and buffers
 nmap <leader>T :enew<cr>
@@ -130,7 +146,7 @@ nmap <leader>h :bprevious<cr>
 
 " Grep lecture notes
 command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
-nnoremap <leader>[ :Ngrep
+nnoremap <leader>[ :Ngrep 
 
 " Close current buffer and move to prev
 nmap <leader>bq :bp <BAR> bd #<cr>
@@ -192,9 +208,40 @@ nmap <leader>gb :!hub browse<cr>
 nmap <leader>lm :w<cr> :make viewpdf<cr>
 command FixQuotes :%s/"\(\_.\{-}\)"/``\1''/g " Replace quotes with LaTeX friendly ones
 
+syn match texTextcite "\\textcite{[^}]}" containedin=texStatement contains=@NoSpell
+syn match texParencite "\\parencite{[^}]}" containedin=texStatement contains=@NoSpell
+syn match texCiteauthor "\\citeauthor{[^}]}" containedin=texStatement contains=@NoSpell
+syn match texCiteyear "\\citeyear{[^}]}" containedin=texStatement contains=@NoSpell
+
 " NERDTree convenience mappings {{{2
 map <leader>nt :NERDTreeToggle<cr>
+map <leader>nf :NERDTreeFind<cr>
 "2}}}
+
+" ABC
+nmap <leader>ap :call Abc2midi()<CR>
+function! Abc2midi()
+    let midi_file_name = shellescape(expand("%:p:r").'.mid')
+    let abc_file_name = shellescape(expand("%:p"))
+    write
+    let cmd = 'abc2midi '.abc_file_name.' -o ' . midi_file_name
+    silent call system(cmd)
+    let play_cmd = 'timidity '.midi_file_name
+    silent call system(play_cmd)
+    let rm_cmd = 'rm '.midi_file_name
+    silent call system(rm_cmd)
+endfunction
+
+nmap <leader>av :call Abcm2ps()<CR>
+function! Abcm2ps()
+    let abc_file_name = shellescape(expand("%:p"))
+    let ps_file_name = shellescape(expand("%:p:r").'.ps')
+    write
+    let cmd = 'abcm2ps -O= '.abc_file_name.' && open '.ps_file_name
+    call system(cmd)
+    let rm_cmd = 'rm '.ps_file_name
+    call system(rm_cmd)
+endfunction
 
 " Sane search regexps
 nnoremap / /\v
@@ -232,6 +279,7 @@ nnoremap ; :
 " Fold html tags
 nnoremap <leader>ft Vatzf
 
+
 " jj takes us to normal mode
 inoremap jj <ESC>
 
@@ -263,10 +311,23 @@ augroup end
 augroup ft_mediawiki " {{{2
     autocmd BufNewFile,BufRead *.shoutwiki.com*.*.txt setlocal filetype=mediawiki
 augroup end
+augroup ft_tex " {{{2
+    autocmd BufNewFile,BufRead *.cls setlocal filetype=tex
+augroup end
+augroup ft_abc " {{{2
+    autocmd BufNewFile,BufRead *.abc setlocal nospell commentstring=\%%s
+augroup end
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
 "     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
 " augroup end
+augroup line_return "{{{2
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup end
 " Functions {{{1
 " Named serial inc {{{2
 function! UPDSERIAL(date, num)
@@ -348,6 +409,37 @@ hi def InterestingWord5 guifg=#000000 ctermfg=16 guibg=#ff9eb8 ctermbg=211
 hi def InterestingWord6 guifg=#000000 ctermfg=16 guibg=#ff2c4b ctermbg=195
 
 
+" Pulse Line {{{2
+" From Steve Losh's vimrc. For some reason though, this only works in terminal
+" vim for me.
+
+function! s:Pulse()
+    redir => old_hi
+        silent execute 'hi CursorLine'
+    redir END
+    let old_hi = split(old_hi, '\n')[0]
+    let old_hi = substitute(old_hi, 'xxx', '', '')
+
+    let steps = 8
+    let width = 1
+    let start = width
+    let end = steps * width
+    let color = 233
+
+    for i in range(start, end, width)
+        execute "hi CursorLine ctermbg=" . (color + i)
+        redraw
+        sleep 6m
+    endfor
+    for i in range(end, start, -1 * width)
+        execute "hi CursorLine ctermbg=" . (color + i)
+        redraw
+        sleep 6m
+    endfor
+
+    execute 'hi ' . old_hi
+endfunction " }}}
+command! -nargs=0 Pulse call s:Pulse()
 " Plugin settings {{{1
 " TeX {{{2
 let g:tex_flavor='latex'
@@ -372,10 +464,31 @@ let g:jekyll_path='/Users/sjk/Code/blog'
 let g:jekyll_post_suffix = 'md'
 " Surround {{{2
 let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+augroup surround_django
+    " type 'Sv' or 'S{' for a variable
+    " type 'Sb' for a block
+    " type 'Si' for an if statement
+    " type 'Sw' for a with statement
+    " type 'Sc' for a comment
+    " type 'Sf' for a for statement
+    " type 'S%' for other template tags
+    autocmd FileType htmldjango let b:surround_{char2nr("v")} = "{{ \r }}"
+    autocmd FileType htmldjango let b:surround_{char2nr("{")} = "{{ \r }}"
+    autocmd FileType htmldjango let b:surround_{char2nr("%")} = "{% \r %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
+augroup end
+
 " Gist {{{2
 let g:gist_clip_command = 'pbcopy'
 " NERDTree {{{2
 let NERDTreeIgnore=['\~$', '\.aux$', '\.bbl$', '\.bcf$', '\.blg$', '\.pdf$', '\.run\.xml$', '\.toc$', '\.out$', '\.pyc$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeChDirMode = 2
 " Airline {{{2
 let g:airline_theme='badwolf' " Status bar theme
 let g:airline_powerline_fonts = 1
@@ -421,6 +534,18 @@ let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
 " Pandoc {{{2
 let g:pandoc#biblio#use_bibtool = 1
+" Syntastic {{{2
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_tex_checkers = ['chktex']
+let g:syntastic_tex_chktex_args = ['-l', '/Users/sjk/.chktexrc']
+
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
