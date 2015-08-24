@@ -1,0 +1,14 @@
+snippet elif "elif" b
+{% elif ${1} %}
+${0}
+endsnippet
+
+snippet url "template url" i
+{% url '${1}' ${2}%}${0}
+endsnippet
+
+snippet comment "comment" i
+{% comment %}
+${1:${VISUAL:comment}}
+{% endcomment %}
+endsnippet
