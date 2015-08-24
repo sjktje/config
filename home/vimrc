@@ -71,7 +71,18 @@ let mapleader=","
 let maplocalleader="-"
 syntax enable			" syntax hilighting is nice
 set list
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:⌴
+
+" Resize splits when the window is resized
+au VimResized * :wincmd =
+
+" {{{2 Trailing whitespace
+" Don't show trailing whitespace in insert mode.
+augroup trailing
+    au!
+    au InsertEnter * :set listchars-=trail:⌴
+    au InsertLeave * :set listchars+=trail:⌴
+augroup END
 
 " Colorschemes {{{1
 "colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
