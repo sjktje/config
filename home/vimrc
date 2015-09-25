@@ -254,6 +254,9 @@ nmap Q gqap
 " Use this to add newline chars to latex table lines and tab them correctly
 vmap <leader>t :s,$,\\\\, | :Tab /&<cr>
 
+" Attempt to fix abc file
+noremap <leader>abc :%s/ \| /\|/ge <Bar> %s/\|: /\|:/ge <Bar> %s/ :\|/:\|/e <Bar> %s/ \|1 /\|1/ge <Bar> %s/ \|2 /\|2/ge <Bar> %s/ \|\|/\|\|/ge <cr>
+
 " Switch windows easily
 map <C-h> <C-w>h
 map <C-j> <C-w>j
