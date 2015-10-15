@@ -90,8 +90,8 @@ augroup END
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
 " colo mustang
-" colo badwolf
-colo solarized
+colo badwolf
+" colo solarized
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 
