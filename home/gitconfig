@@ -1,6 +1,7 @@
 [user]
 	name = Svante Kvarnström
 	email = sjk@ankeborg.nu
+	signingkey = FD54E1CD
 [alias]
 	ci = commit
 	co = checkout
