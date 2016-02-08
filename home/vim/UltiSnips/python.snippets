@@ -148,21 +148,10 @@ endsnippet
 
 snippet mod
 class ${1:ModelName}(models.Model):
-    """${2:docstring}"""
-    ${3}
-    
-    class Meta:
-	${4}
-    
-    def __unicode__(self):
-	${5}
-    
-    def save(self, force_insert=False, force_update=False):
-	${6}
-    
-    @models.permalink
-    def get_absolute_url(self):
-	return ('${7:view_or_url_name}' ${8})
+    ${2}
+
+    def __str__(self):
+	    return ${3}
 endsnippet
 
 
@@ -204,7 +193,7 @@ snippet ac "Assert contains" b
 self.assertContains(${1:first}, ${2:second})
 endsnippet
 
-snippet att "assertTemplateUSed" b
+snippet atu "assertTemplateUsed" b
 self.assertTemplateUsed(${1:response}, '${2:template.html}')
 endsnippet
 
@@ -212,9 +201,7 @@ snippet def "function with docstring" b
 def ${1:function}(`!p
 if snip.indent:
     snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-    """
-    ${4:TODO: Docstring for $1.}
-    """
+    """${3:TODO: docstring}"""
     ${0:pass}
 endsnippet
 
