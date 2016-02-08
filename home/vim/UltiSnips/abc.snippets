@@ -1,14 +1,32 @@
 snippet head "ABC header" b
-X: ${1}
-T: ${2}
-C: ${3:Svante Kvarnstr\"om}
-R: ${4:Reel}
-O: ${5:Ireland}
-S: ${6:Source}
-H: ${7:history...}
-M: ${8:4/4}
-L: ${9:1/8}
-Z: Svante Kvarnstr\"om
-K: ${10:key}
+X:${1}
+T:${2}
+C:${3:Trad.}
+R:${4:Reel}
+O:${5:Ireland}
+S:${6:Source}
+H:${7:history...}
+M:`!p
+tune_types = {
+    'Reel': '4/4',
+    'Hornpipe': '4/4',
+    'Jig': '6/8',
+    'Slipjig': '9/8',
+    'Polka': '2/4',
+    'Waltz': '3/4',
+    'Polska': '3/4',
+}
+snip.rv = tune_types.get(t[4], "whaaat")`
+L:${9:1/8}
+Z:Svante Kvarnstr\"om
+K:${10:key}
 ${0}
+endsnippet
+
+snippet alt "Alternate ending" i
+1${1:${VISUAL:first}}:|2${2:second}||
+endsnippet
+
+snippet alte "Alternate ending with |]" i
+1${1:${VISUAL:first}}:|2${2:second}|]
 endsnippet
