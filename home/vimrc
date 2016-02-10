@@ -90,8 +90,8 @@ augroup END
 "colo desert			" And desert is too.
 "colo slate                     " why not try slate for a while?
 " colo mustang
-colo badwolf
-" colo solarized
+" colo badwolf
+colo solarized
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 
@@ -499,47 +499,30 @@ let NERDTreeChDirMode = 2
 let g:airline_theme='badwolf' " Status bar theme
 let g:airline_powerline_fonts = 1
 " Python-mode {{{2
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'M'
-let g:pydoc = 'pydoc'
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 0
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_print_as_function = 0
-let g:pymode_syntax_space_errors = 0
-let g:pymode_run = 0
-let g:pymode_lint = 0
-let g:pymode_breakpoint = 0
-let g:pymode_utils_whitespaces = 1
-let g:pymode_virtualenv = 0
+let g:pymode = 1
+let g:pymode_options = 1
+let g:pymode_quickfix_minheight = 3
+let g:pymode_quickfix_maxheight = 6
+let g:pymode_virtualenv = 1
+let g:pymode_indent = 1
 let g:pymode_folding = 1
-
-let g:pymode_options_indent = 1
-let g:pymode_options_fold = 0
-let g:pymode_options_other = 0
-let g:pymode_options = 0
-
-let g:pymode_rope = 0
-let g:pymode_rope_global_prefix = "<localleader>R"
-let g:pymode_rope_local_prefix = "<localleader>r"
-let g:pymode_rope_auto_project = 1
-let g:pymode_rope_enable_autoimport = 0
-let g:pymode_rope_autoimport_generate = 1
-let g:pymode_rope_autoimport_underlineds = 0
-let g:pymode_rope_codeassist_maxfixes = 10
-let g:pymode_rope_sorted_completions = 1
-let g:pymode_rope_extended_complete = 1
-let g:pymode_rope_autoimport_modules = ["os", "shutil", "datetime"]
-let g:pymode_rope_confirm_saving = 1
-let g:pymode_rope_vim_completion = 1
-let g:pymode_rope_guess_project = 1
-let g:pymode_rope_goto_def_newwin = 0
-let g:pymode_rope_always_show_complete_menu = 0
+let g:pymode_motion = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
+let g:pymode_lint_ignore = 'E501'
+let g:pymode_syntax = 1
 " Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
 " Pandoc {{{2
 let g:pandoc#biblio#use_bibtool = 1
+" UltiSnips {{{2
+let g:ultisnips_python_style = 'sphinx'
 " Syntastic {{{2
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -547,7 +530,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_tex_checkers = ['chktex']
 let g:syntastic_tex_chktex_args = ['-l', '/Users/sjk/.chktexrc']
