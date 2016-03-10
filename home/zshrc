@@ -363,3 +363,6 @@ fi
 if [ -f ~/.zsh_extra ]; then
     source ~/.zsh_extra
 fi
+
+# added by travis gem
+[ -f /Users/sjk/.travis/travis.sh ] && source /Users/sjk/.travis/travis.sh
