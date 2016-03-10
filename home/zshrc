@@ -290,6 +290,10 @@ add-zsh-hook preexec title_preexec
 zmodload zsh/complist
 autoload -U compinit && compinit
 
+if [ -f /usr/local/share/zsh/site-functions/git-flow-completion.zsh ]; then
+    source /usr/local/share/zsh/site-functions/git-flow-completion.zsh
+fi
+
 # pip zsh completion start
 function _pip_completion {
   local words cword
