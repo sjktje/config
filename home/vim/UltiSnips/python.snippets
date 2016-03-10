@@ -1,9 +1,47 @@
 global !p
 
-def triple_quotes(snip):
-    return '"' * 3
+SINGLE_QUOTES = "'"
+DOUBLE_QUOTES = '"'
 
+try:
+	rst_char_len = vim.strwidth  # Requires Vim 7.3+
+except AttributeError:
+	from unicodedata import east_asian_width
+	def rst_char_len(s):
+		"""Return the required over-/underline length for s."""
+		result = 0
+		for c in s:
+			result += 2 if east_asian_width(c) in ('W', 'F') else 1
+		return result
+
+
+def get_quoting_style(snip):
+	style = snip.opt("g:ultisnips_python_quoting_style", "double")
+	if style == 'single':
+		return SINGLE_QUOTES
+	return DOUBLE_QUOTES
+
+
+def triple_quotes(snip):
+	style = snip.opt("g:ultisnips_python_triple_quoting_style")
+	if not style:
+		return get_quoting_style(snip) * 3
+	return (SINGLE_QUOTES if style == 'single' else DOUBLE_QUOTES) * 3
 endglobal
+
+snippet modhead
+`!p snip.rv = triple_quotes(snip)`
+    ${1:name of module}
+    `!p snip.rv = rst_char_len(t[1])*'~'`
+
+    ${2:description of module}
+
+    :copyright: (c) `!v strftime("%Y")` by Svante Kvarnström
+    :license: BSD, see LICENSE for more details.
+`!p snip.rv = triple_quotes(snip)`
+
+${0}
+endsnippet
 
 snippet bsdl
 # Copyright (c) `!v strftime("%Y")` Svante Kvarnström <sjk@ankeborg.nu>. All rights reserved.
@@ -197,16 +235,16 @@ snippet atu "assertTemplateUsed" b
 self.assertTemplateUsed(${1:response}, '${2:template.html}')
 endsnippet
 
-snippet def "function with docstring" b
-def ${1:function}(`!p
-if snip.indent:
-    snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-    """${3:TODO: docstring}"""
-    ${0:pass}
-endsnippet
+# snippet def "function with docstring" b
+# def ${1:function}(`!p
+# if snip.indent:
+#     snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+#     """${3:TODO: docstring}"""
+#     ${0:pass}
+# endsnippet
 
 snippet enc "Add file encoding" b
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 endsnippet
 
 snippet render "render" i
