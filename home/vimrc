@@ -507,12 +507,16 @@ let g:pymode_virtualenv = 1
 let g:pymode_indent = 1
 let g:pymode_folding = 1
 let g:pymode_motion = 1
-let g:pymode_doc = 1
+let g:pymode_doc = 0
 let g:pymode_doc_bind = 'K'
 let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
+
+nnoremap <leader>pl :PymodeLint<cr>
+nnoremap <leader>pla :PymodeLintAuto<cr>
+
 let g:pymode_lint = 1
-let g:pymode_lint_on_write = 1
+let g:pymode_lint_on_write = 0
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 let g:pymode_lint_ignore = 'E501'
 let g:pymode_syntax = 1
