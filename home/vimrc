@@ -576,6 +576,8 @@ let g:syntastic_jsl_conf = '$HOME/.vim/jsl.conf'
 let g:syntastic_scala_checkers = ['fsc']
 let g:syntastic_python_checkers = ['python']
 
+nnoremap <leader>C :SyntasticCheck<cr>
+
 " Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
