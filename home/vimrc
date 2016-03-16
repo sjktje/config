@@ -73,6 +73,7 @@ syntax enable			" syntax hilighting is nice
 set list
 set listchars=tab:▸\ ,eol:¬,trail:⌴
 set bg=dark
+set tags=tags
 
 " Resize splits when the window is resized
 au VimResized * :wincmd =
@@ -561,20 +562,16 @@ nnoremap <leader>pla :PymodeLintAuto<cr>
 
 
 "Syntastic {{{2
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_enable_signs = 1
 let g:syntastic_check_on_open = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_jump = 0
-let g:syntastic_java_checker = 'javac'
-let g:syntastic_mode_map = {
-            \ "mode": "active",
-            \ "active_filetypes": [],
-            \ "passive_filetypes": ['java', 'html', 'rst']
-            \ }
-let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
-let g:syntastic_jsl_conf = '$HOME/.vim/jsl.conf'
-let g:syntastic_scala_checkers = ['fsc']
-let g:syntastic_python_checkers = ['python']
+let g:syntastic_python_python_exec = 'python3'
 
 nnoremap <leader>C :SyntasticCheck<cr>
 
