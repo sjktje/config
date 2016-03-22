@@ -201,6 +201,33 @@ function 6p() {
 	fi
 }
 
+# "code <project>" changes directory to ~/Code/project and switches to
+# whatever virtualenv is specified in ~/Code/project/.venv, if such file
+# exists.
+function code() {
+    if [ ! -n "$1" ]
+    then
+        echo "Usage: code <code directory>"
+        return 1
+    fi
+
+    CODE_DIRECTORY="${HOME}/Code/${1}"
+
+    if [ ! -n "$CODE_DIRECTORY" ]
+    then
+        echo "Code directory $CODE_DIRECTORY does not exist."
+        return 1
+    fi
+
+    cd $CODE_DIRECTORY
+
+    if [ -e ".venv" ]
+    then
+        venv=$(cat .venv)
+        workon $venv
+    fi
+}
+
 function rlss(){
     last_screenshot="$(ls -1 ~/ss/Screen\ Shot*|tail -n 1)"
     filename="${HOME}/ss/${1}.png"
