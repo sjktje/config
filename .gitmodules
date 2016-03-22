@@ -139,3 +139,6 @@
 [submodule "home/vim/bundle/youcompleteme"]
 	path = home/vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "home/vim/bundle/pytest"]
+	path = home/vim/bundle/pytest
+	url = https://github.com/alfredodeza/pytest.vim
