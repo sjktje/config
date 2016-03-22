@@ -136,3 +136,6 @@
 [submodule "home/vim/bundle/ansible"]
 	path = home/vim/bundle/ansible
 	url = https://github.com/pearofducks/ansible-vim.git
+[submodule "home/vim/bundle/youcompleteme"]
+	path = home/vim/bundle/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe.git
