@@ -597,7 +597,10 @@ nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
-"
+" PyTest {{{2
+nmap <silent><leader>pf <Esc>:Pytest file<cr>
+nmap <silent><leader>pc <Esc>:Pytest class<cr>
+nmap <silent><leader>pm <Esc>:Pytest method<cr>
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
