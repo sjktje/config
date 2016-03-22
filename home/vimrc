@@ -304,8 +304,6 @@ augroup ft_html " {{{2
     autocmd BufNewFile,BufRead forms.py    setlocal filetype=python.django
     autocmd BufNewFile,BufRead *.html setlocal filetype=htmldjango
     autocmd FileType html,htmldjango setlocal foldmethod=manual
-    autocmd FileType htmldjango inoremap <buffer> <c-t> {%<space><space>%}<left><left><left>
-    autocmd FileType htmldjango inoremap <buffer> <c-b> {{<space><space>}}<left><left><left>
     autocmd FileType php,htmldjango runtime! ftplugin/html/sparkup.vim
 augroup end
 augroup filetypes " {{{2
@@ -514,7 +512,7 @@ let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
 let g:pymode_utils_whitespaces = 0
 let g:pymode_virtualenv = 0
-let g:pymode_folding = 0
+let g:pymode_folding = 1
 
 let g:pymode_options_indent = 0
 let g:pymode_options_fold = 0
@@ -575,6 +573,15 @@ let g:syntastic_python_python_exec = 'python3'
 
 nnoremap <leader>C :SyntasticCheck<cr>
 
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--select=F,C9 --max-complexity=10'
+
+let g:syntastic_mode_map = {
+       \ "mode": "active",
+       \ "active_filetypes": [] }
 " Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
@@ -582,6 +589,15 @@ let g:sparkupNextMapping = '<c-m>'
 let g:pandoc#biblio#use_bibtool = 1
 " UltiSnips {{{2
 let g:ultisnips_python_style = 'sphinx'
+let g:UltiSnipsExpandTrigger = '<c-t>'
+let g:UltiSnipsListSnippets = '<c-l>'
+
+" YouCompleteMe {{{2
+nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
+"
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
