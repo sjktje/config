@@ -2,23 +2,23 @@ snippet head "ABC header" b
 X:${1}
 T:${2}
 C:${3:Trad.}
-R:${4:Reel}
+R:${4:reel}
 O:${5:Ireland}
 S:${6:Source}
 H:${7:history...}
 M:`!p
 tune_types = {
-    'Reel': '4/4',
-    'Hornpipe': '4/4',
-    'Jig': '6/8',
-    'Slipjig': '9/8',
-    'Polka': '2/4',
-    'Waltz': '3/4',
-    'Polska': '3/4',
+    'reel': '4/4',
+    'hornpipe': '4/4',
+    'jig': '6/8',
+    'slipjig': '9/8',
+    'polka': '2/4',
+    'waltz': '3/4',
+    'polska': '3/4',
 }
 snip.rv = tune_types.get(t[4], "whaaat")`
 L:${9:1/8}
-Z:Svante Kvarnstr\"om
+Z:Svante Kvarnström
 K:${10:key}
 ${0}
 endsnippet

@@ -169,11 +169,11 @@ snippet bal "\begin{align*}" w
 endsnippet
 
 snippet rat "right arrow text" w
-$\overrightarrow{\text{${1:${VISUAL:text}}}}$
+$\overrightarrow{\text{${1:${VISUAL:text}}}}$ $2
 endsnippet
 
 snippet lat "left arrow text" w
-$\overleftarrow{\text{${1:${VISUAL:text}}}}$
+$\overleftarrow{\text{${1:${VISUAL:text}}}}$ $2
 endsnippet
 
 snippet headshh
@@ -207,13 +207,29 @@ $\downarrow$
 endsnippet
 
 snippet ra "rightarrow"
-$\rightarrow$
+$\rightarrow$ $1
 endsnippet
 
 snippet la "leftarrow"
-$\leftarrow$
+$\leftarrow$ $1
 endsnippet
 
 snippet inc "include"
 \include{${1:${VISUAL}}}
+endsnippet
+
+snippet dia "dialogue"
+\begin{dialogue}
+    ${1:${VISUAL}}
+\end{dialogue}
+endsnippet
+
+snippet tdep "tikz-dependency"
+\begin{dependency}[theme=simple]
+    \begin{deptext}[column sep=1em]
+        ${1:${VISUAL}}
+    \end{deptext}
+    \depedge{${2:from}}{${3:to}}{${4}}
+    ${0}
+\end{dependency}
 endsnippet
