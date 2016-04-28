@@ -142,3 +142,6 @@
 [submodule "home/vim/bundle/pytest"]
 	path = home/vim/bundle/pytest
 	url = https://github.com/alfredodeza/pytest.vim
+[submodule "home/vim/bundle/isort"]
+	path = home/vim/bundle/isort
+	url = https://github.com/fisadev/vim-isort.git
