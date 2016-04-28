@@ -64,7 +64,7 @@ set statusline+=%l/%L:%v                        " Set <line number>/<total lines
 set statusline+=\                               " Set ending space
 set shortmess+=I                 " Disable vim welcome screen
 set spell
-set spelllang=sv,en_gb
+set spelllang=sv,en_gb,fr
 set hidden                      " Make vim work like all other editors...
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
@@ -448,14 +448,14 @@ command! -nargs=0 Pulse call s:Pulse()
 set diffopt=vertical
 " TeX {{{2
 let g:tex_flavor='latex'
-let g:tex_fold_enabled=1 " This might not be a plugin setting.
+let g:tex_fold_enabled=0 " This might not be a plugin setting.
 " latex-box {{{2
 let g:LatexBox_bibtex_wild_spaces = 1 " \cite{Knuth 1981 == \cite{Knuth.*1981
-let g:LatexBox_Folding = 1 " LaTeX structure folding
+let g:LatexBox_Folding = 0 " LaTeX structure folding
 let g:LatexBox_fold_preamble = 1
 let g:LatexBox_fold_envs = 1
 let g:LatexBox_latexmk_async = 1 " Let latexmk run in the background
-let g:LatexBox_latexmk_preview_continuously = 1 " Compile on write
+let g:LatexBox_latexmk_preview_continuously = 0 " Compile on write
 let g:LatexBox_quickfix = 2 " Don't steal the cursor
 
 " Synctex {{{2
@@ -601,6 +601,8 @@ nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
 nmap <silent><leader>pf <Esc>:Pytest file<cr>
 nmap <silent><leader>pc <Esc>:Pytest class<cr>
 nmap <silent><leader>pm <Esc>:Pytest method<cr>
+" isort {{{2
+" let g:vim_isort_map = '<leader>is'
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
