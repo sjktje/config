@@ -186,6 +186,7 @@ function code() { cd ~/Code/${1} }
 function ff() { find . -type f -iname '*'$*'*' -ls; }
 function fe() { find . -type f -iname '*'$1'*' -exec "${2:-file}" {} \; ; }
 function fd() { find . -type d -iname '*'$*'*' -ls; }
+function ffind() { egrep -i $* ${HOME}/.allfiles }
 function bytetombit() { echo $(( $1/1024.0**2*8 )) }
 function mbittobyte() { echo $(( $1*1024.0**2/8 )) }
 function texpdf() { pdflatex ${1}.tex && open ${1}.pdf }
