@@ -145,3 +145,6 @@
 [submodule "home/vim/bundle/isort"]
 	path = home/vim/bundle/isort
 	url = https://github.com/fisadev/vim-isort.git
+[submodule "home/vim/bundle/nerdtree-git"]
+	path = home/vim/bundle/nerdtree-git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
