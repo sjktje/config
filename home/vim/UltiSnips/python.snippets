@@ -31,13 +31,13 @@ endglobal
 
 snippet modhead
 `!p snip.rv = triple_quotes(snip)`
-    ${1:name of module}
-    `!p snip.rv = rst_char_len(t[1])*'~'`
+${1:name of module}
+`!p snip.rv = rst_char_len(t[1])*'~'`
 
-    ${2:description of module}
+${2:description of module}
 
-    :copyright: (c) `!v strftime("%Y")` by Svante Kvarnström
-    :license: BSD, see LICENSE for more details.
+:copyright: (c) `!v strftime("%Y")` by Svante Kvarnström
+:license: BSD, see LICENSE for more details.
 `!p snip.rv = triple_quotes(snip)`
 
 ${0}
@@ -249,4 +249,28 @@ endsnippet
 
 snippet render "render" i
 return render(${1:request}, '${2:template}.html', ${3:context})
+endsnippet
+
+snippet view "view"
+def ${1:name}(request${2:, ${3:args}}):
+    """
+    TODO: docstring for $1.
+
+    **Context**
+
+    TODO: document context.
+
+    **Template**
+
+    TODO: document which template is used.
+    """
+    ${0}
+endsnippet
+
+snippet :t ":template:" i
+:template:\`${1}\`
+endsnippet
+
+snippet :m ":model:" i
+:model:\`${1}\`
 endsnippet
