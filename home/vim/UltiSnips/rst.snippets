@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+
+global !p
+from slugify import slugify
+
+def slug(string):
+    return slugify(string, to_lower=True)
+endglobal
+
+snippet blog
+${1:${VISUAL:Post subject}}
+`!p snip.rv = len(t[1])*'#'`
+
+:date: `!v strftime('%Y-%m-%d')`
+:tags: ${2}
+:category: ${3}
+:slug: `!p snip.rv = slug(t[1])`
+:authors: Svante Kvarnström
+
+${0}
+endsnippet
