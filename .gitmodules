@@ -151,3 +151,6 @@
 [submodule "home/vim/bundle/vimux"]
 	path = home/vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
+[submodule "home/hammerspoon/hs/tiling"]
+	path = home/hammerspoon/hs/tiling
+	url = https://github.com/dsanson/hs.tiling
