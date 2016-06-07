@@ -1,0 +1,24 @@
+export CVS_RSH=ssh
+export EDITOR=vim
+export LC_CTYPE=sv_SE.UTF-8
+export TZ=CET
+export HISTSIZE=13000
+export SAVEHIST=12000
+export HISTFILE=~/.history
+export VIMHOME=${HOME}/.vim
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='3;33'
+export BLOCKTABLE="attackers"
+export WORKON_HOME=~/.envs
+export TODOTXT_DEFAULT_ACTION='ls'
+export NOTES_DIR=/Users/sjk/Documents/Skola/SHH/notes
+export PIP_REQUIRE_VIRTUALENV=true
+
+typeset -U path
+path=(
+    ~/bin
+    /Applications/Postgres.app/Contents/Versions/9.3/bin
+    /Library/TeX/Distributions/Programs/texbin
+    $path
+)
+
