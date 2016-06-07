@@ -38,6 +38,8 @@ alias burniso='cdrecord -v -eject dev=1,0,0'
 
 alias thesession='timidity ~/Downloads/*.mid(Nm0om[1])'
 
+alias mux=tmuxinator
+
 # OS X convenience aliases
 if [[ `uname -s` == "Darwin" ]]; then
     alias pubkeycp='cat ~/.ssh/id_rsa.pub |pbcopy |echo "Public key copied to clipboard."'
