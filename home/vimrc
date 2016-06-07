@@ -68,7 +68,7 @@ set spelllang=sv,en_gb,fr
 set hidden                      " Make vim work like all other editors...
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
 let mapleader=","
-let maplocalleader="-"
+let maplocalleader=";"
 syntax enable			" syntax hilighting is nice
 set list
 set listchars=tab:▸\ ,eol:¬,trail:⌴
@@ -203,7 +203,7 @@ nmap <leader>ga :Gwrite<cr>
 nmap <leader>gw :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
-nmap <leader>gp :cd %:p:h<cr>; !git push<cr>;cd -<cr>
+" nmap <leader>gp :cd %:p:h<cr>; !git push<cr>;cd -<cr>
 nmap <leader>gb :!hub browse<cr>
 
 " LaTeX-work mappings {{{2
@@ -219,6 +219,40 @@ syn match texCiteyear "\\citeyear{[^}]}" containedin=texStatement contains=@NoSp
 map <leader>nt :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
 "2}}}
+
+" Vimux mappings {{{2
+" Run py.test
+map <leader>rpt :call VimuxRunCommand("clear; py.test")<cr>
+
+" Run last command executed by VimuxRunCommand
+map <leader>vl :VimuxRunLastCommand<cr>
+
+" Prompt for a command to run
+map <leader>vp :VimuxPromptCommand<cr>
+
+" Zoom tmux runner
+map <leader>vz :VimuxZoomRunner<cr>
+
+" Inspect runner pane
+map <leader>vi :VimuxInspectRunner<cr>
+
+" Close runner
+map <leader>vq :VimuxCloseRunner<cr>
+
+" git push
+map <leader>gp :call VimuxRunCommandInDir("git push", 0)<cr>
+
+function! VimuxSlime()
+    call VimuxSendText(@v)
+    call VimuxSendKeys("Enter")
+endfunction
+
+" If text is selected, save it in the v buffer and send that buffer it to tmux
+vmap <localleader>vs "vy :call VimuxSlime()<CR>
+
+" Select current paragraph and send it to tmux
+nmap <localleader>vs vip<LocalLeader>vs<CR>
+" 2}}}
 
 " ABC
 nmap <leader>ap :call Abc2midi()<CR>
