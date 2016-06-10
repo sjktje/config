@@ -222,7 +222,7 @@ map <leader>nf :NERDTreeFind<cr>
 
 " Vimux mappings {{{2
 " Run py.test
-map <leader>rpt :call VimuxRunCommand("clear; py.test")<cr>
+map <leader>rpt :call VimuxRunCommand("clear; py.test " . bufname("%"))<cr>
 
 " Run last command executed by VimuxRunCommand
 map <leader>vl :VimuxRunLastCommand<cr>
