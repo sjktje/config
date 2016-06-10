@@ -12,3 +12,9 @@ snippet comment "comment" i
 ${1:${VISUAL:comment}}
 {% endcomment %}
 endsnippet
+
+snippet with "with x=y" i
+{% with ${1}=${2} %}
+    ${0}
+{% endwith %}
+endsnippet
