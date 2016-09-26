@@ -160,3 +160,6 @@
 [submodule "home/vim/bundle/emmet"]
 	path = home/vim/bundle/emmet
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "home/vim/bundle/nerdtree-fugitive"]
+	path = home/vim/bundle/nerdtree-fugitive
+	url = https://github.com/low-ghost/nerdtree-fugitive.git
