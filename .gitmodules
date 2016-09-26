@@ -154,3 +154,9 @@
 [submodule "home/hammerspoon/hs/tiling"]
 	path = home/hammerspoon/hs/tiling
 	url = https://github.com/dsanson/hs.tiling
+[submodule "home/vim/bundle/todo-txt"]
+	path = home/vim/bundle/todo-txt
+	url = https://github.com/freitass/todo.txt-vim.git
+[submodule "home/vim/bundle/emmet"]
+	path = home/vim/bundle/emmet
+	url = https://github.com/mattn/emmet-vim.git
