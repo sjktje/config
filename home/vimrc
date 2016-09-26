@@ -634,7 +634,9 @@ let g:pandoc#biblio#use_bibtool = 1
 " UltiSnips {{{2
 let g:ultisnips_python_style = 'sphinx'
 let g:UltiSnipsExpandTrigger = '<c-t>'
+let g:UltiSnipsJumpForwardTrigger = '<c-t>'
 let g:UltiSnipsListSnippets = '<c-l>'
+let g:UltiSnipsEditSplit = 'horizontal'
 
 " YouCompleteMe {{{2
 nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
