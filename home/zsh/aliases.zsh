@@ -15,6 +15,7 @@ alias ....='cd ../../..'
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias cdshh='cd ~/Documents/Skola/SHH'
 alias cddr='cd ~/Documents/Skola/SHH/@Drafts'
+alias cdfir='cd ~/Documents/Firma/'
 
 # Spell checking
 alias svspell='aspell -l sv check'
