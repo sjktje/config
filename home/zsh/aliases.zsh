@@ -23,7 +23,8 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
-alias t='todo.sh -d ~/.todo.cfg'
+alias t='todo.sh'
+alias vitodo='vim ~/Dropbox/todo/todo.txt'
 
 # Rename
 alias spacetodash="rename 's,\s,_,g'"
