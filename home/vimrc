@@ -262,11 +262,14 @@ function! Abc2midi()
     let abc_file_name = shellescape(expand("%:p"))
     write
     let cmd = 'abc2midi '.abc_file_name.' -o ' . midi_file_name
-    silent call system(cmd)
+    call VimuxRunCommand(cmd)
+    " silent call system(cmd)
     let play_cmd = 'timidity '.midi_file_name
-    silent call system(play_cmd)
+    call VimuxRunCommand(play_cmd)
+    " silent call system(play_cmd)
     let rm_cmd = 'rm '.midi_file_name
-    silent call system(rm_cmd)
+    call VimuxRunCommand(rm_cmd)
+    " silent call system(rm_cmd)
 endfunction
 
 nmap <leader>av :call Abcm2ps()<CR>
@@ -274,10 +277,12 @@ function! Abcm2ps()
     let abc_file_name = shellescape(expand("%:p"))
     let ps_file_name = shellescape(expand("%:p:r").'.ps')
     write
-    let cmd = 'abcm2ps -O= '.abc_file_name.' && open '.ps_file_name
+    let cmd = 'abcm2ps -O= '.abc_file_name.' && open '.ps_file_name.' && rm '.ps_file_name
+    " call VimuxRunCommand(cmd)
     call system(cmd)
-    let rm_cmd = 'rm '.ps_file_name
-    call system(rm_cmd)
+    " let rm_cmd = 'rm '.ps_file_name
+    " call VimuxRunCommand(rm_cmd)
+    " call system(rm_cmd)
 endfunction
 
 " Sane search regexps
