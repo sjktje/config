@@ -241,6 +241,7 @@ map <leader>vq :VimuxCloseRunner<cr>
 
 " git push
 map <leader>gp :call VimuxRunCommandInDir("git push", 0)<cr>
+map <leader>gph :call VimuxRunCommandInDir("git push heroku master", 0)<cr>
 
 function! VimuxSlime()
     call VimuxSendText(@v)
