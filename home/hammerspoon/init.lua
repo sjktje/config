@@ -10,5 +10,5 @@ hotkey.bind(mash, "f", function() tiling.goToLayout("fullscreen") end)
 
 -- If you want to set the layouts that are enabled
 tiling.set('layouts', {
-  'fullscreen', 'main-vertical'
+  'fullscreen', 'main-vertical', 'main-horizontal'
 })
