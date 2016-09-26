@@ -35,6 +35,7 @@ alias srsync='rsync -zPe ssh'
 alias pullcapiohome='rsync -arP --delete-after /Volumes/ncsvakva /Users/sjk/Documents/Capio'
 alias pullcapiocommon='rsync -arP --delete-after /Volumes/COMMONGER\$ /Users/sjk/Documents/Capio'
 alias pushcapiohome="rsync -arP --delete-after /Users/sjk/Documents/Capio/ncsvakva /Volumes"
+alias backup-video='sudo rsync -avP --delete /Volumes/Video\ SJK/ /Volumes/VIDEO\ BACKUP'
 
 alias burniso='cdrecord -v -eject dev=1,0,0'
 
