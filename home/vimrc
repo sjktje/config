@@ -649,6 +649,10 @@ nmap <silent><leader>pc <Esc>:Pytest class<cr>
 nmap <silent><leader>pm <Esc>:Pytest method<cr>
 " isort {{{2
 " let g:vim_isort_map = '<leader>is'
+" distractfree {{{2
+let g:distractfree_width = '75%'
+let g:distractfree_colorscheme = 'mirowriter'
+let g:distractfree_keep_options = 'textwidth=79'
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
