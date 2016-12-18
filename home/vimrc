@@ -357,6 +357,7 @@ augroup ft_mediawiki " {{{2
 augroup end
 augroup todo_files " {{{2
     autocmd BufNewFile,BufRead *.ol.txt setlocal noexpandtab tabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead ~/Dropbox/todo/*.txt set ft=todo
 augroup end
 augroup ft_tex " {{{2
     autocmd BufNewFile,BufRead *.cls setlocal filetype=tex
