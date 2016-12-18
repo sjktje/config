@@ -52,7 +52,6 @@ Abolish ns{,s,et,ets,en,ens,ena,enas} nervsystem{}
 Abolish behmet{,s,en,ens,er,ers,erna,ernas} behandlingsmetod{}
 Abolish tilgång{,en} tillgång{}
 Abolish lr eller
-Abolish o och
 Abolish mkt mycket
 Abolish omst{,er,ers,erna,ernas} omständighet{}
 Abolish tiom till och med
