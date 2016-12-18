@@ -24,7 +24,8 @@ alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
 alias t='todo.sh'
-alias vitodo='vim ~/Dropbox/todo/todo.txt'
+alias vitodo='vim ~/Google\ Drive/todo/todo.txt'
+alias inbox='todo.sh addto inbox.txt'
 
 # Rename
 alias spacetodash="rename 's,\s,_,g'"
