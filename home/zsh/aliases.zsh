@@ -67,6 +67,8 @@ if [[ `uname -s` == "Darwin" ]]; then
     alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 fi
 
+alias apl='ansible-playbook --ask-vault-pass'
+
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
