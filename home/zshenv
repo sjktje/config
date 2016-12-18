@@ -19,6 +19,7 @@ path=(
     ~/bin
     /Applications/Postgres.app/Contents/Versions/9.3/bin
     /Library/TeX/Distributions/Programs/texbin
+    /usr/local/sbin
     $path
 )
 
