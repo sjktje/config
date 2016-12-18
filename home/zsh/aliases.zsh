@@ -38,6 +38,10 @@ alias pullcapiocommon='rsync -arP --delete-after /Volumes/COMMONGER\$ /Users/sjk
 alias pushcapiohome="rsync -arP --delete-after /Users/sjk/Documents/Capio/ncsvakva /Volumes"
 alias backup-video='sudo rsync -avP --delete /Volumes/Video\ SJK/ /Volumes/VIDEO\ BACKUP'
 
+# Brew
+alias fetch-updates='brew update && brew fetch --deps --retry $(brew outdated |cut -f 1)'
+
+
 alias burniso='cdrecord -v -eject dev=1,0,0'
 
 alias thesession='timidity ~/Downloads/*.mid(Nm0om[1])'
