@@ -513,7 +513,12 @@ map <silent> <Leader>ls :silent
 let g:jekyll_path='/Users/sjk/Code/blog'
 let g:jekyll_post_suffix = 'md'
 " Surround {{{2
-let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+augroup surround_tex
+    " type 'Su' for \usepackage{}
+    " type 'Sc' + 'command' for \command{ }
+    autocmd FileType tex let b:surround_{char2nr("u")} = "\\\usepackage{\r}"
+    autocmd FileType tex let g:surround_{char2nr('c')} = "\\\1command\1{\r}"
+augroup end
 augroup surround_django
     " type 'Sv' or 'S{' for a variable
     " type 'Sb' for a block
