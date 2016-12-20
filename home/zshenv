@@ -17,7 +17,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 typeset -U path
 path=(
     ~/bin
-    /Applications/Postgres.app/Contents/Versions/9.3/bin
+    /Applications/Postgres.app/Contents/Versions/latest/bin
     /Library/TeX/Distributions/Programs/texbin
     /usr/local/sbin
     $path
