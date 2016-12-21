@@ -1,0 +1,5 @@
+default_context:
+    full_name: 'Svante Kvarnström'
+    email: 'sjk@sjk.io'
+    github_username: 'sjktje'
+cookiecutters_dir: '~/.cookiecutters'
