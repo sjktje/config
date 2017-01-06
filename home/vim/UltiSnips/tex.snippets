@@ -233,3 +233,33 @@ snippet tdep "tikz-dependency"
     ${0}
 \end{dependency}
 endsnippet
+
+snippet invoice "sjk invoice"
+\documentclass{sjkinvoice}
+
+\invoiceNo{${1}}
+\dueIn{30}
+\clientName{${2:name}}
+\clientAddress{${3:Tolvv. 23\\121 21 Stockholm}}
+\clientReference{${4:Kalle}}
+\date{${5:`date +%Y-%m-%d`}}
+
+\begin{document}
+
+\makeheader{Svante Kvarnström}
+
+\makeletterhead
+
+\begin{specification}
+    \lineitem{${6:2012-12-12}}{${7:1}}{${8:3000}}{${9:0}}{${10:Spelning...}}
+    ${0}
+
+    \beginsummary
+
+    \summaryline{Total}{\formatcurrency{\sjkTotal}}
+    \summaryline{Varav moms}{\formatcurrency{\sjkVat}}
+    \fineprint
+\end{specification}
+
+\end{document}
+endsnippet
