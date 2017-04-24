@@ -126,8 +126,9 @@ def main():
         print_warning('You are not currently using zsh.')
         zsh_bin = which('zsh')
         if zsh_bin is not None:
-            print_ok('Zsh is in your path. Making it your default shell now...')
-            subprocess.call(['chsh', '-s', zsh_bin], stdin=subprocess.PIPE)
+            # print_ok('Zsh is in your path. Making it your default shell now...')
+            print_ok('You might want to make zsh your default shell.')
+            # subprocess.call(['chsh', '-s', zsh_bin], stdin=subprocess.PIPE)
 
 main()
 
