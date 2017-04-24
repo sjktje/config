@@ -51,6 +51,10 @@ alias mux=tmuxinator
 # Flush msmtp queue
 alias goemail='msmtp-queue -r'
 
+# Ansible
+alias ave='ansible-vault edit'
+alias avv='ansible-vault view'
+
 # OS X convenience aliases
 if [[ `uname -s` == "Darwin" ]]; then
     alias pubkeycp='cat ~/.ssh/id_rsa.pub |pbcopy |echo "Public key copied to clipboard."'
