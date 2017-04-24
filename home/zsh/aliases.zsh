@@ -73,6 +73,8 @@ fi
 
 alias apl='ansible-playbook --ask-vault-pass'
 
+alias shutdownafterbackup="while (ps -ef |grep 'backupd$'); do sleep 60; done; shutdown -h +1"
+
 # Make the Terminal icon bounce. Sometimes useful, like:
 # execute_timey_wimey_command && termbounce
 # Then minimize terminal and it'll bounce when done.
