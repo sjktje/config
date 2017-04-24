@@ -4,6 +4,7 @@
 	signingkey = FD54E1CD
 [alias]
 	ci = commit
+        ic = commit
 	co = checkout
 	st = status
         br = branch
