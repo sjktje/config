@@ -1,0 +1,18 @@
+snippet am "ansible managed" b
+# {{ ansible_managed }}
+endsnippet
+
+snippet apt "apt declaration" b
+- name: install ${1}
+  apt:
+    name: ${2}
+    state: present
+endsnippet
+
+snippet template "template declaration" b
+- name: ${1}
+  template:
+    src: ${2}
+    dest: ${3}
+    ${0}
+endsnippet
