@@ -1,12 +1,41 @@
 " sjks .vimrc
 " Setup {{{1
-set nocompatible
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin on
-filetype plugin indent on
-syntax on
+
+"""""""""""""
+"  Plugins  "
+"""""""""""""
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-abolish'
+Plug 'pearofducks/ansible-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-dispatch'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'fisadev/vim-isort'
+Plug 'csexton/jekyll.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'low-ghost/nerdtree-fugitive'
+Plug 'alfredodeza/pytest.vim'
+Plug 'tpope/vim-repeat'
+Plug 'altercation/vim-colors-solarized'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
+Plug 'vim-syntastic/syntastic'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-unimpaired'
+Plug 'freitass/todo.txt-vim'
+Plug 'honza/vim-snippets'
+Plug 'vimoutliner/vimoutliner'
+Plug 'benmills/vimux'
+Plug 'julienr/vimux-pyutils'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
+call plug#end()
 
 " GUI Options {{{1
 if has('gui_running')
@@ -92,7 +121,8 @@ augroup END
 "colo slate                     " why not try slate for a while?
 " colo mustang
 " colo badwolf
-colo solarized
+" colo solarized
+colo seoul256
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 
