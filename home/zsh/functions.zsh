@@ -18,6 +18,11 @@ function 6p() {
 	fi
 }
 
+# git functions
+#
+function cim() { git ci -m "$*" }
+function ciam() { git ci -am "$*" }
+
 # "code <project>" changes directory to ~/Code/project and switches to
 # whatever virtualenv is specified in ~/Code/project/.venv, if such file
 # exists.
