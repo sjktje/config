@@ -54,7 +54,7 @@ set scrolloff=4                 " keep four lines above cursor when scrolling
 set clipboard=unnamed           " Yank to OS X's clipboard
 set nojoinspaces                " I don't want double spaces after periods when joining lines
 set cursorline                  " Hilight the current line
-set number			" Show line numbers
+" set number			" Show line numbers
 set laststatus=2                " Always show status line
 set statusline=                                 " Override default
 set statusline+=%{fugitive#statusline()[4:-2]}  " Show fugitive git info
