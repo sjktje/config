@@ -8,6 +8,9 @@ fi
 # global packages. That's where I use gpip.
 alias gpip='PIP_REQUIRE_VIRTUALENV="" pip'
 
+# git
+alias add='git add'
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
