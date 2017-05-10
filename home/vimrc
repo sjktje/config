@@ -31,7 +31,6 @@ Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
 Plug 'vimoutliner/vimoutliner'
 Plug 'benmills/vimux'
-Plug 'julienr/vimux-pyutils'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
