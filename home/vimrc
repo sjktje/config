@@ -72,7 +72,7 @@ set showmatch			" show matching brackets
 set mat=5			" how many tenths of a second to blink matching brackets for
 set pastetoggle=<F2>
 set grepprg=grep\ -nH\ $*       " Required by Latex-Suite
-set textwidth=72		" Line wrap at 72 chars
+set textwidth=79		" Line wrap at 79 chars
 set ignorecase                  " Make ctrl-n (and others) ignore case.
 set infercase                   " Make 'Compl' complete to 'Complete' instead of 'complete'.
 set dictionary=/Users/sjk/Documents/Wordlists/ssk.txt
