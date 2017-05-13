@@ -13,6 +13,7 @@ export WORKON_HOME=~/.envs
 export TODOTXT_DEFAULT_ACTION='ls'
 export NOTES_DIR=/Users/sjk/Documents/Skola/SHH/notes
 export PIP_REQUIRE_VIRTUALENV=true
+export ANSIBLE_NOCOWS=1
 
 typeset -U path
 path=(
