@@ -575,7 +575,8 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 " Airline {{{2
-let g:airline_theme='badwolf' " Status bar theme
+" let g:airline_theme='badwolf' " Status bar theme
+let g:airline_theme='distinguished'
 let g:airline_powerline_fonts = 1
 " Python-mode {{{2
 " Python-mode is fucking about so I'm trying Steve Losh's settings.
