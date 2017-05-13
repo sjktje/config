@@ -34,6 +34,7 @@ Plug 'benmills/vimux'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " GUI Options {{{1
