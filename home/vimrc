@@ -522,6 +522,13 @@ command! -nargs=0 Pulse call s:Pulse()
 " Plugin settings {{{1
 " Fugitive {{{2
 set diffopt=vertical
+" ansible-vim {{{2
+let g:ansible_unindent_after_newline = 1
+" More or less all the yml files I edit are ansible
+augroup ansible_vim
+    autocmd BufRead,BufNewFile *.yml set ft=ansible
+augroup end
+
 " TeX {{{2
 let g:tex_flavor='latex'
 let g:tex_fold_enabled=0 " This might not be a plugin setting.
