@@ -3,6 +3,11 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
+
+if [[ $(uname 2> /dev/null) == "Darwin" ]]; then
+    source ~/.zsh/osx.zsh
+fi
+
 source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then

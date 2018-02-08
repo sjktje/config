@@ -84,7 +84,6 @@ alias shutdownafterbackup="while (ps -ef |grep 'backupd$'); do sleep 60; done; s
 alias termbounce='tput bel'
 
 # Extention aliases!
-alias -s {avi,flv,mpg,mpeg,wmv,mp4,mov,mkv}=/Applications/VLC.app/Contents/MacOS/VLC
 alias -s txt=vim
 alias -s html=firefox
 alias -s pdf=open
