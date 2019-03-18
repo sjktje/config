@@ -58,30 +58,31 @@ fi
 
 
 # From https://gist.github.com/pjf/051aa4ef326d493beec950823f7edfd8#file-bashrc
-TICK="✓"
-CROSS="✗"
+if [ -f /usr/local/bin/task ]; then
+    TICK="✓"
+    CROSS="✗"
 
-URGENT="❗"
-OVERDUE="☠️"
-DUETODAY="😱"
-DUETOMORROW="📅"
+    URGENT="❗"
+    OVERDUE="☠️"
+    DUETODAY="😱"
+    DUETOMORROW="📅"
 
-function task_indicator {
-    if [ `task +READY +OVERDUE count` -gt "0" ]; then
-        echo "$OVERDUE"
-    elif [ `task +READY +DUETODAY count` -gt "0" ]; then
-        echo "$DUETODAY"
-    elif [ `task +READY +DUETOMORROW count` -gt "0" ]; then
-        echo "$DUETOMORROW"
-    elif [ `task +READY urgency \> 10 count` -gt "0" ]; then
-        echo "$URGENT"
-    else
-        echo '$'
-    fi
-}
+    function task_indicator {
+        if [ `task +READY +OVERDUE count` -gt "0" ]; then
+            echo "$OVERDUE"
+        elif [ `task +READY +DUETODAY count` -gt "0" ]; then
+            echo "$DUETODAY"
+        elif [ `task +READY +DUETOMORROW count` -gt "0" ]; then
+            echo "$DUETOMORROW"
+        elif [ `task +READY urgency \> 10 count` -gt "0" ]; then
+            echo "$URGENT"
+        else
+            echo '$'
+        fi
+    }
 
 
-task="\$(task_indicator)"
-addprompt=$task
-PROMPT="$addprompt $PROMPT"
-
+    task="\$(task_indicator)"
+    addprompt=$task
+    PROMPT="$addprompt $PROMPT"
+fi
