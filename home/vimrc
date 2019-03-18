@@ -13,7 +13,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'fisadev/vim-isort'
 Plug 'csexton/jekyll.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -24,6 +23,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+" Plug 'gabrielelana/vim-markdown'
 Plug 'vim-syntastic/syntastic'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-unimpaired'
@@ -34,9 +35,24 @@ Plug 'benmills/vimux'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/fountain.vim'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'blindFS/vim-taskwarrior'
+Plug 'tpope/vim-speeddating'
+Plug 'vimwiki/vimwiki'
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'blindFS/vim-taskwarrior'
+" Plug 'mrk21/yaml-vim'
+Plug 'stephpy/vim-yaml'
+Plug 'joshdick/onedark.vim'
+Plug 'tpope/vim-rhubarb'
+" Plug 'jalvesaq/zotcite'
+Plug 'rafaqz/citation.vim'
+Plug 'tpope/vim-vividchalk'
+
 call plug#end()
 
 " GUI Options {{{1
@@ -124,7 +140,9 @@ augroup END
 " colo mustang
 " colo badwolf
 " colo solarized
-colo seoul256
+" colo seoul256
+"colo onedark
+colo vividchalk
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 
@@ -397,6 +415,9 @@ augroup end
 augroup ft_abc " {{{2
     autocmd BufNewFile,BufRead *.abc setlocal nospell commentstring=\%%s
 augroup end
+" augroup ft_yaml " {{{2
+"     autocmd BufNewFile,BufReadPost *.{yaml,yml} set foldmethod=indent
+" augroup end
 " augroup onnewfile " {{{2
 "     " Try to find a template for our new file.
 "     autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
@@ -529,6 +550,14 @@ let g:ansible_unindent_after_newline = 1
 augroup ansible_vim
     autocmd BufRead,BufNewFile *.yml set ft=ansible
 augroup end
+
+" vim-markdown {{{2
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_strikethrough = 1
+set conceallevel=2
+
 
 " TeX {{{2
 let g:tex_flavor='latex'
@@ -699,6 +728,10 @@ nmap <silent><leader>pm <Esc>:Pytest method<cr>
 let g:distractfree_width = '75%'
 let g:distractfree_colorscheme = 'mirowriter'
 let g:distractfree_keep_options = 'textwidth=79'
+" vim-table-mode {{{2
+" for rst
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}

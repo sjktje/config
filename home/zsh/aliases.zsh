@@ -7,9 +7,11 @@ fi
 # PIP_REQUIRE_VIRTUALENV above), but sometimes I want to install or upgrade
 # global packages. That's where I use gpip.
 alias gpip='PIP_REQUIRE_VIRTUALENV="" pip'
+alias gpip3='PIP_REQUIRE_VIRTUALENV="" pip3'
 
 # git
 alias add='git add'
+alias gc='git clone'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -17,8 +19,12 @@ alias ....='cd ../../..'
 
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias cdshh='cd ~/Documents/Skola/SHH'
+alias cdamb='cd ~/Google\ Drive/Ambulans'
 alias cddr='cd ~/Documents/Skola/SHH/@Drafts'
 alias cdfir='cd ~/Documents/Firma/'
+alias cdavd='cd ~/Google\ Drive/Avdelning\ 27/'
+alias cdg='cd ~/Google\ Drive'
+alias cdmrn='cd ~/Google\ Drive/MRN'
 
 # Spell checking
 alias svspell='aspell -l sv check'
@@ -26,9 +32,16 @@ alias ukspell='aspell -l en check'
 alias svtexspell='aspell -l sv -t check'
 alias uktexspell='aspell -l en -t check'
 
-alias t='todolist'
+alias t='task'
+alias tf='task add project:firma'
+alias th='task add project:home'
+alias tu='task add project:uni'
+
+
 alias vitodo='vim ~/Google\ Drive/todo/todo.txt'
 alias inbox='todo.sh addto inbox.txt'
+
+alias tt='timetrap'
 
 # Rename
 alias spacetodash="rename 's,\s,_,g'"
@@ -39,7 +52,8 @@ alias srsync='rsync -zPe ssh'
 alias pullcapiohome='rsync -arP --delete-after /Volumes/ncsvakva /Users/sjk/Documents/Capio'
 alias pullcapiocommon='rsync -arP --delete-after /Volumes/COMMONGER\$ /Users/sjk/Documents/Capio'
 alias pushcapiohome="rsync -arP --delete-after /Users/sjk/Documents/Capio/ncsvakva /Volumes"
-alias backup-video='sudo rsync -avP --delete /Volumes/Video\ SJK/ /Volumes/VIDEO\ BACKUP'
+alias backup-video='sudo rsync -avP --delete /Volumes/SJK\ 2TB/ /Volumes/SJK\ 2TB\ BACKUP'
+alias backup-music='sudo rsync -avP --delete /Volumes/Music/ /Volumes/Music\ Backup'
 
 # Brew
 alias fetch-updates='brew update && brew fetch --deps --retry $(brew outdated |cut -f 1)'

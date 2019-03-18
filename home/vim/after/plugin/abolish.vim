@@ -11,7 +11,7 @@ Abolish ssk{,s,or,ors,orna,ornas,an,ans}        sjukskötersk{a,as,or,ors,orna,o
 Abolish usk{,s,or,ors,orna,ornas,an,ans}        underskötersk{a,as,or,ors,orna,ornas,an,ans}
 Abolish pat{,er,ers,erna,ernas,s,en,ens}        patient{}
 Abolish cssk{,s,or,ors,orna,ornas,an,ans}       chefssjukskötersk{a,as,or,ors,orna,ornas,an,ans}
-Abolish öht överhuvudtaget
+Abolish öht över huvud taget
 Abolish hra har
 Abolish flytat flytta
 Abolish jga jag
@@ -23,7 +23,7 @@ Abolish bt{,et} blodtryck{}
 Abolish resp respektive
 Abolish cirk{,t} cirkulatorisk{}
 Abolish sthlm{,s} Stockholm{}
-Abolish iv intravenös
+Abolish iv{,t} intravenös{}
 Abolish ellre eller
 Abolish msk{a,as,an,ans,or,ors,orna,ornas} människ{}
 Abolish rätj{,en,ens,erna,ernas} räddningstjänst{}
@@ -130,3 +130,18 @@ Abolish krksjd{,s,en,ens,ar,arna,ars,arnas} kranskärlssjukdom{}
 Abolish mha med hjälp av
 Abolish patfall{,s,en,ens,et,ets} patientfall{}
 Abolish ggr{,na} gånger{}
+Abolish isf isåfall
+Abolish knaske kanske
+Abolish iaf i alla fall
+Abolish glr gäller
+Abolish sklnd{,en} skillnad{}
+Abolish sklndn skillnaden
+Abolish mdn medan
+Abolish olka olika
+Abolish enl enligt
+Abolish kna kan
+Abolish srsklt särskilt
+Abolish btfall{,en,et,s,ens,ets} blodtrycksfall{}
+Abolish mste måste
+Abolish drfr därför
+Abolish btsnk{ande,ning} blodtryckssänk{}

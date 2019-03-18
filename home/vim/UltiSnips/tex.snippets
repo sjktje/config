@@ -130,6 +130,10 @@ snippet url "\url{url}" w
 \url{${1:${VISUAL:url}}}
 endsnippet
 
+snippet email "email href" w
+\href{mailto:${1:address}}{$1$0}
+endsnippet
+
 snippet sjk "\sjk{text}" w
 \sjk{${1:${VISUAL:text}}}
 endsnippet
@@ -263,3 +267,46 @@ snippet invoice "sjk invoice"
 
 \end{document}
 endsnippet
+
+
+snippet kardnotes "Kardiologen minutes"
+\documentclass{kardnotes}
+
+\author{Svante Kvarnström}
+
+\date{${1:`date +%Y-%m-%d`}}
+
+\group{${2:Dokumentationsgruppen}}
+
+\attendees{%
+    Svante Kvarnström \and
+    ${3}
+}
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{fancy}
+
+${0}
+
+\end{document}
+endsnippet
+
+
+snippet aktlist "Aktivitetslistan"
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lll}
+	\toprule
+        Aktivitet & Ansvarig & Datum \\\midrule
+	${0}
+	\bottomrule
+    \end{tabular}
+    \caption{Aktivitetslistan}%
+    \label{tab:aktivitetslistan}
+\end{table}
+endsnippet
+
+
