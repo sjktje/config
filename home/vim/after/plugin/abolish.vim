@@ -145,3 +145,4 @@ Abolish btfall{,en,et,s,ens,ets} blodtrycksfall{}
 Abolish mste måste
 Abolish drfr därför
 Abolish btsnk{ande,ning} blodtryckssänk{}
+Abolish ldr leder
