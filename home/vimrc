@@ -52,6 +52,8 @@ Plug 'tpope/vim-rhubarb'
 " Plug 'jalvesaq/zotcite'
 Plug 'rafaqz/citation.vim'
 Plug 'tpope/vim-vividchalk'
+Plug 'reedes/vim-colors-pencil'
+Plug 'reedes/vim-pencil'
 
 call plug#end()
 
@@ -91,7 +93,7 @@ set showmatch			" show matching brackets
 set mat=5			" how many tenths of a second to blink matching brackets for
 set pastetoggle=<F2>
 set grepprg=grep\ -nH\ $*       " Required by Latex-Suite
-set textwidth=79		" Line wrap at 79 chars
+set textwidth=78		" Line wrap at 79 chars
 set ignorecase                  " Make ctrl-n (and others) ignore case.
 set infercase                   " Make 'Compl' complete to 'Complete' instead of 'complete'.
 set dictionary=/Users/sjk/Documents/Wordlists/ssk.txt
@@ -103,14 +105,14 @@ set nojoinspaces                " I don't want double spaces after periods when 
 set cursorline                  " Hilight the current line
 " set number			" Show line numbers
 set laststatus=2                " Always show status line
-set statusline=                                 " Override default
-set statusline+=%{fugitive#statusline()[4:-2]}  " Show fugitive git info
-set statusline+=\ %f\ %m\ %r                    " Show filename/path
-set statusline+=%=                              " Set right-side status info after this line
-set statusline+=%l/%L:%v                        " Set <line number>/<total lines>:<column>
-set statusline+=\                               " Set ending space
+" set statusline=                                 " Override default
+" set statusline+=%{fugitive#statusline()[4:-2]}  " Show fugitive git info
+" set statusline+=\ %f\ %m\ %r                    " Show filename/path
+" set statusline+=%=                              " Set right-side status info after this line
+" set statusline+=%l/%L:%v                        " Set <line number>/<total lines>:<column
+" set statusline+=\                               " Set ending space
 set shortmess+=I                 " Disable vim welcome screen
-set spell
+set nospell
 set spelllang=sv,en_gb,fr
 set hidden                      " Make vim work like all other editors...
 let html_use_css = 1            " the ':%TOhtml' command generates html without <font> tags
@@ -142,7 +144,8 @@ augroup END
 " colo solarized
 " colo seoul256
 "colo onedark
-colo vividchalk
+" colo vividchalk
+colo pencil
 "highlight Folded guibg=Black guifg=blue
 "highlight FoldColumn guibg=darkgrey guifg=white
 
@@ -604,7 +607,12 @@ augroup surround_django
     autocmd FileType htmldjango let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
     autocmd FileType htmldjango let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 augroup end
-
+" markdown {{{2
+augroup markdown
+        " autocmd FileType markdown setlocal background=light noautoindent nocindent nosmartindent indentexpr= formatoptions=ant textwidth=80 wrapmargin=0
+        autocmd FileType markdown setlocal background=light
+        autocmd FileType markdown call pencil#init()
+augroup end
 " Gist {{{2
 let g:gist_clip_command = 'pbcopy'
 " NERDTree {{{2
@@ -614,7 +622,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 " Airline {{{2
 " let g:airline_theme='badwolf' " Status bar theme
-let g:airline_theme='distinguished'
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 " Python-mode {{{2
 " Python-mode is fucking about so I'm trying Steve Losh's settings.
@@ -732,6 +740,8 @@ let g:distractfree_keep_options = 'textwidth=79'
 " for rst
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
+" Goyo {{{2
+let g:goyo_width=85
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
