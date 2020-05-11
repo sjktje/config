@@ -20,11 +20,11 @@ alias ....='cd ../../..'
 alias cdrkh='cd ~/Documents/Skola/RKH'
 alias cdshh='cd ~/Documents/Skola/SHH'
 alias cdamb='cd ~/Google\ Drive/Ambulans'
-alias cddr='cd ~/Documents/Skola/SHH/@Drafts'
 alias cdfir='cd ~/Documents/Firma/'
-alias cdavd='cd ~/Google\ Drive/Avdelning\ 27/'
 alias cdg='cd ~/Google\ Drive'
 alias cdmrn='cd ~/Google\ Drive/MRN'
+alias cdeko='cd ~/Google\ Drive/Privatekonomi'
+alias cdmag='cd ~/Google\ Drive/Magisteruppsats'
 
 # Spell checking
 alias svspell='aspell -l sv check'
@@ -64,6 +64,10 @@ alias burniso='cdrecord -v -eject dev=1,0,0'
 alias thesession='timidity ~/Downloads/*.mid(Nm0om[1])'
 
 alias mux=tmuxinator
+
+# Reboot tomorrow morning at 02:30
+# Gnu date has --date, but not the bsd version, so...
+alias reboottonight='shutdown -r $(date -r $(expr $(date +%s) + 86400) "+%y%m%d0230")'
 
 # Flush msmtp queue
 alias goemail='msmtp-queue -r'
