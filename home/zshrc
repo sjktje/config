@@ -10,9 +10,9 @@ fi
 
 source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
+# if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#     source /usr/local/bin/virtualenvwrapper.sh
+# fi
 
 # For some reason the Debian virtualenvwrapper places the script in
 # /etc/bash_completion.d.
