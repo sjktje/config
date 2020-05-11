@@ -13,7 +13,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'csexton/jekyll.vim'
+" Plug 'csexton/jekyll.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'low-ghost/nerdtree-fugitive'
@@ -54,7 +54,7 @@ Plug 'rafaqz/citation.vim'
 Plug 'tpope/vim-vividchalk'
 Plug 'reedes/vim-colors-pencil'
 Plug 'reedes/vim-pencil'
-
+" Plug 'Rykka/riv.vim'
 call plug#end()
 
 " GUI Options {{{1
@@ -611,7 +611,7 @@ augroup end
 augroup markdown
         " autocmd FileType markdown setlocal background=light noautoindent nocindent nosmartindent indentexpr= formatoptions=ant textwidth=80 wrapmargin=0
         autocmd FileType markdown setlocal background=light
-        autocmd FileType markdown call pencil#init()
+        " autocmd FileType markdown call pencil#init()
 augroup end
 " Gist {{{2
 let g:gist_clip_command = 'pbcopy'
@@ -742,6 +742,10 @@ let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
 " Goyo {{{2
 let g:goyo_width=85
+" Riv {{{2
+let sjk_journal = { 'path': '~/Code/sjk_journal' }
+let g:riv_projects = [sjk_journal]
+
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
 "1}}}
