@@ -116,4 +116,7 @@ alias -s zip="unzip"
 alias -g D="~/Downloads/*(om[1])"
 alias -g C="~/Code/"
 
+alias op-signin='eval $(op signin my)'
+alias op-logout='op signout && unset OP_SESSION_my'
+
 eval "$(hub alias -s)"
