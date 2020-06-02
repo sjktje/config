@@ -120,3 +120,8 @@ alias op-signin='eval $(op signin my)'
 alias op-logout='op signout && unset OP_SESSION_my'
 
 eval "$(hub alias -s)"
+
+if command -v nvim 1>/dev/null 2>&1;
+then
+    alias vim='nvim'
+fi
