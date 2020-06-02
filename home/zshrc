@@ -16,8 +16,13 @@ source ~/config/zsh-plugins/syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # For some reason the Debian virtualenvwrapper places the script in
 # /etc/bash_completion.d.
-if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
-    source /etc/bash_completion.d/virtualenvwrapper
+# if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
+#     source /etc/bash_completion.d/virtualenvwrapper
+# fi
+
+if command -v pyenv 1>/dev/null 2>&1;
+then
+    eval "$(pyenv init -)"
 fi
 
 if [ -f ~/.zsh_extra ]; then
