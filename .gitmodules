@@ -7,3 +7,6 @@
 [submodule "home/hammerspoon/hs/tiling"]
 	path = home/hammerspoon/hs/tiling
 	url = https://github.com/dsanson/hs.tiling
+[submodule "home/tmux/plugins/tpm"]
+	path = home/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
