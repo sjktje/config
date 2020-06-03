@@ -19,7 +19,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'low-ghost/nerdtree-fugitive'
 Plug 'alfredodeza/pytest.vim'
 Plug 'tpope/vim-repeat'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
@@ -52,9 +52,10 @@ Plug 'tpope/vim-rhubarb'
 " Plug 'jalvesaq/zotcite'
 Plug 'rafaqz/citation.vim'
 Plug 'tpope/vim-vividchalk'
-Plug 'reedes/vim-colors-pencil'
+" Plug 'reedes/vim-colors-pencil'
 Plug 'reedes/vim-pencil'
 " Plug 'Rykka/riv.vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " GUI Options {{{1
@@ -135,19 +136,6 @@ augroup trailing
     au InsertLeave * :set listchars+=trail:⌴
 augroup END
 
-" Colorschemes {{{1
-"colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
-"colo desert			" And desert is too.
-"colo slate                     " why not try slate for a while?
-" colo mustang
-" colo badwolf
-" colo solarized
-" colo seoul256
-"colo onedark
-" colo vividchalk
-colo pencil
-"highlight Folded guibg=Black guifg=blue
-"highlight FoldColumn guibg=darkgrey guifg=white
 
 " Mappings {{{1
 
@@ -622,7 +610,8 @@ let NERDTreeDirArrows = 1
 let NERDTreeChDirMode = 2
 " Airline {{{2
 " let g:airline_theme='badwolf' " Status bar theme
-let g:airline_theme='minimalist'
+" let g:airline_theme='minimalist'
+let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 " Python-mode {{{2
 " Python-mode is fucking about so I'm trying Steve Losh's settings.
@@ -745,6 +734,22 @@ let g:goyo_width=85
 " Riv {{{2
 let sjk_journal = { 'path': '~/Code/sjk_journal' }
 let g:riv_projects = [sjk_journal]
+" nord {{{2
+let g:nord_uniform_diff_background = 1
+
+" nord wants the color scheme to be loaded after the nord settings, so...
+" Colorschemes {{{1
+"colo elflord			" change the colorscheme to 'elflord'. Murphy is cool too, though.
+"colo desert			" And desert is too.
+"colo slate                     " why not try slate for a while?
+" colo mustang
+" colo badwolf
+" colo solarized
+" colo seoul256
+"colo onedark
+" colo vividchalk
+" colo pencil
+colo nord
 
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
