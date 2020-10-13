@@ -1,9 +1,12 @@
 export CVS_RSH=ssh
 export EDITOR=vim
-export LC_ALL=
-export LC_CTYPE=sv_SE.UTF-8
-export LC_PAPER=sv_SE.UTF-8
 export LC_COLLATE=C
+export LC_CTYPE="sv_SE.UTF-8"
+export LC_MESSAGES="en_GB.UTF-8"
+export LC_MONETARY="sv_SE.UTF-8"
+export LC_NUMERIC="sv_SE.UTF-8"
+export LC_PAPER="sv_SE.UTF-8"
+export LC_TIME="sv_SE.UTF-8"
 export TZ=CET
 export HISTSIZE=13000
 export SAVEHIST=12000
