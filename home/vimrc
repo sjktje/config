@@ -598,7 +598,7 @@ augroup end
 " markdown {{{2
 augroup markdown
         " autocmd FileType markdown setlocal background=light noautoindent nocindent nosmartindent indentexpr= formatoptions=ant textwidth=80 wrapmargin=0
-        autocmd FileType markdown setlocal background=light
+        " autocmd FileType markdown setlocal background=light
         " autocmd FileType markdown call pencil#init()
 augroup end
 " Gist {{{2
