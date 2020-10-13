@@ -3,6 +3,7 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
+source ~/.zsh/johnnydecimal.zsh
 
 if [[ $(uname 2> /dev/null) == "Darwin" ]]; then
     source ~/.zsh/osx.zsh
