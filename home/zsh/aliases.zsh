@@ -3,6 +3,8 @@ if [[ `uname -s` != "OpenBSD" ]]; then
 	alias ls='ls -G'
 fi
 
+alias lt=ls --human-readable --size -l -S --classify'
+
 # A virtualenv is required in order to install python packages (see export
 # PIP_REQUIRE_VIRTUALENV above), but sometimes I want to install or upgrade
 # global packages. That's where I use gpip.
@@ -119,7 +121,10 @@ alias -g C="~/Code/"
 alias op-signin='eval $(op signin my)'
 alias op-logout='op signout && unset OP_SESSION_my'
 
-eval "$(hub alias -s)"
+if command -v hub 1>/dev/null 2>&1;
+then
+    eval "$(hub alias -s)"
+fi
 
 if command -v nvim 1>/dev/null 2>&1;
 then
