@@ -319,8 +319,8 @@ function! Abcm2ps()
     let ps_file_name = shellescape(expand("%:p:r").'.ps')
     write
     let cmd = 'abcm2ps -O= '.abc_file_name.' && open '.ps_file_name.' && rm '.ps_file_name
-    " call VimuxRunCommand(cmd)
-    call system(cmd)
+    call VimuxRunCommand(cmd)
+    " call system(cmd)
     " let rm_cmd = 'rm '.ps_file_name
     " call VimuxRunCommand(rm_cmd)
     " call system(rm_cmd)
