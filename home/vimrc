@@ -126,7 +126,7 @@ set bg=dark
 set tags=tags
 
 " Resize splits when the window is resized
-au VimResized * :wincmd =
+"au VimResized * :wincmd =
 
 " {{{2 Trailing whitespace
 " Don't show trailing whitespace in insert mode.
