@@ -68,4 +68,3 @@ function someday() {
 function tup() {
     task add project:uni.${*}
 }
-
