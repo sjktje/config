@@ -94,7 +94,7 @@ if [[ `uname -s` == "Darwin" ]]; then
     alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
 fi
 
-alias apl='ansible-playbook --ask-vault-pass'
+alias apl='ansible-playbook'
 
 alias shutdownafterbackup="while (ps -ef |grep 'backupd$'); do sleep 60; done; shutdown -h +1"
 
