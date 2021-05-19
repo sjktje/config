@@ -47,7 +47,7 @@ jcp()
     fi;
     _johnny_splitdecimal "$1";
     _johnny_fetchpath;
-    cp --no-clobber --verbose --recursive "${@:2}" "$retval";
+    cp -nvR "${@:2}" "$retval";
 }
 
 jmv()
@@ -55,12 +55,12 @@ jmv()
     if [[ $# -lt 2 ]];
     then
 	echo "Usage:";
-	echo "$ jcp CATEGORY.UNIQUE SRC"
+	echo "$ jmv CATEGORY.UNIQUE SRC"
 	return;
     fi;
     _johnny_splitdecimal "$1";
     _johnny_fetchpath;
-    mv --no-clobber --verbose "${@:2}" "$retval";
+    mv -nv "${@:2}" "$retval";
 }
 
 
