@@ -147,3 +147,4 @@ Abolish drfr därför
 Abolish btsnk{ande,ning} blodtryckssänk{}
 Abolish ldr leder
 Abolish fll{,s} Falu lasarett{}
+Abolish hvs halsvenstas
