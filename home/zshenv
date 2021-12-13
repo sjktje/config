@@ -18,7 +18,7 @@ export BLOCKTABLE="attackers"
 export WORKON_HOME=~/.envs
 export TODOTXT_DEFAULT_ACTION='ls'
 export NOTES_DIR=/Users/sjk/Documents/Skola/SHH/notes
-export PIP_REQUIRE_VIRTUALENV=true
+#export PIP_REQUIRE_VIRTUALENV=true
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export ANSIBLE_NOCOWS=1
 export PYENV_ROOT='$HOME/.pyenv'
@@ -30,9 +30,8 @@ typeset -U path
 path=(
     ~/bin
     $PYENV_ROOT/bin
-    /Applications/Postgres.app/Contents/Versions/latest/bin
+    /opt/homebrew/bin
     /Library/TeX/Distributions/Programs/texbin
-    /usr/local/opt/python/libexec/bin
     /usr/local/sbin
     $path
 )

@@ -1,5 +1,8 @@
 " sjks .vimrc
 " Setup {{{1
+let g:python3_host_prog = '/opt/homebrew/opt/python/bin/python3'
+let g:loaded_python_provider = 0
+
 
 """""""""""""
 "  Plugins  "
@@ -33,6 +36,7 @@ Plug 'honza/vim-snippets'
 Plug 'vimoutliner/vimoutliner'
 Plug 'benmills/vimux'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
