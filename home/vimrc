@@ -32,7 +32,7 @@ Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
 Plug 'vimoutliner/vimoutliner'
 Plug 'benmills/vimux'
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -41,7 +41,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/fountain.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-speeddating'
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
 " Plug 'blindFS/vim-taskwarrior'
 " Plug 'mrk21/yaml-vim'
@@ -56,6 +56,9 @@ Plug 'reedes/vim-pencil'
 " Plug 'Rykka/riv.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'gcmt/taboo.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
 call plug#end()
 
 " GUI Options {{{1
@@ -715,6 +718,12 @@ nnoremap <leader>y :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>pd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>pc :YcmCompleter GoToDeclaration<CR>
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.pandoc = ['@']
+let g:ycm_filetype_blacklist = {}
+
 " PyTest {{{2
 nmap <silent><leader>pf <Esc>:Pytest file<cr>
 nmap <silent><leader>pc <Esc>:Pytest class<cr>
@@ -730,7 +739,31 @@ let g:distractfree_keep_options = 'textwidth=79'
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
 " Goyo {{{2
-let g:goyo_width=85
+let g:goyo_width=100
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  set nocursorline
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set showmode
+  set showcmd
+  set scrolloff=5
+  set cursorline
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " Riv {{{2
 let sjk_journal = { 'path': '~/Code/sjk_journal' }
 let g:riv_projects = [sjk_journal]
