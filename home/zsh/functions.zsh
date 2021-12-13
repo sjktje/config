@@ -68,3 +68,7 @@ function someday() {
 function tup() {
     task add project:uni.${*}
 }
+
+function pbibdoc() {
+    pandoc -C --bibliography=biblio.bib --csl karlstad-universitet-harvard -s ${1} -o ${1:s/md/docx}
+}
