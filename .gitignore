@@ -3,3 +3,4 @@ home/vim/plugged/
 home/tmux/plugins/
 *.swp
 *.spl
+home/config/gh/
