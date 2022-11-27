@@ -1,0 +1,6 @@
+require('sjk.packer_init')
+require('sjk.settings')
+require('sjk.keymaps')
+require('sjk.autocommands')
+require('sjk.plugins.nvim-tree')
+require('sjk.plugins.lualine')
