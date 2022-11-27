@@ -1,6 +1,7 @@
 home/vim/.netrwhist
 home/vim/plugged/
-home/tmux/plugins/
 *.swp
 *.spl
 home/config/gh/
+
+home/config/nvim/plugin/packer_compiled.lua

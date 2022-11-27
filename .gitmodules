@@ -10,3 +10,6 @@
 [submodule "home/tmux/plugins/tpm"]
 	path = home/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "home/hammerspoon/hhtwm"]
+	path = home/hammerspoon/hhtwm
+	url = https://github.com/szymonkaliski/hhtwm.git
