@@ -35,7 +35,21 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use 'tpope/vim-abolish'
+
+  use 'tpope/vim-surround'
+  use 'numToStr/Comment.nvim'
+  use 'christoomey/vim-tmux-navigator'
+
+
+  -- autocompletion
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+
+  -- snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
