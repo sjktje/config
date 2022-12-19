@@ -1,5 +1,10 @@
 export CVS_RSH=ssh
-export EDITOR=vim
+if command -v nvim 1>/dev/null 2>&1;
+then
+    export EDITOR=vim
+else
+    export EDITOR=nvim
+fi
 export LC_COLLATE=C
 export LC_CTYPE="sv_SE.UTF-8"
 export LC_MESSAGES="en_GB.UTF-8"
@@ -21,16 +26,18 @@ export NOTES_DIR=/Users/sjk/Documents/Skola/SHH/notes
 #export PIP_REQUIRE_VIRTUALENV=true
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export ANSIBLE_NOCOWS=1
-export PYENV_ROOT='$HOME/.pyenv'
+export PYENV_ROOT="${HOME}/.pyenv"
 export MPD_HOST='tweed.glams.sjk.io'
 export MPD_PORT=6600
 export JOHNNYDECIMAL_BASE=~/Documents/
+export HOMEBREW_NO_ENV_HINTS=1
 
 typeset -U path
 path=(
     ~/bin
     $PYENV_ROOT/bin
     /opt/homebrew/bin
+    /opt/homebrew/sbin
     /Library/TeX/Distributions/Programs/texbin
     /usr/local/sbin
     $path
