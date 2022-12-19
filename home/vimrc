@@ -1,7 +1,6 @@
 " sjks .vimrc
 " Setup {{{1
-let g:python3_host_prog = '/opt/homebrew/opt/python/bin/python3'
-let g:loaded_python_provider = 0
+"let g:loaded_python_provider = 0
 
 
 """""""""""""
@@ -62,6 +61,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'gcmt/taboo.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'gruvbox-community/gruvbox'
+Plug 'jceb/vim-orgmode'
 
 call plug#end()
 
@@ -131,6 +132,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:⌴
 set bg=dark
 set tags=tags
+set termguicolors
 
 " Resize splits when the window is resized
 "au VimResized * :wincmd =
@@ -196,7 +198,7 @@ nmap <leader>h :bprevious<cr>
 
 " Grep lecture notes
 command! -nargs=1 Ngrep vimgrep "<args>" $NOTES_DIR/**/*.md
-nnoremap <leader>[ :Ngrep 
+nnoremap <leader>[ :Ngrep
 
 " Close current buffer and move to prev
 nmap <leader>bq :bp <BAR> bd #<cr>
@@ -542,6 +544,8 @@ command! -nargs=0 Pulse call s:Pulse()
 " Plugin settings {{{1
 " Fugitive {{{2
 set diffopt=vertical
+" tpope-commentary {{{2
+autocmd FileType pf setlocal commentstring=#\ %s
 " ansible-vim {{{2
 let g:ansible_unindent_after_newline = 1
 " More or less all the yml files I edit are ansible
@@ -618,7 +622,7 @@ let NERDTreeChDirMode = 2
 " Airline {{{2
 " let g:airline_theme='badwolf' " Status bar theme
 " let g:airline_theme='minimalist'
-let g:airline_theme='nord'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 " Python-mode {{{2
 " Python-mode is fucking about so I'm trying Steve Losh's settings.
@@ -692,8 +696,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_auto_jump = 0
-let g:syntastic_python_python_exec = 'python3'
-
+let g:syntastic_python_python_exec = '/Users/sjk/.pyenv/versions/py3nvim/bin/python'
 nnoremap <leader>C :SyntasticCheck<cr>
 
 let g:syntastic_error_symbol = '✗'
@@ -703,8 +706,8 @@ let g:syntastic_python_checkers = ['flake8', 'pep8', 'pydocstyle']
 let g:syntastic_python_flake8_args = '--select=F,C9 --max-complexity=10'
 
 let g:syntastic_mode_map = {
-       \ "mode": "active",
-       \ "active_filetypes": [] }
+            \ "mode": "active",
+            \ "active_filetypes": [] }
 " Sparkup {{{2
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-m>'
@@ -712,8 +715,9 @@ let g:sparkupNextMapping = '<c-m>'
 let g:pandoc#biblio#use_bibtool = 1
 " UltiSnips {{{2
 let g:ultisnips_python_style = 'sphinx'
-let g:UltiSnipsExpandTrigger = '<c-t>'
-let g:UltiSnipsJumpForwardTrigger = '<c-t>'
+let g:UltiSnipsExpandTrigger = '<c-b>'
+let g:UltiSnipsJumpForwardTrigger = '<c-b>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-z>'
 let g:UltiSnipsListSnippets = '<c-l>'
 let g:UltiSnipsEditSplit = 'horizontal'
 
@@ -744,9 +748,13 @@ let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
 " Goyo {{{2
 let g:goyo_width=100
+let g:goyo_height='95%'
+
 function! s:goyo_enter()
   silent !tmux set status off
   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set bg=light
+  set nolist "This removes listchars (for tab, eol, trailing spaces etc)
   set noshowmode
   set noshowcmd
   set scrolloff=999
@@ -758,6 +766,8 @@ endfunction
 function! s:goyo_leave()
   silent !tmux set status on
   silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set list
+  set bg=dark
   set showmode
   set showcmd
   set scrolloff=5
@@ -771,6 +781,8 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " Riv {{{2
 let sjk_journal = { 'path': '~/Code/sjk_journal' }
 let g:riv_projects = [sjk_journal]
+" vim-orgmode {{{2
+let g:org_agenda_files=['~/Documents/80-89 Personligt/82 Planering och TODO/82.02 Org/index.org']
 " nord {{{2
 let g:nord_uniform_diff_background = 1
 
@@ -786,7 +798,8 @@ let g:nord_uniform_diff_background = 1
 "colo onedark
 " colo vividchalk
 " colo pencil
-colo nord
+" colo nord
+colo gruvbox
 
 " Source external files {{{1
     "source $VIMHOME/autocorrect.vim          " Common misspellings
