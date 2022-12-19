@@ -4,7 +4,18 @@ cmd = {"cmd"}
 require "apps"
 require "grid"
 
-hs.hotkey.bind(cmd, '.', hs.hints.windowHints)
+-- hhtwm = require('hhtwm')
+-- hhtwm.start()
+
+-- hs.hotkey.bind(cmd, '.', hs.hints.windowHints)
+
+-- local laptopScreen = "Built-in Retina Display"
+-- local windowLayout = { 
+--    { "Google Chrome", nil, laptopScreen, hs.layout.left50, nil, nil},
+--    { "iTerm2", nil, laptopScreen, hs.layout.right50, nil, nil},
+-- }
+-- hs.layout.apply(windowLayout)
+
 
 ---------------------
 --  Reload config  --
@@ -24,6 +35,7 @@ end
 
 hs.pathwatcher.new(os.getenv("HOME") ..
     "/.hammerspoon/", reloadConfig):start()
-hs.pathwatcher.new(os.getenv("HOME") ..
-    ".homesick/repos/dotfiles/home/.hammerspoon/", reloadConfig):start()
 hs.alert.show("Config loaded")
+
+
+
