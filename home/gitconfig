@@ -39,6 +39,7 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
+	editor = nvim
 [merge]
         summary = true
 [github]
